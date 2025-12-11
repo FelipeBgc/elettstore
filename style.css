@@ -83,18 +83,14 @@ a {
 
 .section_li{
     display: inline-block;
-    width: 19.5rem;
-    margin:3rem 0 0 6rem;
+    max-width: 315px;
+    margin:3rem 4rem 0;
     background-image: linear-gradient(
     to bottom,
     var(--cor3) 0%,
     #C9CAC4 100%
     );
     border-radius:.5rem .5rem;
-}
-
-.section_li+.section_li{
-    margin-left: 6rem;
 }
 
 .text{
