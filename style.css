@@ -87,7 +87,7 @@ a {
 .section_li{
     display: inline-block;
     max-width: 315px;
-    margin:3rem 0 0 3rem;
+    margin:3rem 0 0 4rem;
     background-image: linear-gradient(
     to bottom,
     var(--cor3) 0%,
@@ -97,7 +97,7 @@ a {
 }
 
 .section_li+.section_li{
-    margin-left: 3rem;
+    margin-left: 4rem;
 }
 
 li img{
