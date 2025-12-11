@@ -38,7 +38,7 @@ a {
 }
 
 .cabecalho a+a {
-    margin-left: 2.5rem;
+    margin-left: 3.1rem;
 }
 
 #home{
@@ -73,6 +73,7 @@ a {
 
 #destaques {
     margin-top: 1rem;
+    margin-right: 2rem;
 }
 
 .section_title_cardapio{
@@ -83,7 +84,7 @@ a {
 
 .section_li{
     display: inline-block;
-    width: 21rem;
+    width: 22rem;
     margin:3rem 0 0 5rem;
     background-image: linear-gradient(
     to bottom,
@@ -93,17 +94,16 @@ a {
     border-radius:.5rem .5rem;
 }
 
-li img{
-    height: 28.5rem;
-    width: 21rem;
-    border-radius: .5rem .5rem 0 0;
-}
-
 .text{
     padding: 0.5rem;
     color: var(#5a5959);
 }
 
+li img{
+    height: 28.5rem;
+    width: 22rem;
+    border-radius: .5rem .5rem 0 0;
+}
 
 #sobre {
     margin-top: 6rem;
