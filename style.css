@@ -47,7 +47,7 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-bottom: 14rem;
+    padding-bottom: 21rem;
 }
 
 #home div{
@@ -75,7 +75,7 @@ a {
 }
 
 #destaques {
-    margin-top: 1rem;
+    margin-top: 3.8rem;
     position: relative;
 }
 
@@ -92,9 +92,9 @@ h3{
 .section_li{
     display: inline-block;
     padding: 0;
-    width: 320px;
-    max-width: 1020px;
-    margin:3rem 0 0 1rem;
+    width: 330px;
+    
+    margin:3rem 0 0 1.5rem;
     background-image: linear-gradient(
     to bottom,
     var(--cor3) 0%,
@@ -103,12 +103,12 @@ h3{
     border-radius:.5rem .5rem;
 }
 .section_li+.section_li{
-    margin-left: 1rem;
+    margin-left: 1.5rem;
     padding: 0;
 }
 li img{
     height: 28.5rem;
-    max-width: 320px;
+    max-width: 330px;
     border-radius: .5rem .5rem 0 0;
 }
 .text{
