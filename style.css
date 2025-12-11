@@ -22,7 +22,7 @@ body{
 
 a {
     text-decoration: none;
-    color: var(--cor3);
+    color: #682a2a;
 }
 
 .cabecalho {
@@ -49,7 +49,7 @@ a {
 
 #home div{
     text-align: center;
-    padding: 37% 0% 80% 20%;
+    padding: 44% 0% 0% 20%;
     color: var(--cor2);
 }
 
@@ -73,7 +73,6 @@ a {
 
 #destaques {
     margin-top: 1rem;
-    margin: auto;
 }
 
 .section_title_cardapio{
@@ -92,6 +91,10 @@ a {
     #C9CAC4 100%
     );
     border-radius:.5rem .5rem;
+}
+
+.section_li+.section_li{
+    margin-left: 6rem;
 }
 
 .text{
