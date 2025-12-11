@@ -84,7 +84,7 @@ a {
 
 .section_li{
     display: inline-block;
-    max-width: 320px;
+    max-width: 312px;
     margin:3rem 0 0 6.5rem;
     background-image: linear-gradient(
     to bottom,
@@ -101,7 +101,7 @@ a {
 
 li img{
     height: 28.5rem;
-    width: 320px;
+    width: 312px;
     border-radius: .5rem .5rem 0 0;
 }
 
