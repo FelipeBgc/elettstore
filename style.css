@@ -45,7 +45,7 @@ a {
     background-image:url("imagens/imagem.elett.jpg");
     background-position: center;
     background-size: cover;
-    min-height: 610px;
+    min-height: 600px;
 }
 
 #home div{
@@ -74,7 +74,6 @@ a {
 
 #destaques {
     margin-top: 1rem;
-    
 }
 
 .section_title_cardapio{
@@ -86,7 +85,7 @@ a {
 .section_li{
     display: inline-block;
     max-width: 310px;
-    margin:3rem 0 0 6rem;
+    margin:3rem 4rem 0;
     background-image: linear-gradient(
     to bottom,
     var(--cor3) 0%,
@@ -95,16 +94,16 @@ a {
     border-radius:.5rem .5rem;
 }
 
+li img{
+    height: 28.5rem;
+    max-width: 310px;
+    border-radius: .5rem .5rem 0 0;
+}
 .text{
     padding: 0.5rem;
     color: var(#5a5959);
 }
 
-li img{
-    height: 28.5rem;
-    width: 310px;
-    border-radius: .5rem .5rem 0 0;
-}
 
 #sobre {
     margin-top: 6rem;
