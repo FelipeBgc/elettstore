@@ -38,7 +38,7 @@ a {
 }
 
 .cabecalho a+a {
-    margin-left: 3.1rem;
+    margin-left: 2.5rem;
 }
 
 #home{
@@ -83,7 +83,7 @@ a {
 
 .section_li{
     display: inline-block;
-    width: 22rem;
+    width: 21rem;
     margin:3rem 0 1.5rem 5rem;
     background-image: linear-gradient(
     to bottom,
@@ -100,7 +100,7 @@ a {
 
 li img{
     height: 28.5rem;
-    width: 22rem;
+    width: 21rem;
     border-radius: .5rem .5rem 0 0;
 }
 
