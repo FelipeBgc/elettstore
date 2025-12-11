@@ -73,7 +73,7 @@ a {
 
 #destaques {
     margin-top: 1rem;
-    margin-right: 2rem;
+    margin: auto;
 }
 
 .section_title_cardapio{
@@ -84,7 +84,7 @@ a {
 
 .section_li{
     display: inline-block;
-    width: 22rem;
+    max-width: 340px;
     margin:3rem 0 0 5rem;
     background-image: linear-gradient(
     to bottom,
@@ -101,7 +101,7 @@ a {
 
 li img{
     height: 28.5rem;
-    width: 22rem;
+    max-width: 340px;
     border-radius: .5rem .5rem 0 0;
 }
 
