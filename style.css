@@ -117,7 +117,7 @@ li img{
 
 
 #sobre {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     position: relative;
     background-image: linear-gradient(
     to bottom,
@@ -156,27 +156,35 @@ address > * {
   text-align: left;
 }
 
+#email, a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+#contact {
+    background-color: #1C1C1C;
+    color: #fff;
+}
+
 #contact .title{
     text-align: center;
-    margin-top: 2rem;
+    padding-top: 2rem;
 }
 
 .button_end {
     text-align: center;
 }
 
-.button_end a{
-    background-color: var(--cor1);
-    padding: 1rem 1.9rem;
-    border-radius: .4rem;
+.button_end {
     font-weight: 600;
     font-size: 1rem;
+    padding-bottom: 2rem;
 }
 
 footer{
     background-color: var(--cor3);
     color: var(--cor1);
     padding: 1rem;
-    margin-top: 3rem;
+    
     text-align: center;
 }
