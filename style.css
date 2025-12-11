@@ -45,6 +45,8 @@ a {
     background-image:url("imagens/imagem.elett.jpg");
     background-position: center;
     background-size: cover;
+    min-height: 570px;
+    min-width: 312px;
 }
 
 #home div{
