@@ -18,7 +18,7 @@ html {
 
 body{
     background-color: var(--cor1);
-    min-width: 320px;
+    min-width: 390px;
 }
 
 a {
@@ -87,7 +87,7 @@ a {
 .section_li{
     display: inline-block;
     max-width: 359px;
-    margin:3rem 4rem 0 4rem;
+    margin:3rem 4rem 0 1rem;
     background-image: linear-gradient(
     to bottom,
     var(--cor3) 0%,
