@@ -22,7 +22,7 @@ body{
 
 a {
     text-decoration: none;
-    color: #682a2a;
+    color: var(--cor3);
 }
 
 .cabecalho {
@@ -73,6 +73,7 @@ a {
 
 #destaques {
     margin-top: 1rem;
+    min-width: 320px;
 }
 
 .section_title_cardapio{
