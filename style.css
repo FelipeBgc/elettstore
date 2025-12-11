@@ -45,8 +45,8 @@ a {
     background-image:url("imagens/imagem.elett.jpg");
     background-position: center;
     background-size: cover;
-    min-height: 570px;
-    min-width: 312px;
+    min-height: 610px;
+    min-width: 300px;
 }
 
 #home div{
@@ -86,7 +86,7 @@ a {
 
 .section_li{
     display: inline-block;
-    max-width: 312px;
+    max-width: 300px;
     margin:3rem 0 0 6.5rem;
     background-image: linear-gradient(
     to bottom,
@@ -103,7 +103,7 @@ a {
 
 li img{
     height: 28.5rem;
-    width: 312px;
+    width: 300px;
     border-radius: .5rem .5rem 0 0;
 }
 
