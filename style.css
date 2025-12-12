@@ -26,7 +26,7 @@ a {
 }
 
 .cabecalho {
-    padding: 1.5rem 0;
+    padding: 1.3rem 0;
     background-color: var(--cor3);
     text-align: center;
     font-weight: 600;
@@ -125,7 +125,7 @@ li img{
     border-radius: .5rem .5rem;
     text-align: left;
     font-size: 70%;
-    padding: .1rem 0 .2rem .3rem;
+    padding: .1rem 0 0rem .3rem;
     color: var(#5a5959);
 }
 
