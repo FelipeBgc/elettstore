@@ -23,7 +23,6 @@ body{
 
 a {
     text-decoration: none;
-    color: var(--cor3);
 }
 
 .cabecalho {
@@ -32,6 +31,10 @@ a {
     text-align: center;
     font-weight: 600;
     font-size: 1rem;
+}
+
+nav>a:hover{
+    padding: 1px;
 }
 
 .cabecalho a {
@@ -47,7 +50,6 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-bottom: 21rem;
 }
 
 #home div{
@@ -85,15 +87,24 @@ a {
     font: normal 400 2rem 'Segoe UI', serif;
 }
 
+li>a{
+    color: var(--cor3);
+}
+
 h3{
     text-decoration: underline;
+}
+
+.section_li+.section_li:hover{
+    box-shadow: 0px 3px rgba(0, 0, 0, 0);
 }
 
 .section_li{
     display: inline-block;
     padding: 0;
-    width: 330px;
-    margin:3rem 0 0 2rem;
+    height: 223px;
+    width: 159px;
+    margin:3rem 0 0 1.6rem;
     background-image: linear-gradient(
     to bottom,
     var(--cor3) 0%,
@@ -102,22 +113,26 @@ h3{
     border-radius:.5rem .5rem;
 }
 .section_li+.section_li{
-    margin-left: 2rem;
+    margin-left: 1.6rem;
     padding: 0;
 }
 li img{
-    height: 28.5rem;
-    max-width: 330px;
+    height: 180px;
+    width: 159px;
     border-radius: .5rem .5rem 0 0;
 }
 .text{
-    padding: 0.5rem;
+    box-shadow: 0px 4px 1px rgba(0, 0, 0, 0.37);
+    border-radius: .5rem .5rem;
+    text-align: left;
+    font-size: 70%;
+    padding: .1rem 0 .2rem .3rem;
     color: var(#5a5959);
 }
 
 
 #sobre {
-    margin-top: 1.5rem;
+    margin-top: 3rem;
     position: relative;
     background-image: linear-gradient(
     to bottom,
@@ -127,10 +142,11 @@ li img{
     url("img/9juv4s551xfskgjmbz6jsau2hbk2.jpg");
     background-size: cover;
     background-position: center;
+    box-shadow: 0px -6px 15px rgba(0, 0, 0, 0.082);
 }
 
 .section_sobre{
-    padding: 4rem;
+    padding: 7rem 4rem 10rem 4rem;
     color: var(--cor2);
     text-align: center;
 }
@@ -145,7 +161,7 @@ li img{
 }
 
 address {
-  margin: 2rem 0;
+  margin: 1.6rem;
   font-style: italic;
 }
 
@@ -168,7 +184,7 @@ address > * {
 
 #contact .title{
     text-align: center;
-    padding-top: 2rem;
+    padding-top: 4.5rem;
 }
 
 .button_end {
@@ -185,6 +201,5 @@ footer{
     background-color: var(--cor3);
     color: var(--cor1);
     padding: 1rem;
-    
     text-align: center;
 }
