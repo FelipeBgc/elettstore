@@ -91,9 +91,7 @@ li>a{
     color: var(--cor3);
 }
 
-.section_li{
-    box-shadow: 0px 10px 9px rgba(0, 0, 0, 0.37);
-}
+
 
 h3{
     text-decoration: underline;
