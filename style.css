@@ -17,39 +17,132 @@ html {
 }
 
 body{
-    background-color: var(--cor1);
+    background-color: var(--cor2);
     min-width: 320px;
 }
 
-a {
-    text-decoration: none;
-}
-
-.cabecalho {
-    padding: 1.3rem 0;
-    background-color: var(--cor3);
+header nav{
+    display: flex;
+    background-color: var(--cor1);
+    justify-content: space-around;
     text-align: center;
-    font-weight: 600;
-    font-size: 1rem;
+    align-items: center;
+    width: 100%;
+    height: 8vh;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    position: fixed;
+    transition: all .35s ease;
+    padding: 8px 0 20px 8% ;  
 }
 
-nav>a:hover{
-    padding: 1px;
+.mobile-menu{
+    min-width: 20px;
+    height: 20px;
+    background-color: var(--cor2);
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1rem;
 }
 
-.cabecalho a {
-     color: var(--cor4);
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #333;
+    border-radius: 10px;
+    transition: 400ms ease;
 }
 
-.cabecalho a+a {
-    margin-left: 1.5rem;
+.line-2 {
+    margin: 2px 0;
 }
 
-#home{
-    background-image:url("imagens/imagem.elett.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+#checkbox:checked ~.line-2 {
+    opacity: 0;
+}
+
+#checkbox:checked ~.line-1 {
+    rotate: 45deg;
+    translate: 0 3px;
+}
+
+#checkbox:checked ~.line-3 {
+    rotate: -45deg;
+    translate: 0 -3px;
+}
+
+ion-icon {
+    min-width: 35px;
+    height: 35px;
+    color: var(--cor2);
+    cursor: pointer;
+}
+
+@media {
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 12.11vh;
+        left: 0;
+        width: 90vw;
+        height: 92vh;
+        background-color: var(--cor1);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translate(-100%);
+        transition: transform 0.3s ease-in;
+    }
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translate(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.nav-list a{
+    color: var(--cor2);
+    text-decoration: none;
+    transition: .3s;
+}
+
+.nav-list a:hover{
+    opacity: 0.7;
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li{
+    letter-spacing: 3px;
+    opacity: 0;
+    margin-left: 0;
+}
+
+nav{
+    display: block;
+}
+
+.nav-list.active{
+    transform: translate(0);
 }
 
 #home div{
