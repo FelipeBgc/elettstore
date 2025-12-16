@@ -40,7 +40,6 @@ header nav{
 .mobile-menu{
     min-width: 20px;
     height: 20px;
-    background-color: var(--cor2);
     border-radius: 15px;
     cursor: pointer;
     padding: 2px;
@@ -52,14 +51,16 @@ header nav{
 
 .line {
     width: 100%;
-    height: 1px;
-    background-color: #333;
+    height: 2px;
+    background-color: #ffffff;
     border-radius: 10px;
     transition: 400ms ease;
+    cursor: pointer;
 }
 
 .line-2 {
-    margin: 2px 0;
+    margin: 5px 0;
+    cursor: pointer;
 }
 
 #checkbox:checked ~.line-2 {
@@ -77,15 +78,15 @@ header nav{
 }
 
 ion-icon {
-    min-width: 35px;
+    width: 35px;
     height: 35px;
     color: var(--cor2);
-    cursor: pointer;
+    margin-top: 2px;
 }
 
 
-
-    .header-mobile .bg .container.line.d-flex .logo {
+@media (max-width: 769px) {
+    .header .logo {
         position: static;
         transform: none;
         width: calc(50% - 20px);
@@ -310,4 +311,77 @@ footer{
     color: var(--cor1);
     padding: 1rem;
     text-align: center;
+}
+
+.snow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: 1000; /* Bring above content */
+  pointer-events: none; /* Don’t block clicks */
+
+  background: none;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/flake1.png"),
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/flake2.png"),
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/flake3.png");
+  background-repeat: repeat;
+  background-size: 600px 600px;
+
+  /* Single standard animation, no vendor prefixes needed now */
+  animation: snow 10s linear infinite;
+}
+
+/* =========================================
+   KEYFRAMES – shared by both layers
+   - Moves multiple background layers
+     at different speeds/directions
+========================================= */
+@keyframes snow {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px;
+  }
+  50% {
+    background-position: 500px 500px, 100px 200px, -100px 150px;
+  }
+  100% {
+    background-position: 500px 1000px, 200px 400px, -100px 300px;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+
+  /* Main winter-night gradient */
+  background:
+    radial-gradient(
+      circle at 50% 120%,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0) 60%
+    ),
+    radial-gradient(
+      circle at 80% 0%,
+      rgba(199, 207, 214, 0.25) 0%,
+      rgba(0, 0, 0, 0) 50%
+    ),
+    radial-gradient(
+      circle at 20% -10%,
+      rgba(255, 200, 255, 0.25) 0%,
+      rgba(0, 0, 0, 0) 45%
+    ),
+    linear-gradient(
+      to bottom,
+      #fafafa 0%,
+      rgba(255, 255, 255, 0.30%) 30%,
+      rgba(255, 254, 254, 0.486) 60%,
+      #050b16 100%
+    );
+
+  background-attachment: fixed;
+  color: white;
+  overflow-x: hidden;
 }
