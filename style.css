@@ -274,7 +274,7 @@ h3{
     display: inline-block;
     padding: 0;
     height: 223px;
-    width: 163px;
+    width: 160px;
     margin:3rem 0 0 1rem;
     background-image: linear-gradient(
     to bottom,
@@ -289,7 +289,7 @@ h3{
 }
 li img{
     height: 180px;
-    width: 163px;
+    width: 160px;
     border-radius: .5rem .5rem 0 0;
 }
 .text{
