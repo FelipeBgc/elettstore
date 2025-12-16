@@ -351,6 +351,11 @@ footer{
   }
 }
 
+
+
+
+
+
 body {
   margin: 0;
   padding: 0;
@@ -375,9 +380,9 @@ body {
     ),
     linear-gradient(
       to bottom,
-      #fafafa 0%,
-      rgba(255, 255, 255, 0.30%) 30%,
-      rgba(255, 254, 254, 0.486) 60%,
+      #000000 0%,
+      #0c0c0cf6 30%,
+      #08101f 60%,
       #050b16 100%
     );
 
