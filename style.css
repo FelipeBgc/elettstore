@@ -102,7 +102,7 @@ body{
         top: 12.11vh;
         left: 0;
         width: 90vw;
-        height: 92vh;
+        height: 80vh;
         background-color: var(--cor1);
         flex-direction: column;
         align-items: center;
@@ -205,7 +205,7 @@ h3{
     padding: 0;
     height: 223px;
     width: 160px;
-    margin:3rem 0 0 1.6rem;
+    margin:3rem 0 0 1.4rem;
     background-image: linear-gradient(
     to bottom,
     var(--cor3) 0%,
@@ -214,7 +214,7 @@ h3{
     border-radius:.5rem .5rem;
 }
 .section_li+.section_li{
-    margin-left: 1.6rem;
+    margin-left: 1.4rem;
     padding: 0;
 }
 li img{
