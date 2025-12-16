@@ -116,6 +116,7 @@ body{
 }
 
 
+
 @keyframes navLinkFade {
     from {
         opacity: 0;
@@ -132,6 +133,7 @@ body{
     color: var(--cor3);
     text-decoration: none;
     transition: .3s;
+    
 }
 
 .nav-list a:hover{
