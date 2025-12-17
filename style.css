@@ -8,7 +8,7 @@
     --cor1: #777777;
     --cor2: #fff;
     --cor3: #000000;
-    --cor4:#EAEAEA;
+    --cor4:#0000009f;
     --cor5:#A1A09A;
 }
 
@@ -16,9 +16,40 @@ html {
   scroll-behavior: smooth;
 }
 
-body{
-    background-color: var(--cor2);
-    min-width: 320px;
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+
+  /* Main winter-night gradient */
+  background:
+    radial-gradient(
+      circle at 50% 120%,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0) 60%
+    ),
+    radial-gradient(
+      circle at 80% 0%,
+      rgba(199, 207, 214, 0.25) 0%,
+      rgba(0, 0, 0, 0) 50%
+    ),
+    radial-gradient(
+      circle at 20% -10%,
+      rgba(255, 200, 255, 0.25) 0%,
+      rgba(0, 0, 0, 0) 45%
+    ),
+    linear-gradient(
+      to bottom,
+      #000000 0%,
+      #0c0c0cf6 30%,
+      #08101f 60%,
+      #050b16 100%
+    );
+
+  background-attachment: fixed;
+  color: white;
 }
 
 header nav{
@@ -93,10 +124,6 @@ ion-icon {
     }
 }
 
-body{
-    overflow-x: hidden; 
-}
-
 .nav-list {
         position: absolute;
         top: 18.2vh;
@@ -161,7 +188,7 @@ nav{
 
 .search-box{
     position: fixed;
-    top: 12.2%;
+    top: 12%;
     left: 100%;
     transform: translate(-100%, 0%);
     background: var(--cor2);
@@ -212,7 +239,7 @@ nav{
 }
 
 .search-txt{
-    position: relative;
+  position: relative;
   border: none;
   background: none;
   outline:none;
@@ -223,99 +250,88 @@ nav{
   text-align: left;
 }
 
-body {
-  padding: 0px;
-  margin: 0px;
-  font-family: "Roboto", sans-serif;
-  color: #423f3f;
-  text-transform: uppercase;
-  font-size: 10px;
+.container {
+  font-family: Arial, sans-serif;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  min-width: 380px;
+  margin: 22rem 0rem 2rem 1rem;
 }
 
-.fullheight {
-  height: 150px;
-  background-color: #fa8072;
+.cartao-produto {
+  background-color: white;
+  border-radius: 16px;
+  border: 2.5px solid black;
+  transition: transform 0.3s ease;
+  transition-duration: 0.8s;
+  display: inline-block;
+  width: 160px;
+  height: 325px;
+  margin-left: .8rem;
+  margin-top: 1rem;
+}
+
+.cartao-produto:hover {
+  transform: translateY(-5px);
+}
+
+.img-produto {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
+
+.info-produto {
+  padding: 0 10px;
+}
+
+.titulo-produto {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  color: #050b16;
+}
+
+.preco {
+  font-size: 16px;
+  color: var(--cor4);
+  margin: 1px 0 5px 0;
+}
+
+.add-carrinho {
+  background-color: #4caf50;
+  border: none;
   color: white;
-  font-size: 30px;
-  text-transform: none;
+  padding: 10px 10px;
   text-align: center;
-  padding-top: 100px;
+  text-decoration: none;
+  display: inline;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-/* This is the CSS for the Slider*/
-.productsliderarrow {
-  .arrow {
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Old versions of Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Opera and Firefox */
-    margin-top: 115px;
-    margin-left: 10px;
-    margin-right: 10px;
-    border-radius: 50%;
-    color: rgb(242, 119, 10);
-    display: box;
-    cursor: pointer;
-    background-color: #efefef;
-    z-index: 50;
-    position: absolute;
-    transition: ease 0.5s;
-    &:hover {
-      transform: scale(1.5);
-    }
-  }
-  .right {
-    right: 0px;
-  }
-  .left {
-    left: 0px;
-  }
+.add-to-cart:hover {
+  background-color: #45a049;
 }
 
-.wrapperlinkitem {
-  margin: 10px;
-  a {
-    text-decoration: none;
-    .wrapper-item {
-      border: solid 1px #cbd5e0;
-      box-shadow: 0px 3px 5px #cbd5e0;
-      border-radius: 4px;
-      height: 230px;
-      width: 180px;
-      font-family: "Roboto", sans-serif;
-      transition: ease 0.2s;
-      color: #423f3f;
-      text-align: center;
-      img {
-        width: 100%;
-        height: 170px;
-        object-fit: contain;
-      }
-      h3 {
-        text-decoration: none;
-        width: 100%;
-        margin-top: 10px;
-        font-size: 14px;
-      }
-      &:hover {
-        box-shadow: 0px 5px 7px #cbd5e0;
-        transform: translate(0px, -2px);
-      }
-    }
-  }
+#cart-count {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
 }
-
-.slick-slide {
-  &:focus,
-  a {
-    outline: none;
-  }
-}
-
-/* End of the CSS for the Slider*/
 
 
 
@@ -326,10 +342,7 @@ body {
     to bottom,
     var(--cor1) 0%,
     rgba(0, 0, 0, 0.8) 100%
-    ),
-    url("img/9juv4s551xfskgjmbz6jsau2hbk2.jpg");
-    background-size: cover;
-    background-position: center;
+    );
     box-shadow: 0px -6px 15px rgba(0, 0, 0, 0.082);
 }
 
@@ -360,14 +373,24 @@ address > * {
   text-align: left;
 }
 
-#email, #b {
+#atendimento #b {
     color: #fff;
     text-decoration: underline;
+}
+
+#atendimento> h2{
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin-bottom: 33px;
 }
 
 .ico {
     width: 18px;
     height: 18px;
+    margin-right: 5px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
 }
 
 #contact {
@@ -437,39 +460,4 @@ footer{
   100% {
     background-position: 500px 1000px, 200px 400px, -100px 300px;
   }
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-
-  /* Main winter-night gradient */
-  background:
-    radial-gradient(
-      circle at 50% 120%,
-      rgba(255, 255, 255, 0.05) 0%,
-      rgba(255, 255, 255, 0) 60%
-    ),
-    radial-gradient(
-      circle at 80% 0%,
-      rgba(199, 207, 214, 0.25) 0%,
-      rgba(0, 0, 0, 0) 50%
-    ),
-    radial-gradient(
-      circle at 20% -10%,
-      rgba(255, 200, 255, 0.25) 0%,
-      rgba(0, 0, 0, 0) 45%
-    ),
-    linear-gradient(
-      to bottom,
-      #000000 0%,
-      #0c0c0cf6 30%,
-      #08101f 60%,
-      #050b16 100%
-    );
-
-  background-attachment: fixed;
-  color: white;
-  overflow-x: hidden;
 }
