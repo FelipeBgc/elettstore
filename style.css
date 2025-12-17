@@ -2,6 +2,7 @@
     font-family:"PT Sans", "Noto Sans Khudawadi",system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root{
@@ -52,6 +53,44 @@ body {
   color: white;
 }
 
+.snow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: 1000; /* Bring above content */
+  pointer-events: none; /* Don’t block clicks */
+
+  background: none;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/flake1.png"),
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/flake2.png"),
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/flake3.png");
+  background-repeat: repeat;
+  background-size: 600px 600px;
+
+  /* Single standard animation, no vendor prefixes needed now */
+  animation: snow 10s linear infinite;
+}
+
+/* =========================================
+   KEYFRAMES – shared by both layers
+   - Moves multiple background layers
+     at different speeds/directions
+========================================= */
+@keyframes snow {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px;
+  }
+  50% {
+    background-position: 500px 500px, 100px 200px, -100px 150px;
+  }
+  100% {
+    background-position: 500px 1000px, 200px 400px, -100px 300px;
+  }
+}
+
 header nav{
     display: flex;
     background-color: var(--cor1);
@@ -65,7 +104,7 @@ header nav{
     z-index: 1000;
     position: fixed;
     transition: all .35s ease;
-    padding: 8px 0 20px 8% ;  
+    padding: 30px ;  
 }
 
 .mobile-menu{
@@ -126,13 +165,13 @@ ion-icon {
 
 .nav-list {
         position: absolute;
-        top: 18.2vh;
+        top: 9.3vh;
         left: 0;
-        width: 67.5vw;
-        height: 81.5vh;
-        padding: .5rem 0;
-        background-color: var(--cor2);
-        box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.808);
+        width: 80vw;
+        height: 93.5vh;
+        padding: 1rem 0 1rem 0;
+        background-color: var(--cor1);
+        box-shadow: .5px .5px 7px rgba(0, 0, 0, 0.808);
         border: 0 1.5px  solid rgba(0, 0, 0, 0.712);
         border-radius: 2px 2px;
         flex-direction: column;
@@ -140,6 +179,10 @@ ion-icon {
         justify-content: space-around;
         transform: translate(-100%);
         transition: transform 0.3s ease-in;
+}
+
+.header .nav-list {
+  text-align: left;
 }
 
 
@@ -157,10 +200,9 @@ ion-icon {
 }
 
 .nav-list a{
-    color: var(--cor3);
+    color: var(--cor2);
     text-decoration: none;
     transition: .3s;
-    
 }
 
 .nav-list a:hover{
@@ -188,13 +230,13 @@ nav{
 
 .search-box{
     position: fixed;
-    top: 12%;
+    top: 9%;
     left: 100%;
     transform: translate(-100%, 0%);
     background: var(--cor2);
     display: flex;
     width: 100%;
-    z-index: 1000;
+    z-index: 500;
     transition: all .35s ease;
     padding: 6px 0 7px 0;  
 }
@@ -206,13 +248,12 @@ nav{
   background: var(--cor2);
   display: flex;
   align-items: center;
-  justify-content: center;
   transition: 0.4s;
 }
 
 .search-box> .search-txt {
     min-width: 90vw;
-    padding: 0 33px 0 5px; 
+    padding: 0 10px 0 8px; 
 }
 
 .search-box{
@@ -362,50 +403,216 @@ nav{
 }
 
 address {
-  margin: 1.6rem;
   font-style: italic;
-}
-
-address > * {
+  color: var(--cor2);
   display: inline-block;
-  margin: 1.5rem;
-  margin-left: 7%;
-  text-align: left;
+  
 }
+  
+  #contact .title{
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 4.5rem;
+  }
 
-#atendimento #b {
-    color: #fff;
-    text-decoration: underline;
-}
 
-#atendimento> h2{
-    font-weight: 800;
-    font-size: 1.5rem;
-    margin-bottom: 33px;
-}
-
-.ico {
-    width: 18px;
-    height: 18px;
-    margin-right: 5px;
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-}
-
-#contact {
-     background-image: linear-gradient(
+.footer-distributed{
+	background-image: linear-gradient(
     to top,
     var(--cor1) 0%,
     rgba(0, 0, 0, 0.8) 100%
     );
     color: #fff;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
 }
 
-#contact .title{
-    text-align: center;
-    padding-top: 4.5rem;
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
 }
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	padding: 0;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.43;
+  letter-spacing: .14px;
+	margin-bottom: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+  font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #222;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons img{
+	max-height: 30px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  padding-right: 3.9px;
+  border-radius: 4px;
+  margin-left: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center .footer-links{
+  margin-left: 1.1rem;
+}
+
+.footer-distributed .footer-center i{
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+  font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  lightseagreen;
+	text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-right .footer-links{
+  color:  #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.43;
+  letter-spacing: .14px;
+	margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0 ;
+}
+
+.footer-distributed .footer-company-about p {
+  margin-left: .4rem;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 769px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: left;
+	}
+
+  .footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+    width: 90%;
+  }
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+  
+  .ico {
+      width: 18px;
+      height: 18px;
+      margin-right: 5px;
+      display: inline-block;
+      align-items: center;
+      justify-content: center;
+  }
 
 .button_end {
     text-align: center;
@@ -414,10 +621,10 @@ address > * {
 .button_end {
     font-weight: 600;
     font-size: 1rem;
-    padding-bottom: 2rem;
+    padding-top: 2rem;
 }
 
-footer{
+.footer-name{
     background-color: var(--cor3);
     color: var(--cor1);
     padding: 1rem;
