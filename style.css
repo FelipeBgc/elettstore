@@ -109,6 +109,7 @@ header nav{
 
 .mobile-menu{
     min-width: 20px;
+    z-index: 1100;
     height: 20px;
     border-radius: 15px;
     cursor: pointer;
@@ -165,11 +166,11 @@ ion-icon {
 
 .nav-list {
         position: fixed;
-        top: 8.9vh;
+        top: 0;
         left: 0;
         width: 80vw;
-        height: 93.5vh;
-        padding: 1rem 0 1rem 0;
+        height: 105vh;
+        padding: 3rem 0 1rem 0;
         background-color: var(--cor1);
         box-shadow: .5px .5px 7px rgba(0, 0, 0, 0.808);
         border: 0 1.5px  solid rgba(0, 0, 0, 0.712);
@@ -230,15 +231,15 @@ nav{
 
 .search-box{
     position: fixed;
-    top: 8.2%;
+    top: 8%;
     left: 100%;
     transform: translate(-100%, 0%);
     background: var(--cor2);
     display: flex;
     width: 100%;
-    z-index: 500;
+    z-index: 900;
     transition: all .35s ease;
-    padding: 6px 0 7px 0;  
+    padding: 0px 0 7px 0;  
 }
 
 .search-button{
@@ -247,12 +248,12 @@ nav{
   background: var(--cor2);
   display: flex;
   align-items: center;
-  padding-top: .3rem;
+  padding-top: 1rem;
 }
 
 .search-box> .search-txt {
     min-width: 90vw;
-    padding: 0 10px 0 8px; 
+    padding: 1rem 10px 0 8px; 
 }
 
 .search-box{
@@ -296,17 +297,11 @@ nav{
   background-color: white;
   border-radius: 16px;
   border: 2.5px solid black;
-  transition: transform 0.3s ease;
-  transition-duration: 0.8s;
   display: inline-block;
   width: 160px;
   height: 325px;
   margin-left: .8rem;
   margin-top: 1rem;
-}
-
-.cartao-produto:hover {
-  transform: translateY(-5px);
 }
 
 .img-produto {
@@ -497,7 +492,6 @@ address {
 	font-size: 25px;
 	width: 38px;
 	height: 38px;
-
 	margin: 10px 15px;
 	vertical-align: middle;
 }
