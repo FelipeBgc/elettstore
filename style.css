@@ -230,7 +230,7 @@ nav{
 
 .search-box{
     position: fixed;
-    top: 9%;
+    top: 8.2%;
     left: 100%;
     transform: translate(-100%, 0%);
     background: var(--cor2);
@@ -243,12 +243,11 @@ nav{
 
 .search-button{
   color: var(--cor3);
-  float: right;
   width: 50px;
   background: var(--cor2);
   display: flex;
   align-items: center;
-  transition: 0.4s;
+  padding-top: .3rem;
 }
 
 .search-box> .search-txt {
@@ -264,13 +263,6 @@ nav{
 
 .search-box:hover > .search-button {
     background: var(--cor2);
-}
-
-.fas-fa-search {
-    position: fixed;
-    top: 10%;
-    background-color: #fff;
-    padding-right: 40px;
 }
 
 .search{
