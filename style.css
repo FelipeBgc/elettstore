@@ -213,7 +213,7 @@ nav{
   display: inline-block;
   width: 167px;
   height: 350px;
-  margin-left: 1.6rem;
+  margin-left: 1rem;
   margin-top: 3rem;
 }
 
@@ -240,7 +240,7 @@ nav{
   font-weight: 500;
   font-size: 1.2rem;
   color: var(--cor4);
-  margin: 18px 0 15px .6rem;
+  margin: 18px 0 9px .6rem;
 }
 
 .add-carrinho {
