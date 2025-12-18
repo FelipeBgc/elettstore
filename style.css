@@ -41,7 +41,7 @@ header nav{
     position: fixed;
     transition: all .35s ease;
     padding: 30px ;  
-    gap: 3rem;
+    gap: 4.4rem;
 }
 
 .mobile-menu{
@@ -76,15 +76,6 @@ ion-icon {
     height: 35px;
     color: var(--cor2);
     margin-top: 2px;
-}
-
-
-@media (max-width: 769px) {
-    .header .logo {
-        position: static;
-        transform: none;
-        width: calc(50% - 20px);
-    }
 }
 
 .nav-list {
