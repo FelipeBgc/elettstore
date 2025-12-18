@@ -213,7 +213,7 @@ nav{
   display: inline-block;
   width: 167px;
   height: 350px;
-  margin-left: .8rem;
+  margin-left: 1.6rem;
   margin-top: 3rem;
 }
 
@@ -226,6 +226,7 @@ nav{
 
 .info-produto {
   padding: 0 1px;
+  height: 100%;
 }
 
 .titulo-produto {
@@ -239,7 +240,7 @@ nav{
   font-weight: 500;
   font-size: 1.2rem;
   color: var(--cor4);
-  margin: 18px 0 25px .6rem;
+  margin: 18px 0 15px .6rem;
 }
 
 .add-carrinho {
@@ -254,7 +255,7 @@ nav{
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-left: .3rem;
+  margin-left: .5rem;
 }
 
 .add-to-cart:hover {
