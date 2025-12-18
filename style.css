@@ -15,80 +15,16 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
-  min-width: 320px;
+  min-width: 100%;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
   height: 100vh;
-
-  /* Main winter-night gradient */
-  background:
-    radial-gradient(
-      circle at 50% 120%,
-      rgba(255, 255, 255, 0.05) 0%,
-      rgba(255, 255, 255, 0) 60%
-    ),
-    radial-gradient(
-      circle at 80% 0%,
-      rgba(199, 207, 214, 0.25) 0%,
-      rgba(0, 0, 0, 0) 50%
-    ),
-    radial-gradient(
-      circle at 20% -10%,
-      rgba(255, 200, 255, 0.25) 0%,
-      rgba(0, 0, 0, 0) 45%
-    ),
-    linear-gradient(
-      to bottom,
-      #000000 0%,
-      #0c0c0cf6 30%,
-      #08101f 60%,
-      #050b16 100%
-    );
-
   background-attachment: fixed;
-  color: white;
-}
-
-.snow {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  z-index: 1000; /* Bring above content */
-  pointer-events: none; /* Don’t block clicks */
-
-  background: none;
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/flake1.png"),
-    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/flake2.png"),
-    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/flake3.png");
-  background-repeat: repeat;
-  background-size: 600px 600px;
-
-  /* Single standard animation, no vendor prefixes needed now */
-  animation: snow 10s linear infinite;
-}
-
-/* =========================================
-   KEYFRAMES – shared by both layers
-   - Moves multiple background layers
-     at different speeds/directions
-========================================= */
-@keyframes snow {
-  0% {
-    background-position: 0px 0px, 0px 0px, 0px 0px;
-  }
-  50% {
-    background-position: 500px 500px, 100px 200px, -100px 150px;
-  }
-  100% {
-    background-position: 500px 1000px, 200px 400px, -100px 300px;
-  }
 }
 
 header nav{
@@ -105,10 +41,11 @@ header nav{
     position: fixed;
     transition: all .35s ease;
     padding: 30px ;  
+    gap: 3rem;
 }
 
 .mobile-menu{
-    min-width: 20px;
+    min-width: 29px;
     z-index: 1100;
     height: 20px;
     border-radius: 15px;
@@ -117,7 +54,7 @@ header nav{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 1rem;
+    
 }
 
 .line {
@@ -132,20 +69,6 @@ header nav{
 .line-2 {
     margin: 5px 0;
     cursor: pointer;
-}
-
-#checkbox:checked ~.line-2 {
-    opacity: 0;
-}
-
-#checkbox:checked ~.line-1 {
-    rotate: 45deg;
-    translate: 0 3px;
-}
-
-#checkbox:checked ~.line-3 {
-    rotate: -45deg;
-    translate: 0 -3px;
 }
 
 ion-icon {
@@ -169,21 +92,17 @@ ion-icon {
         top: 0;
         left: 0;
         width: 80vw;
-        height: 105vh;
+        height: 100vh;
         padding: 3rem 0 1rem 0;
         background-color: var(--cor1);
         box-shadow: .5px .5px 7px rgba(0, 0, 0, 0.808);
         border: 0 1.5px  solid rgba(0, 0, 0, 0.712);
         border-radius: 2px 2px;
         flex-direction: column;
-        align-items: center;
+        text-align: left;
         justify-content: space-around;
         transform: translate(-100%);
         transition: transform 0.3s ease-in;
-}
-
-.header .nav-list {
-  text-align: left;
 }
 
 
@@ -204,6 +123,9 @@ ion-icon {
     color: var(--cor2);
     text-decoration: none;
     transition: .3s;
+    margin-left: 4rem;
+    font-weight: 500;
+    font-size: 1.2rem;
 }
 
 .nav-list a:hover{
@@ -289,50 +211,52 @@ nav{
   display: inline-block;
   justify-content: center;
   align-items: center;
-  min-width: 380px;
-  margin: 22rem 0rem 2rem 1rem;
+  min-width: 230px;
+  margin: 22rem 0rem 2rem 0rem;
 }
 
 .cartao-produto {
   background-color: white;
-  border-radius: 16px;
-  border: 2.5px solid black;
+  border-radius: 6px;
+  border: 1px 1px rgba(255, 255, 255, 0.664);
+  box-shadow: .1px .1px 5px black;
   display: inline-block;
-  width: 160px;
-  height: 325px;
-  margin-left: .8rem;
-  margin-top: 1rem;
+  width: 180px;
+  height: 300px;
+  margin-left: 1.4rem;
+  margin-top: 2rem;
 }
 
 .img-produto {
   width: 100%;
   height: 50%;
   object-fit: cover;
-  border-radius: 16px 16px 0 0;
+  border-radius: px 6px 0 0;
 }
 
 .info-produto {
-  padding: 0 10px;
+  padding: 0 6px;
 }
 
 .titulo-produto {
-  font-size: 16px;
   font-weight: bold;
-  margin: 0;
+  font-size: 1.2rem;
+  margin: 4px 0 ;
   color: #050b16;
 }
 
 .preco {
-  font-size: 16px;
+  font-weight: 500;
+  font-size: 1.2rem;
   color: var(--cor4);
-  margin: 1px 0 5px 0;
+  margin: 18px 0 25px .6rem;
 }
 
 .add-carrinho {
   background-color: #4caf50;
   border: none;
   color: white;
-  padding: 10px 10px;
+  padding: 8px 38px;
   text-align: center;
   text-decoration: none;
   display: inline;
@@ -340,6 +264,7 @@ nav{
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-left: .3rem;
 }
 
 .add-to-cart:hover {
@@ -371,7 +296,7 @@ nav{
     var(--cor1) 0%,
     rgba(0, 0, 0, 0.8) 100%
     );
-    
+    width: 102.5%;
     box-shadow: 0px -6px 15px rgba(0, 0, 0, 0.082);
 }
 
@@ -413,10 +338,10 @@ address {
     color: #fff;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
-	width: 100%;
+	width: 102.5%;
 	text-align: left;
 	font: bold 16px sans-serif;
-	padding: 55px 50px;
+	padding: 55px;
 }
 
 .footer-distributed .footer-left,
@@ -517,22 +442,8 @@ address {
 }
 
 .footer-distributed .footer-center p a{
-	color:  lightseagreen;
+	color:  var(--cor2);
 	text-decoration: none;;
-}
-
-.footer-distributed .footer-links a:before {
-  content: "|";
-  font-weight:300;
-  font-size: 20px;
-  left: 0;
-  color: #fff;
-  display: inline-block;
-  padding-right: 5px;
-}
-
-.footer-distributed .footer-links .link-1:before {
-  content: none;
 }
 
 /* Footer Right */
@@ -590,7 +501,6 @@ address {
 	}
 
 }
-
   
   .ico {
       width: 18px;
@@ -613,45 +523,8 @@ address {
 
 .footer-name{
     background-color: var(--cor3);
+    width: 102.5%;
     color: var(--cor1);
     padding: 1rem;
     text-align: center;
-}
-
-.snow {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  z-index: 1000; /* Bring above content */
-  pointer-events: none; /* Don’t block clicks */
-
-  background: none;
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/flake1.png"),
-    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/flake2.png"),
-    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/flake3.png");
-  background-repeat: repeat;
-  background-size: 600px 600px;
-
-  /* Single standard animation, no vendor prefixes needed now */
-  animation: snow 10s linear infinite;
-}
-
-/* =========================================
-   KEYFRAMES – shared by both layers
-   - Moves multiple background layers
-     at different speeds/directions
-========================================= */
-@keyframes snow {
-  0% {
-    background-position: 0px 0px, 0px 0px, 0px 0px;
-  }
-  50% {
-    background-position: 500px 500px, 100px 200px, -100px 150px;
-  }
-  100% {
-    background-position: 500px 1000px, 200px 400px, -100px 300px;
-  }
 }
