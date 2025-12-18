@@ -40,8 +40,8 @@ header nav{
     z-index: 1000;
     position: fixed;
     transition: all .35s ease;
-    padding: 30px ;  
-    gap: 2.7rem;
+    padding: 30px 20px 30px 5px;  
+    gap: 1.4rem;
 }
 
 .mobile-menu{
@@ -72,10 +72,11 @@ header nav{
 }
 
 ion-icon {
-    width: 35px;
-    height: 35px;
+    width: 24px;
+    height: 24px;
     color: var(--cor2);
     margin-top: 2px;
+    padding-left: 1px;
 }
 
 .nav-list {
@@ -95,8 +96,6 @@ ion-icon {
         transform: translate(-100%);
         transition: transform 0.3s ease-in;
 }
-
-
 
 @keyframes navLinkFade {
     from {
@@ -213,7 +212,7 @@ nav{
   display: inline-block;
   width: 170px;
   height: 350px;
-  margin-left: 1.1rem;
+  margin-left: 1rem;
   margin-top: 3rem;
 }
 
