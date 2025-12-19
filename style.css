@@ -103,7 +103,7 @@ header nav{
     top: 0;
   }
   45%, 50% {
-    right: -800px;
+    right: -600px;
     top: -90px;
   }
   80%, 90% {
@@ -324,6 +324,12 @@ nav{
 
 .add-to-cart:hover {
   background-color: #45a049;
+}
+
+@media (max-width: 769px) {
+  .main .search-box {
+    width: 100%;
+  }
 }
 
 
