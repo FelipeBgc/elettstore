@@ -41,7 +41,7 @@ header nav{
     position: fixed;
     transition: all .35s ease;
     padding: 30px 20px 30px 5px;  
-    gap: 1.4rem;
+    gap: 1rem;
 }
 
 .mobile-menu{
@@ -54,7 +54,9 @@ header nav{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
 }
 
 .line {
@@ -71,30 +73,91 @@ header nav{
     cursor: pointer;
 }
 
+.shopping-cart::before{
+  position: absolute;
+  content: attr(data-product-count);
+  top: 9px;
+  right: 10px;
+  color: var(--cor3);
+  background-color: var(--cor2);
+  font-family: sans-serif;
+  width: 3px;
+  height: 3px;
+  padding: .4rem .6rem .4rem .3rem;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 4px;
+}
+
+/*for Js Code8*/
+.flying-img{
+  position: absolute;
+  animation: fly_to_cart 1s ease-in-out;
+  z-index: 1000;
+}
+
+@keyframes fly_to_cart{
+  0% {
+    right: 0;
+    top: 0;
+  }
+  45%, 50% {
+    right: -800px;
+    top: -90px;
+  }
+  80%, 90% {
+    right: -800px;
+    top: -850px;
+    transform: scale(.2);
+  }
+  100% {
+    right: -800px;
+    top: -850px;
+    transform: scale(.2);
+  }
+}
+
 ion-icon {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
     color: var(--cor2);
-    margin-top: 2px;
-    padding-left: 1px;
+    position: absolute;
+    right: 5px;
+    top: 13px;
+    cursor: pointer;
+}
+
+.conta{
+  position: absolute;
+  right: 3rem;
+  top: 4px;
+  color: #000000;
+}
+
+.cart-icon{
+  position: absolute;
+  right: 1rem;
+  top: 4px;
+  color: #000000;
 }
 
 .nav-list {
         position: fixed;
         top: 0;
         left: 0;
-        width: 80vw;
-        height: 100vh;
-        padding: 3rem 0 0 0;
+        max-width: 99vw;
+        max-height: 105vh;
+        padding: 3rem 2rem 5rem 0;
         background-color: var(--cor1);
         box-shadow: .5px .5px 7px rgba(0, 0, 0, 0.808);
         border: 0 1.5px  solid rgba(0, 0, 0, 0.712);
         border-radius: 2px 2px;
         flex-direction: column;
         text-align: left;
-        gap: 21.7px;
+        gap: 21px;
         transform: translate(-100%);
         transition: transform 0.3s ease-in;
+        z-index: 1000;
 }
 
 @keyframes navLinkFade {
@@ -113,7 +176,7 @@ ion-icon {
     color: var(--cor2);
     text-decoration: none;
     transition: .3s;
-    margin-left: 4rem;
+    margin-left: 2rem;
     font-weight: 500;
     font-size: 1.2rem;
 }
@@ -144,8 +207,6 @@ nav{
 .search-box{
     position: fixed;
     top: 8%;
-    left: 100%;
-    transform: translate(-100%, 0%);
     background: var(--cor2);
     display: flex;
     width: 100%;
@@ -196,16 +257,20 @@ nav{
   text-align: left;
 }
 
-.container {
+.main{
+  margin-top: 22rem;
+}
+
+ .container{
   font-family: Arial, sans-serif;
   display: inline-block;
   justify-content: center;
   align-items: center;
-  min-width: 230px;
-  margin: 22rem 0rem 2rem 0rem;
+  
 }
 
 .cartao-produto {
+  margin: .5rem 0rem 0rem 0rem;
   background-color: white;
   border-radius: 2px;
   box-shadow: .1px .1px 9px rgba(0, 0, 0, 0.267);
@@ -241,7 +306,7 @@ nav{
   margin: 18px 0 20px .6rem;
 }
 
-.add-carrinho {
+.add-to-cart {
   background-color: #4caf50;
   border: none;
   color: white;
