@@ -107,7 +107,7 @@ header nav{
   45%, 50% {
     left: var(--left);
     bottom: 500px;
-    transform: scale(.2);
+    transform: scale(.1);
   }
   80%, 90% {
     left: var(--left);
@@ -329,8 +329,12 @@ nav{
 }
 
 @media (max-width: 769px) {
-  .main .search-box .shopping-cart{
-    width: 100%; 
+  .main .search-box {
+    width: 100%;  
+  }
+
+  .shopping-cart{
+    content: attr(data-product-count);
   }
 }
 
