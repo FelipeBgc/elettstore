@@ -76,8 +76,8 @@ header nav{
 .shopping-cart::before{
   position: absolute;
   content: attr(data-product-count);
-  top: 9px;
-  right: 10px;
+  top: 6px;
+  right: 25px;
   color: var(--cor2);
   background-color: #4caf50;
   font-family: sans-serif;
@@ -93,7 +93,7 @@ header nav{
 /*for Js Code8*/
 .flying-img{
   position: absolute;
-  animation: fly_to_cart 1s ease-in-out;
+  animation: fly_to_cart 2s ease-in-out;
   z-index: 1000;
 }
 
