@@ -107,7 +107,7 @@ header nav{
   45%, 50% {
     left: var(--left);
     bottom: 500px;
-    transform: scale(.1);
+    transform: scale(.2);
   }
   80%, 90% {
     left: var(--left);
