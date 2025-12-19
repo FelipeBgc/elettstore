@@ -7,7 +7,7 @@ for(cart_btn of cart_btns){
         
         shopping_cart.classList.add('active');
 
-        let product_cout = Number(shopping_cart.getAttribute('data-product-count')) || 0;
+        let product_cout = Number(shopping_cart.getAttribute('data-product-count')) | 0;
         shopping_cart.setAttribute('data-product-count' , product_cout + 1)
         
         let target_parent = e.target.parentNode.parentNode.parentNode
@@ -23,14 +23,14 @@ for(cart_btn of cart_btns){
 
         let data = {
             left : shopping_cart_pos.left - (shopping_cart_pos.width / 2 + flying_img_pos.left + flying_img_pos.width / 2),
-            top : shopping_cart_pos.top - flying_img_pos.left + 30
+            bottom : shopping_cart_pos.bottom - flying_img_pos.left + 30
         }
 
-        console.log(data.top);
+        console.log(data.bottom);
 
         flying_img.style.cssText = `
-                                600px : ${data.left.toFixed(2)}px;
-                                400px : ${data.top.toFixed(2)}px;
+                                --left : ${data.left.toFixed(2)}px;
+                                --bottom : ${data.bottom.toFixed(2)}px;
         `
 
         setTimeout (() => {
