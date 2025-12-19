@@ -79,7 +79,7 @@ header nav{
   position: fixed;
   content: attr(data-product-count);
   top: 6px;
-  right: 69px;
+  right: 20px;
   color: var(--cor2);
   background-color: #4caf50;
   font-family: sans-serif;

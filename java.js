@@ -7,8 +7,8 @@ for(cart_btn of cart_btns){
         
         shopping_cart.classList.add('active');
 
-        let product_cout = Number(shopping_cart.getAttribute('data-product-count')) | 0;
-        shopping_cart.setAttribute('data-product-count' , product_cout + 1)
+        let product_cout = Number(shopping_cart.getAttribute('data-product-count')) || 0;
+        shopping_cart.setAttribute('data-product-count' , product_cout + 1);
         
         let target_parent = e.target.parentNode.parentNode.parentNode
         
