@@ -89,6 +89,7 @@ header nav{
   padding: .5rem .6rem .5rem .4rem;
   border-radius: 50%;
   line-height: 4px;
+  z-index: 990;
 }
 
 /*for Js Code8*/
