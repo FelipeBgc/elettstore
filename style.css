@@ -111,18 +111,18 @@ header nav{
   }
   45%, 50% {
     left: var(--left);
-    bottom: 480px;
+    bottom: 445px;
     transform: scale(.2);
   }
   80%, 90% {
     left: var(--left);
     bottom: var(--bottom);
-    transform: scale(.2);
+    transform: scale(.1);
   }
   100% {
     left: calc(var(--left + 40px));
     bottom: var(--bottom);
-    transform: scale(.2);
+    transform: scale(.1);
   }
 }
 
