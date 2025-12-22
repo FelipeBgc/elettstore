@@ -1,11 +1,12 @@
 *{
-    font-family:"PT Sans", "Noto Sans Khudawadi",system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:"PT Sans", "Noto Sans Khudawadi" "Montserrat",system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 :root{
+    --font: "Montserrat";
     --cor1: #777777;
     --cor2: #fff;
     --cor3: #000000;
@@ -275,8 +276,11 @@ nav{
   align-items: center;
 }
 
+.main a{
+  text-decoration: none;
+}
+
 .cartao-produto {
-  margin: .5rem 0rem 0rem 0rem;
   background-color: white;
   border-radius: 2px;
   box-shadow: .1px .1px 9px rgba(0, 0, 0, 0.267);
@@ -284,51 +288,80 @@ nav{
   width: 170px;
   height: 350px;
   margin-left: 1rem;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 .img-produto {
   width: 100%;
-  height: 55%;
+  height: 63%;
   object-fit: cover;
   border-radius: 3px 3px 0 0; 
 }
 
 .info-produto {
   padding: 0 1px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
 }
 
 .titulo-produto {
-  font-weight: bold;
-  font-size: 1rem;
-  margin: 9px 0 ;
-  color: #050b16;
+  opacity: .8;
+  margin-left: .5rem;
+  margin-bottom: 1rem !important;
+  margin-top: .25rem !important;
+  font-size: 16px;
+  line-height: 1.1429em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.795);
 }
 
 .preco {
+  font-family: var(--font, sans-serif);
   font-weight: 500;
   font-size: 1.2rem;
-  color: var(--cor4);
-  margin: 18px 0 20px .6rem;
+  color: var(--cor3);
+  margin: 1px 0 1px .6rem;
+  text-align: left;
 }
 
 .add-to-cart {
   background-color: #4caf50;
   border: none;
+  margin-top: 1rem !important;
   color: white;
   padding: 8px 25px;
   text-align: center;
   text-decoration: none;
-  display: inline;
   font-size: 19px;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-left: .5rem;
 }
 
 .add-to-cart:hover {
   background-color: #45a049;
+}
+
+.porc_desconto {
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 97px;
+    left: 20px;
+    background-color: red;
+    color: var(--cor2);
+    font-size: 12px;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
 }
 
 @media (max-width: 769px) {
@@ -337,10 +370,18 @@ nav{
   }
 }
 
+.b_footer {
+   text-align: center;
+}
 
+.b_footer img{
+    max-width: 100%;
+    margin-top: 4rem;
+    text-align: center;
+}
 
 #sobre {
-    margin-top: 4rem;
+    margin-top: 1rem;
     position: relative;
     background-image: linear-gradient(
     to bottom,
