@@ -92,7 +92,7 @@ header nav{
 }
 
 .shopping-cart.active{
-  width: 11px;
+  width: 1px;
 }
 
 
@@ -112,7 +112,7 @@ header nav{
   }
   45%, 50% {
     left: var(--left);
-    bottom: 500px;
+    bottom: 480px;
     transform: scale(.2);
   }
   80%, 90% {
