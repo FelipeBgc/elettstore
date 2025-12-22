@@ -354,8 +354,8 @@ nav{
     text-align: center;
     justify-content: center;
     flex-direction: column;
-    top: 97px;
-    left: 20px;
+    top: 64px;
+    left: 23px;
     background-color: red;
     color: var(--cor2);
     font-size: 12px;
