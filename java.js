@@ -1,3 +1,5 @@
+//ANIMAÇÃO PRODUTO PRO CARRINHO
+
 const shopping_cart = document.querySelector('.shopping-cart');
 const cart_btns = document.querySelectorAll('.add-to-cart');
 
@@ -10,17 +12,17 @@ for (cart_btn of cart_btns) {
         let product_count = Number(shopping_cart.getAttribute('data-product-count')) || 0;
         shopping_cart.setAttribute('data-product-count', product_count + 1);
 
-        // finding first grand parent of target button 
+        //Encontra o primeiro avô do botão alvo 
         let target_parent = e.target.parentNode.parentNode.parentNode;
         target_parent.style.zIndex = "100";
-        // Creating separate Image
+        // CRIANDO UMA IMAGEM SEPARADA
         let img = target_parent.querySelector('img');
         let flying_img = img.cloneNode();
         flying_img.classList.add('flying-img');
 
         target_parent.appendChild(flying_img);
 
-        // Finding position of flying image
+        // Posição flying image
 
         const flying_img_pos = flying_img.getBoundingClientRect();
         const shopping_cart_pos = shopping_cart.getBoundingClientRect();
@@ -46,6 +48,8 @@ for (cart_btn of cart_btns) {
     }
 }
 
+//ANIMAÇÃO SLIDE
+
 let count = 1;
 document.getElementById("radio1").checked = true;
 
@@ -62,6 +66,8 @@ function nextImage(){
     document.getElementById("radio"+count).checked = true;
 }
 
+
+//LISTA NA PESQUISA
 
 const searchInput = document.getElementById("search");
 
@@ -105,3 +111,47 @@ function formatString(value) {
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g,'');
 }
+
+class SearchLi {
+    constructor(searchBox, li, itemLinks,search) {
+        this.searchBox = document.querySelector(searchBox);
+        this.li = document.querySelector(li);
+        this.itemLinks = document.querySelectorAll(itemLinks);
+        this.activeClass = "active";
+
+        this.handleClick = this.handleClick.bind(this);
+
+        }
+
+        animateLinks() {
+            this.itemLinks.forEach((link) => {
+            link.style.animation
+                ? (link.style.animation = "")
+                : (link.style.animation = `itemLinkFade 0.5s ease forwards 0.3s`);
+            });
+        }
+
+        handleClick() {
+            this.li.classList.toggle(this.activeClass);
+            this.animateLinks();
+        }
+
+        addClickEvent() {
+            this.searchBox.addEventListener("click", this.handleClick);
+        }
+
+        init() {
+            if(this.searchBox) {
+                this.addClickEvent();
+            }
+            return this;
+        }
+    }
+    
+    const searchLi = new SearchLi(
+        ".search-box",
+        ".li",
+        ".li li",
+    );
+    
+    searchLi.init();

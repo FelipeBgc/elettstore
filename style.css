@@ -30,6 +30,8 @@ body {
   background-attachment: fixed;
 }
 
+/*CABEÇALHO*/
+
 header nav{
     display: flex;
     background-color: var(--cor1);
@@ -40,12 +42,14 @@ header nav{
     height: 8vh;
     top: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 1002;
     position: fixed;
     transition: all .35s ease;
     padding: 30px 20px 30px 5px;  
     gap: 1rem;
 }
+
+/*TRES TRAÇOS E LISTA*/
 
 .mobile-menu{
     min-width: 29px;
@@ -74,79 +78,6 @@ header nav{
 .line-2 {
     margin: 5px 0;
     cursor: pointer;
-}
-
-.shopping-cart::before{
-  position: fixed;
-  content: attr(data-product-count);
-  top: 8px;
-  right: 23px;
-  color: var(--cor2);
-  background-color: #4caf50;
-  font-family: sans-serif;
-  font-size: .7rem;
-  width: 18.5px;
-  height: 17px;
-  border-radius: 80%;
-  line-height: 17.5px;
-}
-
-.shopping-cart.active{
-  width: 1px;
-}
-
-/*for Js Code8*/
-.flying-img {
-  position: absolute;
-  animation: fly_to_cart 2s ease-in-out;
-  z-index: 1000;
-}
-
-@keyframes fly_to_cart{
-  0% {
-    left: 0;
-    bottom: 0;
-    transform: scale(.2);
-  }
-  45%, 50% {
-    left: var(--left);
-    bottom: 470px;
-    transform: scale(.2);
-  }
-  80%, 90% {
-    left: var(--left);
-    bottom: var(--bottom);
-    transform: scale(.1);
-  }
-  100% {
-    left: calc(var(--left + 40px));
-    bottom: var(--bottom);
-    transform: scale(.1);
-  }
-}
-
-ion-icon {
-    width: 28px;
-    height: 28px;
-    color: var(--cor2);
-    position: absolute;
-    right: 5px;
-    top: 13px;
-    cursor: pointer;
-}
-
-.conta{
-  position: absolute;
-  right: 3rem;
-  top: 4px;
-  color: #000000;
-}
-
-.cart-icon{
-  position: absolute;
-  right: 1rem;
-  top: 4px;
-  color: #000000;
 }
 
 .nav-list {
@@ -213,7 +144,84 @@ nav{
     transform: translate(0);
 }
 
+/*CARRINHO DE COMPRAS E ANIMAÇÃO*/
+/*MOBILE-NAVBAR.JS (JAVA)*/
 
+.shopping-cart::before{
+  position: fixed;
+  content: attr(data-product-count);
+  top: 8px;
+  right: 23px;
+  color: var(--cor2);
+  background-color: #4caf50;
+  font-family: sans-serif;
+  font-size: .7rem;
+  width: 18.5px;
+  height: 17px;
+  border-radius: 80%;
+  line-height: 17.5px;
+}
+
+.shopping-cart.active{
+  width: 1px;
+}
+
+.flying-img {
+  position: absolute;
+  animation: fly_to_cart 2s ease-in-out;
+  z-index: 1000;
+}
+
+@keyframes fly_to_cart{
+  0% {
+    left: 0;
+    bottom: 0;
+    transform: scale(.2);
+  }
+  45%, 50% {
+    left: var(--left);
+    bottom: 470px;
+    transform: scale(.2);
+  }
+  80%, 90% {
+    left: var(--left);
+    bottom: var(--bottom);
+    transform: scale(.1);
+  }
+  100% {
+    left: calc(var(--left + 40px));
+    bottom: var(--bottom);
+    transform: scale(.1);
+  }
+}
+
+ion-icon {
+    width: 28px;
+    height: 28px;
+    color: var(--cor2);
+    position: absolute;
+    right: 5px;
+    top: 13px;
+    cursor: pointer;
+}
+
+/*PERFIL*/
+
+.conta{
+  position: absolute;
+  right: 3rem;
+  top: 4px;
+  color: #000000;
+}
+
+.cart-icon{
+  position: absolute;
+  right: 1rem;
+  top: 4px;
+  color: #000000;
+}
+
+/*BARRA PESQUISA*/
 
 .search-box{
     position: fixed;
@@ -223,7 +231,7 @@ nav{
     align-items: center;
     justify-content: center;
     width: 100%;
-    z-index: 900;
+    z-index: 1001;
     transition: all .35s ease;
     padding: 15px 8px 10px 16px;  
     gap: 38px;
@@ -268,6 +276,8 @@ nav{
   transition: 0.3s;
   text-align: left;
 }
+
+/*SLIDE*/
 
 .slider{
   margin: 0;
@@ -359,11 +369,11 @@ nav{
   margin-right: 40px;
 }
 
-#radio1:checked ~ .navigation-auto .auto-btn1 {
+#radio1:checked {
   background-color: var(--cor3);
 }
 
-#radio2:checked ~ .navigation-auto .auto-btn2 {
+#radio2:checked ~ .auto-btn2 {
   background-color: var(--cor3);
 }
 
@@ -375,35 +385,68 @@ nav{
   background-color: var(--cor3);
 }
 
+/*LISTA PESQUISA*/
 
-.container{
-  font-family: Arial, sans-serif;
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
+.li.active{
+    transform: translate(1.5%, 70px);
+    z-index: 1000;
+}
+
+@keyframes itemLinkFade {
+    from {
+        opacity: 0;
+        transform: translate(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.li a:hover{
+    opacity: 0.9;
+}
+
+.li a{
+    list-style: none;
+    display: flex;
+    background-color: var(--cor2);
+    padding: 3px;
+    border-radius: 12px;
+    width: 100%;
+    border: 1px solid black;
+    height: 92px;
 }
 
 .li {
   font-family: Arial, sans-serif;
-  position: relative;
-  top: 84px;
-  left: 6px;
-  max-width: 97vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 97%;
   height: 470px;
-  background-color: var(--cor5);
+  background-color: var(--cor2);
   border-radius: 0 0 10px 10px;
-  padding:14px;
+  padding:15px;
   margin-top: 12px;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  z-index: 999.9;
-
+  transform: translate(0%, -100%);
+  transition: 0.3s;
 }
 
 .li li {
   list-style: none;
   margin-top: 12px;
+}
+
+.li a{
+  text-decoration: none;
+  transition: .3s;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 
 .img-produto-li {
@@ -414,22 +457,33 @@ nav{
 }
 
 .img-produto-li img {
-  width: 100px;
-  height: 120px;
+  width: 90px;
+  height: 82.5px;
   object-fit: cover;
   border-radius: 8px;
 }
 
-.item a {
-  display: inline-flex;
-  gap: 12px;
+.item-content {
+  margin-top: .3rem;
+  text-transform: capitalize;
 }
 
-.container> a{
-  text-decoration: none;
+#no_results {
+  display: none;
+  text-align: center;
+  font-size: 1.5rem;
 }
 
-.item a{
+/*PRODUTOS*/
+
+.container{
+  font-family: Arial, sans-serif;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
+
+.container a{
   text-decoration: none;
 }
 
@@ -476,6 +530,7 @@ nav{
   overflow: hidden;
   -webkit-box-orient: vertical;
   text-align: left;
+  text-transform: capitalize;
   color: rgba(0, 0, 0, 0.829);
   z-index: 300;
 }
@@ -552,16 +607,13 @@ nav{
     height: 42px;
   }
 
-#no_results {
-  display: none;
-  text-align: center;
-}
-
 @media (max-width: 769px) {
   .main .search-box {
     width: 100%;  
   }
 }
+
+/*GRUPO WP*/
 
 .b_footer {
    text-align: center;
@@ -572,6 +624,8 @@ nav{
     margin-top: 4rem;
     text-align: center;
 }
+
+/*SOBRE NOS*/
 
 #sobre {
     margin-top: 1rem;
@@ -600,11 +654,12 @@ nav{
     font: normal 400 14px "Noto Sans Khudawadi", sans-serif;
 }
 
+/*CONTATO*/
+
 address {
   font-style: italic;
   color: var(--cor2);
   display: inline-block;
-  
 }
   
   #contact .title{
@@ -613,6 +668,7 @@ address {
     padding-bottom: 4.5rem;
   }
 
+  /*FOOTER*/
 
 .footer-distributed{
 	background-image: linear-gradient(
@@ -636,13 +692,13 @@ address {
 	vertical-align: top;
 }
 
-/* Footer left */
+/* FOOTER ESQUERDO */
 
 .footer-distributed .footer-left{
 	width: 40%;
 }
 
-/* Footer links */
+/* FOOTER LINKS */
 
 .footer-distributed .footer-links{
 	color:  #ffffff;
@@ -687,7 +743,7 @@ address {
   margin-left: 0;
 }
 
-/* Footer Center */
+/* FOOTER CENTRO */
 
 .footer-distributed .footer-center{
 	width: 35%;
@@ -731,7 +787,7 @@ address {
 	text-decoration: none;;
 }
 
-/* Footer Right */
+/* FOOTER DIREITA */
 
 .footer-distributed .footer-right{
 	width: 20%;
@@ -758,8 +814,6 @@ address {
 .footer-distributed .footer-company-about p {
   margin-left: .4rem;
 }
-
-/* If you don't want the footer to be responsive, remove these media queries */
 
 @media (max-width: 769px) {
 
@@ -796,6 +850,8 @@ address {
       justify-content: center;
   }
 
+  /*PEÇA AGORA*/
+
 .button_end {
     text-align: center;
 }
@@ -805,6 +861,8 @@ address {
     font-size: 1rem;
     padding-top: 2rem;
 }
+
+/*CREDITOS*/
 
 .footer-name{
     background-color: var(--cor3);
