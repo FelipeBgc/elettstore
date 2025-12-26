@@ -424,15 +424,15 @@ ion-icon {
   position: absolute;
   top: 0;
   left: 0;
-  min-width: 97%;
-  height: 470px;
+  min-width: 95vw;
+  height: 85%;
   background-color: var(--cor2);
   border-radius: 0 0 10px 10px;
-  padding:15px;
-  margin-top: 12px;
+  margin-top: 29px;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  overflow-x:hidden ;
   transform: translate(0%, -100%);
   transition: 0.3s;
 }
@@ -440,6 +440,9 @@ ion-icon {
 .li li {
   list-style: none;
   margin-top: 12px;
+  width: 95%;
+  height: 95px;
+  padding: 10px;
 }
 
 .li a{
