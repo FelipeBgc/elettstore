@@ -180,7 +180,7 @@ nav{
   }
   45%, 50% {
     left: var(--left);
-    bottom: 370px;
+    bottom: 400px;
     transform: scale(.2);
   }
   80%, 90% {
