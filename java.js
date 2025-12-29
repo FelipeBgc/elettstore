@@ -75,14 +75,15 @@ searchInput.addEventListener('input', (event) => {
     const value = formatString(event.target.value);
 
     const items = document.querySelectorAll('.container-li .item');
-    const noResults = document.getElementById('#no_results');
+    const noResults = document.getElementById('no_results');
+    const box = document.querySelectorAll('.li');
 
     let hasResults = false
 
     if(value != '') {
     items.forEach(item => {
         const itemTitle = item.querySelector('.titulo-produto-li').textContent
-        if(formatString(itemTitle).indexOf(value) !== -1) {
+        if(formatString(itemTitle).indexOf(value) != -1) {
             item.style.display = 'flex';
             
             hasResults = true
@@ -98,10 +99,12 @@ searchInput.addEventListener('input', (event) => {
     }
     
         }  else{
-            items.forEach(item => item.style.display = 'flex');
+            items.forEach(item => item.style.display = 'none');
 
             noResults.style.display = 'none';
         }
+
+        
 });
 
 function formatString(value) {

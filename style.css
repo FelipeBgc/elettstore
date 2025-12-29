@@ -388,7 +388,7 @@ ion-icon {
 /*LISTA PESQUISA*/
 
 .li.active{
-    transform: translate(1.5%, 70px);
+    transform: translate(1.3%, 70px);
     z-index: 1000;
 }
 
@@ -411,72 +411,76 @@ ion-icon {
 .li a{
     list-style: none;
     display: flex;
-    background-color: var(--cor2);
-    padding: 3px;
+    background-color:#B0B0AE;
+    padding: 5px 0 0 5px;
     border-radius: 12px;
     width: 100%;
-    border: 1px solid black;
-    height: 92px;
+    border: .5px solid transparent;
+    height: 89px;
 }
+
 
 .li {
   font-family: Arial, sans-serif;
   position: absolute;
   top: 0;
   left: 0;
-  min-width: 95vw;
-  height: 85%;
+  width: 97%;
+  max-height: 500px;
   background-color: var(--cor2);
+  border: .5px solid rgba(0, 0, 0, 0.733);
   border-radius: 0 0 10px 10px;
-  margin-top: 29px;
+  margin-top: 26px;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
   overflow-x:hidden ;
   transform: translate(0%, -100%);
   transition: 0.3s;
+  padding: 0px 10px 10px 10px;
 }
 
 .li li {
   list-style: none;
   margin-top: 12px;
-  width: 95%;
-  height: 95px;
-  padding: 10px;
+  width: 100%;
+  height: 85px;
 }
 
 .li a{
   text-decoration: none;
   transition: .3s;
-  font-weight: 500;
-  font-size: 1.2rem;
-}
-
-.img-produto-li {
-  width: 100px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 8px;
+  font-weight: 100;
 }
 
 .img-produto-li img {
   width: 90px;
-  height: 82.5px;
+  height: 80px;
   object-fit: cover;
+  object-position: center;
   border-radius: 8px;
 }
 
 .item-content {
-  margin-top: .3rem;
   text-transform: capitalize;
 }
 
-#no_results {
-  display: none;
-  text-align: center;
-  font-size: 1.5rem;
+.titulo-produto-li {
+  margin-left: .5rem;
+  margin-top: .30rem !important;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.1429em;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.829);
 }
 
+#no_results {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 1.5rem;
+}
 /*PRODUTOS*/
 
 .container{
@@ -536,17 +540,6 @@ ion-icon {
   text-transform: capitalize;
   color: rgba(0, 0, 0, 0.829);
   z-index: 300;
-}
-
-.titulo-produto-li {
-  margin-left: .5rem;
-  margin-bottom: 1rem !important;
-  margin-top: .25rem !important;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.1429em;
-  text-align: left;
-  color: rgba(0, 0, 0, 0.829);
 }
 
 .titulo-produto:hover{
