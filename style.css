@@ -426,18 +426,18 @@ ion-icon {
   top: 0;
   left: 0;
   width: 97%;
-  max-height: 500px;
+  max-height: 505.4px;
   background-color: var(--cor2);
   border: .5px solid rgba(0, 0, 0, 0.733);
   border-radius: 0 0 10px 10px;
-  margin-top: 26px;
+  margin-top: 24px;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
   overflow-x:hidden ;
   transform: translate(0%, -100%);
   transition: 0.3s;
-  padding: 0px 10px 10px 10px;
+  padding: 0px 10px 4.5px 10px;
 }
 
 .li li {
