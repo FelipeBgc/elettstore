@@ -412,11 +412,11 @@ ion-icon {
     list-style: none;
     display: flex;
     background-color:#B0B0AE;
-    padding: 5px 0 0 5px;
+    padding: 1.5px 0 0 5px;
     border-radius: 12px;
     width: 100%;
     border: .5px solid transparent;
-    height: 89px;
+    height: 86px;
 }
 
 
