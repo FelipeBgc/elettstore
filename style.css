@@ -40,8 +40,6 @@ header nav{
     align-items: center;
     width: 100%;
     height: 8vh;
-    top: 0;
-    right: 0;
     z-index: 1002;
     position: fixed;
     transition: all .35s ease;
@@ -314,7 +312,7 @@ ion-icon {
 .manual-navigation {
   width: 100%;
   margin-top:-30px;
-  display: flex;
+  display: none;
   justify-content: center;
 }
 
