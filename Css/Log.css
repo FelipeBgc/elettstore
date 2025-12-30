@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+:root{
+    --font: "Montserrat";
+    --cor1: #777777;
+    --cor2: #fff;
+    --cor3: #000000bd;
+    --cor4:#0000009f;
+    --cor5:#A1A09A;
+}
+
+body{
+    background-color: var(--cor5) ;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card{
+    background-color: #ffffff52;
+    padding: 30px;
+    text-align: center;
+    border-radius: 4%;
+    box-shadow: 3px 3px 1px 0px #00000080;
+}
+
+img{
+    text-align: center;
+    margin-bottom: 20px;
+    height: 2.5rem;
+}
+
+.label-float input{
+    width: 100%;
+    padding: 5px;
+    display: inline-block;
+    border: 0;
+    border-bottom: 2px solid var(--cor5);
+    background-color: transparent;
+    outline: none;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    border-radius: 0;
+}
+
+.label-float {
+    position: relative;
+    padding-top: 13px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.label-float label{
+    color: var(--cor3);
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 13px;
+    transition: all .3s ease-out;
+}
+
+.label-float input:focus + label,
+.label-float input:valid + label
+{
+    font-size: 12px;
+    margin-top: 0;
+}
+
+button{
+    background-color: rgba(45, 185, 45, 0.884);
+    border-color: #ffffff90;
+    padding: 7px 19px;
+    font-weight: 500;
+    font-size: 14pt;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: all .2s ease-out;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+button:hover{
+    background-color: rgba(45, 185, 45, 0.651);
+    color: #ffffff;
+    
+}
+
+.justify-center{
+    display: flex;
+    justify-content: center;
+}
+
+hr{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 60%;
+}
+
+p{
+    color: var(--cor3);
+    font-size: 14pt;
+    text-align: center;
+}
+
+a{
+    color: #66569e;
+    text-decoration: none;
+    transition: all .3s ease-out;
+}
+
+a:hover{
+    color: #66569e71;
+}
+
+.fa-eye{
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    cursor: pointer;
+    color: var(--cor3);
+}
+
+#msgError{
+    text-align: center;
+    color: #ff0000;
+    background-color: #ffbbbb;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+}

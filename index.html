@@ -4,13 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Élett Store</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Css/style.css" />
     <link rel="shortcut icon" href="imagens/favicon-removebg-preview.png" type="image/x-icon">
   </head>
   <body>
-
-  
-    <header id="home_1">
+  <header id="home_1">
       <nav >
         <div class="mobile-menu">
               <div class="line line-1"></div>
@@ -46,6 +44,8 @@
         
           <div class="icon">
             <div class="conta"><span><ion-icon name="person-circle-outline"></ion-icon></span></div>
+            <h1 id="logado"></h1>
+            <button onclick="sair()">Sair</button>
           </div>
           
         <div class="shopping-cart active" data-product-count="0">
@@ -422,7 +422,9 @@
   </footer>
 
     <script  type = "module"  src = " https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js " > </script> <script nomodule src = " https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js " ></script>
-    <script src="mobile-navbar.js"></script>
-    <script src="java.js"></script>
+    <script src="JavaScript/mobile-navbar.js"></script>
+    <script src="JavaScript/java.js"></script>
+    <script src="JavaScript/log.js"></script>
+    <script src="JavaScript/deslogar.js"></script>
   </body>
 </html>

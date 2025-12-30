@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/Log.css">
+    <link rel="shortcut icon" href="imagens/favicon-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Identificação - Élett Store</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="imagens/logo_1.png" alt="Elett Store">
+
+            <div id="msgError"></div>
+
+            <div class="label-float">
+                <input type="email" id="email" placeholder="" required>
+                <label id="emailLabel" for="email">Email</label>
+            </div>
+            
+            <div class="label-float">
+                <input type="password" id="senha" placeholder="" required>
+                <label id="senhaLabel" for="senha">Senha</label>
+                <i class="fa fa-eye" aria-hidden="true"></i>
+            </div>
+
+            <div class="justify-center">
+                <button onclick="entrar()">Iniciar Sessão</button>
+            </div>
+
+            <div class="justify-center">
+                <hr>
+            </div>
+
+            <p>Não tem uma conta ?
+                <a href="signup.html" target="_self" rel="next">Cadastre-se</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="JavaScript/log.js"></script>
+</body>
+</html>
