@@ -39,7 +39,7 @@ function entrar(){
         }
 
         if(email.value == uservalid.email && senha.value == uservalid.senha){
-            window.location.href = 'http://127.0.0.1:5500/index.html'
+            window.location.href = 'index.html'
 
             let token = Math.random().toString(16).substring(2) + Math.random().toString(16).substring(2)
             localStorage.setItem('token', token)
