@@ -40,7 +40,7 @@ function entrar(){
     })
 
         if(email.value == uservalid.email && senha.value == uservalid.senha){
-    window.location.href = 'index.html'
+    window.location.href = 'https://felipebgc.github.io/elettstore/'
     
     let mathRandom = Math.random().toString(16).substring(2)
     let token = mathRandom + mathRandom
