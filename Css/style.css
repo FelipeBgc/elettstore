@@ -40,6 +40,11 @@ html {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 body {
   min-width: 100%;
   overflow-x: hidden;
