@@ -12,7 +12,5 @@ if(localStorage.getItem('token') == null ){
 
 
 function sair(){
-    localStorage.removeItem('userLogado')
-    
     window.location.href = 'login.html'   
 }
