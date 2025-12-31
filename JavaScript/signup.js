@@ -31,7 +31,7 @@ nome.addEventListener('keyup', () => {
     validNome = false
   } else {
     labelNome.setAttribute('style', 'color: green')
-    labelNome.innerHTML = 'Nome Completo'
+    labelNome.innerHTML = 'Primeiro nome'
     nome.setAttribute('style', 'border-color: green')
     validNome = true
   }
