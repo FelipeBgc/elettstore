@@ -40,7 +40,7 @@ function entrar(){
     })
 
         if(email.value == uservalid.email && senha.value == uservalid.senha){
-    window.location.href = 'logado.html'
+    window.location.href = 'index.html'
     
     let mathRandom = Math.random().toString(16).substring(2)
     let token = mathRandom + mathRandom
