@@ -17,14 +17,19 @@
 }
 
 .log{
-  position: absolute;
-  top: 1.3rem;
-  right: 6rem;
-  z-index: 1004;
+    width: 18px;
+    height: 28px;
+    color: var(--cor2);
+    position: absolute;
+    right: 73px;
+    top: 22px;
+    cursor: pointer;
+    z-index: 1004;
 }
 
 .log > button{
   padding: 3px;
+  font-size: .7rem;
   border: 1px solid transparent;
   border-radius: 4px;
   cursor: pointer;

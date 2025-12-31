@@ -37,26 +37,23 @@ function entrar(){
                 senha: item.senhaCad
             }
         }
+    })
 
         if(email.value == uservalid.email && senha.value == uservalid.senha){
-            window.location.href = 'index.html'
-
-            let token = Math.random().toString(16).substring(2) + Math.random().toString(16).substring(2)
-            localStorage.setItem('token', token)
-
-            localStorage.setItem('userLogado', JSON.stringify(uservalid))
-        } else {
-            emailLabel.setAttribute('style', 'color: red')
-            email.setAttribute('style', 'border-color: red')
-            senhaLabel.setAttribute('style', 'color: red')
-            senha.setAttribute('style', 'border-color: red')
-            msgError.setAttribute('style', 'display: block')
-            msgError.innerHTML = 'Email ou senha incorretos'
-            email.focus()
-        }
-
-    })
+    window.location.href = 'logado.html'
     
-
-
+    let mathRandom = Math.random().toString(16).substring(2)
+    let token = mathRandom + mathRandom
+    
+    localStorage.setItem('token', token)
+    localStorage.setItem('userLogado', JSON.stringify(uservalid))
+  } else {
+    emailLabel.setAttribute('style', 'color: red')
+    email.setAttribute('style', 'border-color: red')
+    senhaLabel.setAttribute('style', 'color: red')
+    senha.setAttribute('style', 'border-color: red')
+    msgError.setAttribute('style', 'display: block')
+    msgError.innerHTML = 'Email ou senha incorretos'
+    email.focus()
+  }
 }
