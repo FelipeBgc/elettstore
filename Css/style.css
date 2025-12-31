@@ -17,22 +17,32 @@
 }
 
 .log{
-    width: 18px;
-    height: 28px;
+    width: 15px;
+    height: 20px;
     color: var(--cor2);
     position: absolute;
-    right: 73px;
-    top: 22px;
+    right: 70px;
+    top: 26px;
     cursor: pointer;
     z-index: 1004;
 }
 
 .log > button{
   padding: 3px;
-  font-size: .7rem;
+  font-size: .6rem;
   border: 1px solid transparent;
   border-radius: 4px;
   cursor: pointer;
+}
+
+#logado{
+  font-size: .7rem;
+  position: absolute;
+  top: 43px;
+  right: 3.1rem;
+  color: var(--cor2);
+  font-family: sans-serif;
+  font-weight: 400;
 }
 
 html {
@@ -223,7 +233,7 @@ ion-icon {
     color: var(--cor2);
     position: absolute;
     right: 5px;
-    top: 13px;
+    top: 11.4px;
     cursor: pointer;
 }
 
@@ -231,7 +241,7 @@ ion-icon {
 
 .conta{
   position: absolute;
-  right: 3rem;
+  right: 2.9rem;
   top: 4px;
   color: #000000;
 }

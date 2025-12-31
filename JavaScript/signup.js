@@ -6,6 +6,10 @@ let nome = document.querySelector('#nome')
 let labelNome = document.querySelector('#labelNome')
 let validNome = false
 
+let sbnome = document.querySelector('#sbnome')
+let labelSbNome = document.querySelector('#labelSbNome')
+let validSbNome = false
+
 let email = document.querySelector('#email')
 let labelEmail = document.querySelector('#labelEmail')
 let validEmail = false
@@ -34,6 +38,20 @@ nome.addEventListener('keyup', () => {
     labelNome.innerHTML = 'Primeiro nome'
     nome.setAttribute('style', 'border-color: green')
     validNome = true
+  }
+})
+
+sbnome.addEventListener('keyup', () => {
+  if(sbnome.value.length <= 0){
+    labelSbNome.setAttribute('style', 'color: red')
+    labelSbNome.innerHTML = 'Sobrenome *Insira seu sobrenome'
+    sbnome.setAttribute('style', 'border-color: red')
+    validSbNome = false
+  } else {
+    labelSbNome.setAttribute('style', 'color: green')
+    labelSbNome.innerHTML = 'Sobrenome'
+    sbnome.setAttribute('style', 'border-color: green')
+    validSbNome = true
   }
 })
 
