@@ -132,6 +132,10 @@ header nav{
         overflow: auto;
 }
 
+.nav-list::-webkit-scrollbar{
+  width: 0;
+}
+
 @keyframes navLinkFade {
     from {
         opacity: 0;
@@ -237,6 +241,112 @@ ion-icon {
     cursor: pointer;
 }
 
+/*Carrinho de Compras Finalizar*/
+
+
+.cartTab{
+  max-width: 99vw;
+  height: 100vh;
+  background-color: var(--cor1);
+  box-shadow: .5px .5px 7px rgba(0, 0, 0, 0.808);
+  border: 0 1.5px  solid rgba(0, 0, 0, 0.712);
+  color: var(--cor2);
+  border-radius: 2px 2px;
+  position: fixed;
+  inset: 0 -400px 0 auto;
+  display: grid;
+  grid-template-rows: 70px 1fr 70px ;
+  transition: .5s;
+  z-index: 1003;
+}
+
+body.showCart .cartTab{
+  inset: 0 0 0 auto;
+}
+
+.cartTab h1 {
+  padding: 20px;
+  margin: 0;
+  font-weight: 700;
+  text-align: left;
+}
+
+.cartTab .btn_cart{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.cartTab .btn_cart button{
+  background-color: #4caf50;
+  border: 1px solid transparent;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.cartTab .btn_cart .close{
+  background-color: var(--cor2);
+}
+
+.cartTab .ListCart .it img{
+  width: 100%;
+  margin-top: .5rem;
+  height: 80px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+}
+
+.cartTab .ListCart .it{
+  display: grid;
+  grid-template-columns: 70px 150px 50px 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: .5rem;
+}
+
+.ListCart .totalPrice{
+  font-size: .9rem;
+  text-align: left;
+}
+
+.ListCart .name_cart{
+  font-size: .9rem;
+}
+
+.ListCart .quantity span{
+  display: inline-block;
+  width: 20px;
+  height: 21px;
+  background-color: var(--cor2);
+  color: var(--cor3);
+  border-radius: 50%;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1rem;
+  padding-top: 0;
+}
+
+.ListCart .quantity span:nth-child(2){
+  background-color: transparent;
+  color: var(--cor2);
+  border: transparent;
+}
+
+.ListCart .it:nth-child(even){
+  background-color: #eee1;
+}
+
+.ListCart{
+  overflow: auto;
+} 
+
+.ListCart::-webkit-scrollbar{
+  width: 0;
+}
+
 /*PERFIL*/
 
 .conta{
@@ -246,7 +356,7 @@ ion-icon {
   color: #000000;
 }
 
-.cart-icon{
+.cartIcon{
   position: absolute;
   right: 1rem;
   top: 4px;
@@ -409,6 +519,7 @@ ion-icon {
 
 /*SLIDE*/
 
+
 .slider{
   margin: 0;
   margin-top: 6rem;
@@ -437,7 +548,7 @@ ion-icon {
 
 .slide img {
   width: 100%;
-  height: 500px;
+  height: 498px;
   object-fit: cover;
 }
 
@@ -523,6 +634,7 @@ ion-icon {
   display: inline-block;
   justify-content: center;
   align-items: center;
+
 }
 
 .container a{
