@@ -252,7 +252,7 @@ body.showCart .cartTab{
 
 .cartTab .listCart .it{
   display: grid;
-  grid-template-columns: 70px 138px 50px 1fr;
+  grid-template-columns: 70px 138px 30px 1fr;
   align-items: center;
   padding: .3rem .5rem;
   border: 1px solid #2222221c;
