@@ -285,7 +285,6 @@ body.showCart .cartTab{
 .listCart .quantity{
   border: 1px solid #2222221c;
   box-shadow: 1px 1px 11px #2222221c;
-  padding: .3rem;
 }
 
 .listCart .quantity span{
@@ -294,14 +293,14 @@ body.showCart .cartTab{
   justify-content: center;
   text-align: center;
   width: 30px;
-  height: 21px;
-  
+  height: 20px;
   color: var(--cor4);
   border-radius: 50%;
   border: 1px solid transparent;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 900;
+  font-style: normal;
   position: relative;
 }
 
@@ -309,17 +308,40 @@ body.showCart .cartTab{
   background-color: transparent;
   color: #000000d2;
   border: transparent;
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: 1.1rem;
+  font-weight: 600;
   position: relative;
   cursor: auto;
+  bottom: .4rem;
 }
 
 .listCart .quantity .mais:hover{
-  background-color: var(--cor5);
-
+  background-color: var(--cor1);
+  border: var(--cor5) 1px solid ;
+  border-radius: 0%;
+}
+.listCart .quantity .menos:hover{
+  background-color: var(--cor1);
+  border: var(--cor1) 1px solid ;
+  border-radius: 0%;
 }
 
+.listCart .quantity .mais{
+  background-color: var(--cor5);
+  border: 1px solid #2222221c;
+  box-shadow: 1px 1px 11px #2222221c;
+  border-radius: 0%;
+  position: relative;
+  padding: 14px;
+}
+.listCart .quantity .menos{
+  background-color: var(--cor5);
+  border: 1px solid #2222221c;
+  box-shadow: 1px 1px 11px #2222221c;
+  border-radius: 0%;
+  position: relative;
+  padding: 14px;
+}
 
 .listCart .quantity .menos:hover{
   background-color: var(--cor5);
