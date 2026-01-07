@@ -10,15 +10,17 @@
 </head>
 
 <body class="">
+
+  <!--Cabeçalho-->
+
   <header id="home_1">
-    <nav>
+    <nav id="container">
       <div class="mobile-menu">
         <div class="line line-1"></div>
         <div class="line line-2"></div>
         <div class="line line-3"></div>
       </div>
 
-      <div></div>
       <div></div>
 
       <h1 class="logo">
@@ -50,8 +52,10 @@
           <h1 id="logado"></h1>
         </a>
 
+        <!--( Icone de usuario )-->
+
         <div class="conta" onclick="sair()"><span name="person-circle-outline"><svg aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24">
+              xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" viewBox="0 0 24 24">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 13 16h-2a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 12 21Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
             </svg>
@@ -59,17 +63,15 @@
         </div>
       </div>
 
-      <div class="shopping-cart active" data-product-count="0">
-        <div class="cartIcon"><span><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-              fill="none" viewBox="0 0 24 24">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312" />
-            </svg>
-            </ion-icon></span></div>
+      
       </div>
     </nav>
 
   </header>
+  <!--Fim cabeçalho-->
+
+
+  <!--Barra de pesquisa-->
 
   <div id="sectionsh">
     <div class="search-box">
@@ -80,6 +82,10 @@
       </div>
     </div>
   </div>
+  <!--Fim barra de pesquisa-->
+
+
+  <!--Lista de produtos na barra de pesquisa-->
   <div class="li">
     <ul class="container-li">
       <li class="item">
@@ -182,9 +188,11 @@
       <p>Nenhum resultado encontrado</p>
     </li>
   </div>
+  <!--Fim lista de produtos na barra de pesquisa-->
 
-  <div class="main">
 
+  <!--Slides-->
+  <div>
     <div class="slider">
       <div class="slides">
         <!-- Radio Buttons-->
@@ -229,132 +237,78 @@
     </div>
 
   </div>
+  <!--Fim slides-->
 
 
-  <!--produtos-->
+  <!--Produtos e icone carrinho-->
+  <div class="container_1">
+    
+    <!--Icone do carrinho-->
+    <div class="icon-cart">
+      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="31" height="31" fill="none"
+      viewBox="0 0 24 24">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+      d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312" />
+    </svg>
+      <span>0</span>
+    
+    </div>
+    <!--Fim icone do carrinho-->
 
-  <div class="container">
-    <a href="">
-      <span class="porc_desconto">-10% OFF</span>
-      <div class="cartao-produto">
-        <img src="imagens/anel.ajustavel.pedras.cristais.jpg" alt="Product Image" class="img-produto">
-        <h2 class="titulo-produto">Anel de Pedras Cristais (Ajustável) </h2>
-    </a>
-    <div class="info-produto">
-      <p class="preco">R$99.99</p>
-      <button class="btn btn-border add-to-cart">Comprar</button>
+  
+    <!--Produtos (add produtos no arquivo products.json)-->
+    <div class="listProduct">
+      <div class="item_c">
+        <a href="">
+          <img src="imagens/anel.ajustavel.pedras.cristais.jpg" alt="">
+          <h2>Anel de Pedras Cristais (Ajustável)</h2>
+        </a>
+        <div class="price">R$ 99.99</div>
+        <button class="addCart">Comprar</button>
+        <span>-10% OFF</span>
+      </div>
     </div>
+    <!--Fim produtos-->
   </div>
-  </div>
-  <div class="container">
-    <a href="">
-      <span class="porc_desconto">-10% OFF</span>
-      <div class="cartao-produto">
-        <img src="imagens/anel.aparador.cravejado.jpg" alt="Product Image" class="img-produto">
-        <h2 class="titulo-produto">Anel Aparador Cravejado</h2>
-    </a>
-    <div class="info-produto">
-      <p class="preco">R$ 99.99</p>
-      <button class="btn btn-border add-to-cart">Comprar</button>
-    </div>
-  </div>
-  </div>
-  <div class="container">
-    <a href="">
-      <span class="porc_desconto">-10% OFF</span>
-      <div class="cartao-produto">
-        <img src="imagens/anel.dedinho.regulavel.jpg" alt="Product Image" class="img-produto">
-        <h2 class="titulo-produto">Anel Dedinho (Regulável)</h2>
-    </a>
-    <div class="info-produto">
-      <p class="preco">R$ 99.99</p>
-      <button class="btn btn-border add-to-cart">Comprar</button>
-    </div>
-  </div>
-  </div>
-  <div class="container">
-    <a href="">
-      <span class="porc_desconto">-10% OFF</span>
-      <div class="cartao-produto">
-        <img src="imagens/anel.aparador.cravejado.jpg" alt="Product Image" class="img-produto">
-        <h2 class="titulo-produto">Anel Aparador Cravejado</h2>
-    </a>
-    <div class="info-produto">
-      <p class="preco">R$ 99.99</p>
-      <button class="btn btn-border add-to-cart">Comprar</button>
-    </div>
-  </div>
-  </div>
-  <div class="container">
-    <a href="">
-      <span class="porc_desconto">-10% OFF</span>
-      <div class="cartao-produto">
-        <img src="imagens/anel.aparador.cravejado.jpg" alt="Product Image" class="img-produto">
-        <h2 class="titulo-produto">Anel Aparador Cravejado</h2>
-    </a>
-    <div class="info-produto">
-      <p class="preco">R$ 99.99</p>
-      <button class="btn btn-border add-to-cart">Comprar</button>
-    </div>
-  </div>
-  </div>
-  <div class="container">
-    <a href="">
-      <span class="porc_desconto">-10% OFF</span>
-      <div class="cartao-produto">
-        <img src="imagens/anel.aparador.cravejado.jpg" alt="Product Image" class="img-produto">
-        <h2 class="titulo-produto">Anel Aparador Cravejado</h2>
-    </a>
-    <div class="info-produto">
-      <p class="preco">R$ 99.99</p>
-      <button class="btn btn-border add-to-cart">Comprar</button>
-    </div>
-  </div>
-  </div>
-  </main>
+  <!--Fim produtos e icone carrinho-->
+    
 
   <!--Lista dentro do carrinho-->
-
   <div class="cartTab">
     <h1>Carrinho</h1>
-    <div class="ListCart">
+    <div class="listCart">
       <div class="it">
         <div class="image">
-          <img src="imagens/anel.ajustavel.pedras.cristais.jpg" alt="Product Image">
+          <img src="imagens/anel.ajustavel.pedras.cristais.jpg" alt="">
         </div>
-        <div class="name_cart">
+          <div class="name_cart">
           Anel de Pedras Cristais (Ajustável)
-        </div>
-        <div class="totalPrice">
+          </div>
+            <div class="totalPrice">
           R$99.99
-        </div>
-        <div class="quantity">
-          <span class="menos"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="15" height="15"
-              fill="currentColor" viewBox="0 0 24 24">
-              <path fill-rule="evenodd"
-                d="M13.729 5.575c1.304-1.074 3.27-.146 3.27 1.544v9.762c0 1.69-1.966 2.618-3.27 1.544l-5.927-4.881a2 2 0 0 1 0-3.088l5.927-4.88Z"
-                clip-rule="evenodd" />
-            </svg>
-          </span>
+            </div>
+              <div class="quantity">
+                <span class="menos"><</span>
 
-          <span class="quantidade">10</span>
+                <span>10</span>
 
-          <span class="mais"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="15" height="15"
-              fill="currentColor" viewBox="0 0 24 24">
-              <path fill-rule="evenodd"
-                d="M10.271 5.575C8.967 4.501 7 5.43 7 7.12v9.762c0 1.69 1.967 2.618 3.271 1.544l5.927-4.881a2 2 0 0 0 0-3.088l-5.927-4.88Z"
-                clip-rule="evenodd" />
-            </svg>
-          </span>
-        </div>
+                <span class="mais"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
+                </svg>
+                </span>
+              </div><!--Fim quantity-->
+      </div><!--Fim it-->
+
+    </div><!--Fim listCArt-->
+
+    <!--Botões carrinho de compras-->
+      <div class="btn_cart">
+        <button class="close">Sair</button>
+        <button class="checkOut">Finalizar Compra</button>
       </div>
+  
+  </div><!--Fim cartTab-->
 
-    </div>
-    <div class="btn_cart">
-      <button class="close">Sair</button>
-      <button class="checkOut">Finalizar Compra</button>
-    </div>
-  </div>
 
   <!--Sobre-->
 
