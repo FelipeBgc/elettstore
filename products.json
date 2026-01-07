@@ -1,0 +1,27 @@
+[
+
+    {
+        "id": 1,
+        "name": "Anel de Pedras Cristais (Ajustável)",
+        "price": 100,
+        "image": "imagens/anel.ajustavel.pedras.cristais.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Anel Aparador Cravejado",
+        "price": 99,
+        "image": "imagens/anel.aparador.cravejado.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Anel Dedinho Regulável",
+        "price": 10,
+        "image": "imagens/anel.dedinho.regulavel.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Anel Regulável Coração",
+        "price": 10,
+        "image": "imagens/anel.regulavel.coracao.jpg"
+    }
+]
