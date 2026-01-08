@@ -227,7 +227,7 @@ body.showCart head{
   flex-direction: column;
   overflow-y: auto;
   overflow-x:hidden ;
-  padding: .9rem .6rem;
+  padding: .6rem;
 }
 
 .cartTab h1 {
@@ -278,7 +278,7 @@ body.showCart head{
   grid-template-columns: 70px 190px 10px 1fr;
   align-items: center;
   justify-content: center;
-  padding: .6rem .9rem ;
+  padding: .6rem ;
   border: 1px solid #2222221c;
   box-shadow: 1px 1px 11px #2222221c;
   border-radius: 5px;
