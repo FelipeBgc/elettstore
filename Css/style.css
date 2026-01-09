@@ -9,10 +9,11 @@
 
 :root{
     --font: "Montserrat";
+    --fontP: "Poppins";
     --cor1: #777777;
     --cor2: #fff;
     --cor3: #000000;
-    --cor4:#0000009f;
+    --cor_text : #000000d2;
     --cor5:#A1A09A;
     --left: 800px;
     --bottom: 800px;
@@ -157,9 +158,10 @@ body {
     text-decoration: none;
     transition: .3s;
     margin-left: 3rem;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
+    font-optical-sizing: auto;
+    font-weight: 400;
     font-style: normal;
+    font-family: "Montserrat", sans-serif;
     font-size: 1.2rem;
 }
 
@@ -267,6 +269,7 @@ body.showCart head{
   width: 100%;
   height: 80px;
   margin-top: .2rem;
+  margin-left: .5rem;
   object-fit: cover;
   object-position: center;
   border-radius: 8px;
@@ -277,12 +280,12 @@ body.showCart head{
   grid-template-columns: 70px 190px 10px 1fr;
   align-items: center;
   justify-content: center;
-  padding: .6rem ;
+  padding: .3rem;
   border: 1px solid #2222221c;
   box-shadow: 1px 1px 11px #2222221c;
   border-radius: 5px;
   margin-bottom: .6rem;
-  width: 100%;
+  min-width: 365px;
 }
 
 .listCart .name_cart{
@@ -290,7 +293,6 @@ body.showCart head{
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
-  font-style: normal;
   font-style: normal;
   position: relative;
   bottom: 1.8rem;
@@ -715,10 +717,11 @@ body.showCart head{
   width: 170px;
   height: 350px;
   margin-left: 1.1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
+  position: relative;
 }
 
 .item_c a{
@@ -795,20 +798,20 @@ body.showCart head{
   text-decoration: underline;
 }
 
-.item_c span {
-    position: relative;
+.porc_desconto {
+    position: absolute;
     display: flex;
-    text-align: center;
     justify-content: center;
-    flex-direction: column;
-    bottom: 330px;
-    left: 10px;
+    align-items: center;
+    bottom: 18.5rem;
+    left: 12px;
     background-color: red;
-    color: var(--cor2);
-    font-size: 12px;
     border-radius: 50%;
-    width: 42px;
-    height: 42px;
+    color: var(--cor2);
+    font-size: 11px;
+    font-weight: 500;
+    font-family: var(--fontP);
+    width: 48px;
   }
 
 /*GRUPO WP*/
@@ -1040,7 +1043,7 @@ address {
 }
   
   .ico {
-      width: 18px;
+      width: 13px;
       height: 18px;
       margin-right: 5px;
       display: inline-block;

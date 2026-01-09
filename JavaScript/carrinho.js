@@ -29,7 +29,7 @@ const addDataToHTML = () => {
                 <button class="addCart">
                     Comprar
                 </button>
-                <span class="porc_desconto">-10% OFF</span>
+                <span class="porc_desconto">${product.desc}</span>
             `;
             listProductHTML.appendChild(newProduct);
         })
@@ -86,9 +86,9 @@ const addCartToHTML = () => {
           R$${info.price * cart.quantity}
             </div>
               <div class="quantity">
-                <span class="menos"><</span>
+                <span class="menos">&lt;</span>
                 <span>${cart.quantity}</span>
-                <span class="mais">></span>
+                <span class="mais">&gt;</span>
             </div>
             `;
         listCartHTML.appendChild(newCart);

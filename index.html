@@ -265,7 +265,7 @@
         </a>
         <div class="price">R$ 99.99</div>
         <button class="addCart">Comprar</button>
-        <span>-10% OFF</span>
+        <span>10% OFF</span>
       </div>
     </div>
     <!--Fim produtos-->
@@ -273,10 +273,11 @@
   <!--Fim produtos e icone carrinho-->
     
 
-  <!--Lista dentro do carrinho-->
+<!--Lista dentro do carrinho -->
   <div class="cartTab">
     <h1>Carrinho de compras</h1>
     <div class="listCart">
+      <!--Para editar (arquivo "carrinho.js da linha 79 a 92")-->
       <div class="it">
         <div class="image">
           <img src="imagens/anel.ajustavel.pedras.cristais.jpg" alt="">
@@ -288,14 +289,11 @@
           R$99.99
             </div>
               <div class="quantity">
-                <span class="menos"><button><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 16 4-4-4-4"/>
-</svg>
-</button></span>
+                <span class="menos">&lt;</span>
 
                 <span>10</span>
 
-                <div><span class="mais">></span></div>
+                <div><span class="mais">&gt;</span></div>
               </div><!--Fim quantity-->
       </div><!--Fim it-->
 
@@ -306,7 +304,7 @@
         <button class="close"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 24 24">
   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/>
 </svg></button>
-         <button class="checkOut">Finalizar Compra</button>
+         <a href="#"><button class="checkOut">Finalizar Compra</button></a>
       </div>
   
   </div><!--Fim cartTab-->
@@ -388,7 +386,7 @@
           <i class="fa fa-map-marker"></i>
           <p>
             <span>
-              <ion-icon class="ico" name="logo-whatsapp"></ion-icon><strong>Whatsapp :</strong> <a
+              <ion-icon class="ico" name="logo-whatsapp"></ion-icon><strong>Whatsapp:</strong> <a
                 href="#">+1.555.555.5555</a>
             </span>
           </p>
@@ -398,7 +396,7 @@
           <i class="fa fa-phone"></i>
           <p>
             <span>
-              <ion-icon class="ico" name="call"></ion-icon><strong>telefone :</strong> (11) 5555-5555
+              <ion-icon class="ico" name="call"></ion-icon><strong>telefone:</strong> (11) 5555-5555
             </span>
           </p>
         </div>
@@ -406,7 +404,7 @@
         <div>
           <i class="fa fa-envelope"></i>
           <p>
-            <span><ion-icon class="ico" name="mail"></ion-icon><strong>E-mail :</strong><a id="b"
+            <span><ion-icon class="ico" name="mail"></ion-icon><strong>E-mail:</strong><a id="b"
                 href="mailto:contato@elett.store"> contato@elett.store</a>
             </span>
           </p>
