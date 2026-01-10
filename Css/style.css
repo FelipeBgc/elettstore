@@ -148,7 +148,7 @@ header{
       display: none;
     }
 
-    .navbar i{
+    .navbar .otherOption ion-icon{
       display: none;
     }
 
@@ -256,10 +256,16 @@ header{
     width: 100%;
     text-align: left;
     position: absolute;
-    bottom: 4rem;
+    top: 37rem;
     left: 0;
     color: var(--cor_text);
 }
+
+.navbar .otherOption ion-icon{
+      display: inline-block;
+      font-size: 15px;
+      font-weight: 700;
+    }
 
     .navbar .menu li:hover{
       background-color: unset ;
@@ -299,8 +305,9 @@ header{
 
     .navbar li li {
       border-bottom: 0;
-      padding: 10px 10px 10px 50px;
+      padding: 10px 10px 10px 30px;
       position: relative;
+      top: 2px;
     }
 
     .navbar label input:checked ~i {
@@ -627,7 +634,7 @@ body.showCart head{
 .listCart .quantity{
   border: 1px solid #2222221c;
   box-shadow: 1px 1px 11px #2222221c;
-  width: 90px;
+  width: 95px;
   position: relative;
   right: 11.4rem;
   top: .6rem;
@@ -647,6 +654,7 @@ body.showCart head{
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   position: relative;
+  left: 3px;
 }
 
 .listCart .quantity:hover{
