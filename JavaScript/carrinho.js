@@ -96,7 +96,7 @@ const addCartToHTML = () => {
     }
     iconCartSpan.innerText = totalQuantity;
 }
-//essa
+
 listCartHTML.addEventListener('click', (event) => {
     let positionClick = event.target;
     if(positionClick.classList.contains('menos') || positionClick.classList.contains('mais')){
@@ -130,14 +130,14 @@ const changeQuantity = (product_id, type) => {
     addCartToHTML();
 }
 const initApp = () => {
-    // get data from json
+    // obtendo dados do  json
     fetch('products.json')
     .then(response => response.json())
     .then(data => {
         listProducts = data;
         addDataToHTML();
 
-        // get cart from memory
+        // pegando o cart memory
         if(localStorage.getItem('cart')){
             carts = JSON.parse(localStorage.getItem('cart'));
             addCartToHTML();
