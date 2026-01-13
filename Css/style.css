@@ -84,8 +84,7 @@ header{
     top: 5.6rem;
     background-color: var(--cor3);
     z-index: 990;
-    font: 15px var(--font);
-    font-weight: 600;
+    
 }
 
 .navbar ul{
@@ -978,15 +977,15 @@ body.showCart head{
     display: flex;
     justify-content: center;
     align-items: center;
-    bottom: 17.8rem;
-    left: 9px;
+    bottom: 18.2rem;
+    left: 12px;
     background-color: red;
-    border-radius: 60%;
+    border-radius: 50%;
     color: var(--cor2);
     font-size: 11px;
     font-weight: 500;
     font-family: var(--fontP);
-    width: 50px;
+    width: 49px;
   }
 
 /*GRUPO WP*/
