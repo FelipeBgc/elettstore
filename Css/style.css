@@ -99,7 +99,7 @@ header{
     text-align: center;
     position: absolute;
     bottom: 3.4rem;
-    left: 58rem;
+    right: 0;
 }
 
 .navbar .otherOption li{
