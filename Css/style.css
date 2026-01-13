@@ -84,7 +84,8 @@ header{
     top: 5.6rem;
     background-color: var(--cor3);
     z-index: 990;
-    
+    font: 15px var(--font);
+    font-weight: 600;
 }
 
 .navbar ul{
@@ -98,8 +99,8 @@ header{
     width: 35%;
     text-align: center;
     position: absolute;
-    bottom: 3.5rem;
-    right: 0;
+    bottom: 3.4rem;
+    left: 58rem;
 }
 
 .navbar .otherOption li{
@@ -135,7 +136,7 @@ header{
     position: absolute;
     top: 100%;
     left: 0;
-    width: 230px;
+    width: 246.8px;
     margin: 0;
     padding: 0;
     background-color: var(--cor1);
@@ -253,7 +254,7 @@ header{
       top: 3rem;
       font-size: 15px;
       font-family: var(--font);
-      font-weight: 500;
+      font-weight: 600;
     }
 
     .navbar .otherOption,
@@ -264,17 +265,22 @@ header{
 
     .navbar .otherOption {
     width: 100%;
-    text-align: left;
+    text-align: center;
     position: absolute;
-    top: 34rem;
-    left: 0;
+    top: 86.3%;
+    right: 10px;
     color: var(--cor_text);
-}
+    }
 
-.navbar .otherOption ion-icon{
+    .navbar .otherOption ion-icon{
       display: inline-block;
       font-size: 15px;
       font-weight: 700;
+    }
+
+    .navbar .otherOption li{
+      display: inline-block;
+      border: none;
     }
 
     .navbar .menu li:hover{
@@ -348,7 +354,9 @@ header{
 
     .icon-cart{
     position: fixed;
-    top: 20px;
+    display: block;
+    align-items: center;
+    justify-content: center;
     }
   
 }
@@ -358,7 +366,7 @@ header{
 .search-box{
     position: fixed;
     top: 5%;
-    left: 50%;
+    left: 51%;
     background: var(--cor2);
     display: flex;
     align-items: center;
@@ -739,6 +747,7 @@ body.showCart head{
 .icon-cart{
   position: fixed;
   right: 1.5rem;
+  top: 3,1%;
   display: flex;
   align-items: center;
   justify-content: center;
