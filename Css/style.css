@@ -55,15 +55,14 @@ header{
 
 /*TRES TRAÇOS E LISTA*/
 
-.logo h1{
+.logo {
     width: 15%;
 }
 
-.logo h1{
+.logo {
     min-width: 60px;
     position: relative;
     left: 2rem;
-    top: .4rem;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -73,7 +72,7 @@ header{
     color: var(--cor2);
     font-weight: 400;
     font-style: normal;
-    font-size: 2.3rem;
+    font-size: 3.3rem;
 }
 
 .navbar {
@@ -165,19 +164,15 @@ header{
 
 @media only screen and (max-width: 767px){
    
-    .logo h1{
+    .logo {
       position: fixed;
-      top: 21px;
+      top: 8px;
       left: 3.7rem;
       text-align: center;
       align-items: center;
       justify-content: center;
       z-index: 1002;
       width: 17rem;
-      display: inline-block;
-      color: var(--cor2);
-      font-weight: 400;
-      font-style: normal;
     }
     .navbar{
         position: fixed;
