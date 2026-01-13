@@ -29,6 +29,7 @@ html {
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  font: var(--font);
 }
 
 body {
@@ -37,6 +38,7 @@ body {
   margin: 0;
   padding: 0;
   background-attachment: fixed;
+  font-family: var(--font);
 }
 
 /*CABEÇALHO*/
@@ -567,7 +569,7 @@ body.showCart head{
   margin: 0;
   color: var(--cor3);
   text-align: left;
-  font-family: "Poppins", sans-serif;
+  
   font-weight: 600;
   font-size: 1.1rem;
   font-style: normal;
@@ -668,7 +670,7 @@ body.showCart head{
   border-radius: 50%;
   border: 1px solid transparent;
   cursor: pointer;
-  font-family: "Poppins", sans-serif;
+  
   font-weight: 400;
   position: relative;
   left: 3px;
@@ -900,7 +902,7 @@ body.showCart head{
   height: 350px;
   margin-left: 1.1rem;
   margin-top: 2rem;
-  font-family: "Poppins", sans-serif;
+  
   font-weight: 500;
   font-style: normal;
   position: relative;
@@ -973,7 +975,6 @@ body.showCart head{
   line-height: 14px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-family: "Poppins", sans-serif;
 }
 
 .addCart:hover{
