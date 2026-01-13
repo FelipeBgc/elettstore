@@ -84,8 +84,7 @@ header{
     top: 5.6rem;
     background-color: var(--cor3);
     z-index: 990;
-    font: 15px var(--font);
-    font-weight: 600;
+    
 }
 
 .navbar ul{
