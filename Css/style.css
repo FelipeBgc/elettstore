@@ -77,6 +77,14 @@ header{
     font-size: 3.3rem;
 }
 
+.logo p{
+  position: fixed;
+  font-size: 30px;
+  left: 4.2rem;
+  top: .8rem;
+  font-style: italic;
+}
+
 .navbar {
     width: 100%;
     color: var(--cor2);
