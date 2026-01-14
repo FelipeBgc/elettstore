@@ -25,7 +25,7 @@ const addDataToHTML = () => {
             newProduct.innerHTML = `
             <img src="${product.image}" alt="">
                 <h2>${product.name}</h2>
-                <div class="price">R$ ${product.price}</div>
+                <div class="price">R$ ${product.price}.00</div>
                 <button class="addCart">
                     Comprar
                 </button>
@@ -83,18 +83,18 @@ const addCartToHTML = () => {
           ${info.name}
           </div>
             <div class="totalPrice">
-          R$${info.price * cart.quantity}
+          R$${info.price * cart.quantity}.00
             </div>
               <div class="quantity">
                 <span class="menos">&lt;</span>
                 <span>${cart.quantity}</span>
                 <span class="mais">&gt;</span>
-            </div>
+                </div>
             `;
         listCartHTML.appendChild(newCart);
         })
     }
-    iconCartSpan.innerText = totalQuantity;
+        iconCartSpan.innerText = totalQuantity;
 }
 
 listCartHTML.addEventListener('click', (event) => {
