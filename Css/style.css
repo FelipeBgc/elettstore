@@ -379,7 +379,8 @@ header{
     position: fixed;
     z-index: 990;
     height: 45%;
-    } 
+    }
+
     .slider{
     margin-top: 7.5rem;
     }
@@ -477,10 +478,10 @@ header{
 .li a{
     list-style: none;
     display: flex;
-    background-color:#B0B0AE;
     padding: 1.5px 0 0 3px;
     border-radius: 10px;
     width: 100%;
+    background-color:#B0B0AE;
     border: .5px solid transparent;
     height: 85px;
 }
@@ -538,7 +539,8 @@ header{
   font-weight: 500;
   line-height: 1.1429em;
   text-align: left;
-  color: rgba(0, 0, 0, 0.829);
+  color: #000000ef;
+  opacity: .8;
 }
 
 #no_results {
@@ -948,10 +950,10 @@ body.showCart head{
 
 .item_c h2 {
   opacity: .8;
-  margin-left: .5rem;
+  margin-left: .4rem;
   margin-bottom: 1rem !important;
   margin-top: .25rem !important;
-  font-size: 16px;
+  font-size: 15.2px;
   font-weight: 500;
   line-height: 1.1429em;
   text-overflow: ellipsis;
@@ -960,11 +962,12 @@ body.showCart head{
   text-align: left;
   text-transform: capitalize;
   color: rgba(0, 0, 0, 0.829);
-  z-index: 300;
+  padding-right: .67px;
 }
 
 .item_c h2:hover{
   text-decoration: underline;
+  opacity: .7;
 }
 
 .price {
@@ -1189,8 +1192,7 @@ address {
 .footer-distributed .footer-center p span{
 	display:block;
 	font-weight: normal;
-	font-size:14px;
-	line-height:2;
+	font-size:13.5px;
 }
 
 .footer-distributed .footer-center p a{
