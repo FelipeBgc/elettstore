@@ -190,13 +190,13 @@ header{
 
     .logo p {
       position: fixed;
-      top: 6.5px;
+      top: 3.4px;
       left: 6.79rem;
       text-align: center;
       align-items: center;
       justify-content: center;
       z-index: 1002;
-      font-size: 1.9rem;
+      font-size: 2.7rem;
     }
     .navbar{
         position: fixed;
