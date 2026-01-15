@@ -373,10 +373,10 @@ header{
     }
 
     .li.active{
-    margin-top: 3.23rem;
+    margin-top: 3.283rem;
     position: fixed;
-    z-index: 999;
-    height: 47%;
+    z-index: 990;
+    height: 45%;
     } 
     .slider{
     margin-top: 7.5rem;
