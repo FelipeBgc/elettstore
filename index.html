@@ -92,13 +92,17 @@
   <!--Barra de pesquisa-->
 
   <div id="sectionsh">
-    <div class="search-box">
-      <input id="search" type="text" class="search-txt" placeholder=" O que está buscando?" style="font-size: medium; align-items: center; justify-content: center;" >
+    <form action="#" autocomplete="off">
+      <div class="search-box">
+        <input id="search" type="text" class="search-txt" placeholder=" O que está buscando?" style="font-size: medium; align-items: center; justify-content: center;" >
+        
+        <div>
+          <button type="submit" class="search">
+          <ion-icon name="search-outline"></ion-icon>
+          </button>
+        </div>
 
-      <div class="input-icon">
-        <i class="fas-fa-search"><ion-icon class="search" name="search-outline"></ion-icon></i>
-      </div>
-    </div>
+      </form>
   </div>
   <!--Fim barra de pesquisa-->
 
@@ -424,8 +428,8 @@
           </p>
         </h2>
 
-        <div>
-          <p class="footer-company-about">
+        <div class="footer-company-about">
+          <p >
           <p>Segunda a Sábado: 11h00 às 23h00</p>
           <p>Domingo: 16h00 às 23h00</p>
           </p>
