@@ -279,7 +279,7 @@ form .search{ /*BOTÃO PESQUISA*/
   width: 97%;
   height: 70%;
   background-color: var(--cor2);
-  border: 2px solid rgb(0, 0, 0);
+  border: 2px solid rgba(0, 0, 0, 0.507);
   border-top: none;
   border-radius: 0 0 10px 10px;
   display: flex;
@@ -1254,7 +1254,7 @@ address { /*ENDEREÇO CONTATO*/
     }
 
     .li.active{ /*AJUSTAR LISTA PESQUISA ATIVA*/
-    margin-top: 5rem;
+    margin-top: 5.08rem;
     position: fixed;
     z-index: 990;
     height: 45%;
