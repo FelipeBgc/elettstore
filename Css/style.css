@@ -1255,7 +1255,7 @@ address { /*ENDEREÇO CONTATO*/
     }
 
     .li.active{ /*AJUSTAR LISTA PESQUISA ATIVA*/
-    margin-top: 5.08rem;
+    margin-top: 5.02rem;
     position: fixed;
     z-index: 990;
     height: 45%;
