@@ -138,8 +138,14 @@ header{
 }
 
 .navbar li:hover{
-    background-color: var(--cor7);
+    background-color: var(--cor1);
     cursor: pointer;
+}
+
+.navbar .otherOption li:hover{
+  background-color: var(--cor2);
+  color: #000000;
+  border-radius: 20px;
 }
 
 .navbar .menu li ul { /*SUBMENU*/
@@ -1293,5 +1299,4 @@ address { /*ENDEREÇO CONTATO*/
 	.footer-distributed .footer-center i{ /*ÍCONES DO FOOTER CENTRO*/
 		margin-left: 0;
 	}
-
 }
