@@ -192,6 +192,7 @@ label{
     transform: translate(-50%);
     padding: 8px 19px 8px 16px;  
     gap: 38px;
+    border: #0000006c .3px solid;
 }
 
 form .search{ /*BOTÃO PESQUISA*/
@@ -1251,7 +1252,6 @@ address { /*ENDEREÇO CONTATO*/
       margin-top: 2.3rem;
       width: 100%;
       z-index: 998;
-      border-bottom: .8px solid black;
     }
 
     .li.active{ /*AJUSTAR LISTA PESQUISA ATIVA*/
@@ -1262,7 +1262,7 @@ address { /*ENDEREÇO CONTATO*/
     }
 
     .slider{ /*POSIÇAO SLIDE*/
-    margin-top: 8rem;
+    margin-top: 7.97rem;
     }
 
     .manual-btn:hover{ /*MUDAR COR BOTÕES NAVEGAÇÃO MANUAL SLIDE*/
