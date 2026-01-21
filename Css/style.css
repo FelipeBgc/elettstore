@@ -1251,6 +1251,7 @@ address { /*ENDEREÇO CONTATO*/
       margin-top: 2.3rem;
       width: 100%;
       z-index: 998;
+      border-bottom: .8px solid black;
     }
 
     .li.active{ /*AJUSTAR LISTA PESQUISA ATIVA*/
