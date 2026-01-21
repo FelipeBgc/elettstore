@@ -499,7 +499,7 @@ body.showCart head{ /*DESFOCAR FUNDO QUANDO MOSTRAR CARRINHO*/
   width: 95px;
   position: relative;
   right: 11.4rem;
-  top: .7rem;
+  top: 1.3rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -648,11 +648,13 @@ body.showCart head{ /*DESFOCAR FUNDO QUANDO MOSTRAR CARRINHO*/
   margin-top:5px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .manual-btn { /*BOTÕES NAVEGAÇÃO MANUAL SLIDE*/
   border: 1px solid var(--cor3) ;
-  padding: 2.1px;
+  padding: 2.5px;
   cursor: pointer;
   border-radius: 100%;
   transition: 1s;
@@ -1251,7 +1253,7 @@ address { /*ENDEREÇO CONTATO*/
     }
 
     .li.active{ /*AJUSTAR LISTA PESQUISA ATIVA*/
-    margin-top: 4.9rem;
+    margin-top: 5rem;
     position: fixed;
     z-index: 990;
     height: 45%;
