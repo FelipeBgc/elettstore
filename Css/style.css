@@ -1243,7 +1243,7 @@ address { /*ENDEREÇO CONTATO*/
     }
 
     .search-box{ /*AJUSTAR CAIXA PESQUISA*/
-      top: 10%;
+      top: 9%;
       position: fixed;
       margin-top: 2.3rem;
       width: 100%;
