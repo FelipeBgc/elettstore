@@ -40,6 +40,24 @@
         padding:10px 30px;
     }
 
+    .navbar .menu label{ /*POSIÇÃO SETA SUBMENU*/
+      cursor: pointer;
+      display: block;
+      float: right;
+      margin-left: 1rem;
+      color: white;
+    }
+
+    .navbar .menu label i{ /*ÍCONE SETA SUBMENU*/
+      display: block;
+      transition: .5s;
+      margin-right: 0;
+    }
+
+    .navbar label:has(input:checked) ~ ul{ /*ABRIR SUBMENU*/
+      overflow: auto ;
+    }
+
     .cartTab .btn_cart .checkOut { /*BOTÃO FINALIZAR COMPRA*/
     top: 12.5rem;
     }
