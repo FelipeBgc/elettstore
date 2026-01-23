@@ -23,8 +23,10 @@ const addDataToHTML = () => {
             newProduct.classList.add('item_c');
             newProduct.dataset.id = product.id; 
             newProduct.innerHTML = `
+            <a href="produto.html?id=${product.id}">
             <img src="${product.image}" alt="">
                 <h2>${product.name}</h2>
+            </a>
                 <div class="price">R$ ${product.price}.00</div>
                 <button class="addCart">
                     Comprar
@@ -64,6 +66,23 @@ const addToCart = (product_id) => {
 const addCartToMemory = () => {
     localStorage.setItem('cart', JSON.stringify(carts));
 }
+
+const updateCartSubtotal = () => {
+    let subtotal = 0;
+    carts.forEach(cart => {
+        let positionProduct = listProducts.findIndex((value) => value.id == cart.product_id);
+        if(positionProduct >= 0) {
+            let info = listProducts[positionProduct];
+            subtotal += info.price * cart.quantity;
+        }
+    });
+    
+    const subtotalElement = document.getElementById('cart-subtotal');
+    if(subtotalElement) {
+        subtotalElement.textContent = 'R$ ' + subtotal.toFixed(2).replace('.', ',');
+    }
+}
+
 const addCartToHTML = () => {
     listCartHTML.innerHTML = '';
     let totalQuantity = 0;
@@ -95,6 +114,7 @@ const addCartToHTML = () => {
         })
     }
         iconCartSpan.innerText = totalQuantity;
+        updateCartSubtotal();
 }
 
 listCartHTML.addEventListener('click', (event) => {

@@ -104,13 +104,17 @@
         font-size: 1.38rem;
     }
 
+    .cart-summary {
+    top: 8.5rem;
+    }
+
     .cartTab .btn_cart .checkOut { /*BOTÃO FINALIZAR COMPRA*/
-        top: 12.5rem;
+        top: 1.5rem;
     }
 
     .cartTab .listCart{ /*LISTA ITENS CARRINHO DE COMPRAS*/
         top: 3.2rem;
-        height: 215px;
+        height: 155px;
     }
 
     .footer-distributed .footer-center i{ /*ÍCONES DO FOOTER CENTRO*/

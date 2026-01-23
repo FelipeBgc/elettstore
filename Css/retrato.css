@@ -199,10 +199,20 @@
 
     .cartTab .listCart{ /*LISTA ITENS CARRINHO DE COMPRAS*/
         top: 3.9rem;
+        height: 410px;
+    }
+
+    .listCart .totalPrice{ /*PREÇO ITENS CARRINHO DE COMPRAS*/
+        
+        left: 1rem;
+    }
+
+    .cart-summary {
+    top: 25rem;
     }
 
     .cartTab .btn_cart .checkOut { /*BOTÃO FINALIZAR COMPRA*/
-        top: 27rem;
+        top: -3rem;
     }
 
     .slider{ /*POSIÇAO SLIDE*/

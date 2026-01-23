@@ -392,7 +392,7 @@ body.showCart head{ /*DESFOCAR FUNDO QUANDO MOSTRAR CARRINHO*/
   right: 0;
   min-width: 90%;
   max-height: 100%;
-  height: 385px;
+  height: 355px;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
@@ -500,7 +500,7 @@ body.showCart head{ /*DESFOCAR FUNDO QUANDO MOSTRAR CARRINHO*/
   font-style: normal;
   color: #000000d0;
   position: relative;
-  left: 1.2rem;
+  left: 3.9rem;
   top: .7rem;
 }
 
@@ -580,6 +580,45 @@ body.showCart head{ /*DESFOCAR FUNDO QUANDO MOSTRAR CARRINHO*/
 
 .listCart::-webkit-scrollbar{ /*DESAPARECER COM A BARRA DE ROLAGEM NO CARRINHO*/
   width: 0;
+}
+
+/* RESUMO DO PEDIDO NO CARRINHO */
+.cart-summary { 
+  background-color: #f9f9f9;
+  border-top: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+  padding: 12px 15px;
+  margin: 12px 0;
+  border-radius: 4px;
+  position: relative;
+  top: 21.5rem;
+}
+
+.cart-summary .summary-subtotal {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.cart-summary .summary-subtotal span:last-child {
+  color: #333333;
+  font-weight: 500;
+}
+
+.cartTab .btn_cart .checkOut { /*BOTÃO FINALIZAR COMPRA*/
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  min-width: 96%;
+  height: 3rem;
+  position: relative;
+  border-radius: 5px;
+  left: .7rem;
+  top: -1rem;
+  color: var(--cor2);
 }
 
 /*ÍCONE CARRINHO*/
