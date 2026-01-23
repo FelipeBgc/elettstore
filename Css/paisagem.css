@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 752px) {
+    
+    header{ /*AJUSTAR CABEÇALHO*/
+        height: 5.8rem;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+        left: -50px;
+    }
+
+    .logo p{
+        top: 22px;
+        left: 1.2rem;
+        font-size: 2.1rem;
+        display: block;
+    }
+
+    .search-box{ /*CAIXA PESQUISA*/
+        top: 8.5%;
+        left: 46%;
+        min-width: 11px;
+        padding: 1px 5px;
+    }
+
+    .li.active{ /*AJUSTAR LISTA PESQUISA ATIVA*/
+        margin-top: 2.02rem;
+    }
+
+    .navbar .otherOption li{
+        font-size: .8rem;
+        padding: 12px;
+        bottom: .3rem;
+        right: 21px;
+    }
+
+    .navbar .menu li { /*MENU DE NAVEGAÇÃO*/
+        padding:10px 30px;
+    }
+
+    .cartTab .btn_cart .checkOut { /*BOTÃO FINALIZAR COMPRA*/
+    top: 13.5rem;
+    }
+
+    .cartTab .listCart{ /*LISTA ITENS CARRINHO DE COMPRAS*/
+    top: 3.2rem;
+    height: 225px;
+    padding: .6rem;
+    }
+
+    .footer-distributed .footer-center i{ /*ÍCONES DO FOOTER CENTRO*/
+	margin: 10px 1px;
+    }
+
+    .footer-distributed .footer-company-about p { /*TEXTO FOOTER DIREITO*/
+    padding: 0 5px 5px 5px;
+    }
+
+}
