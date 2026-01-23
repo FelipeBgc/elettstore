@@ -1,17 +1,17 @@
 @charset "UTF-8";
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) { /*TELAS ATÉ 900PX*/
     
     header{ /*AJUSTAR CABEÇALHO*/
         height: 5.8rem;
     }
 
-    .logo h1 {
+    .logo h1 { /*LOGO*/
         font-size: 1.5rem;
         left: -50px;
     }
 
-    .logo p{
+    .logo p{ /*ACENTO LOGO CEL*/
         top: 22px;
         left: 1.2rem;
         font-size: 2.1rem;
@@ -29,7 +29,7 @@
         margin-top: 2.02rem;
     }
 
-    .navbar .otherOption li{
+    .navbar .otherOption li{ /*ENTRAR/INSCREVER-SE*/
         font-size: .8rem;
         padding: 12px;
         bottom: .3rem;
@@ -41,51 +41,84 @@
     }
 
     .navbar .menu label{ /*POSIÇÃO SETA SUBMENU*/
-      cursor: pointer;
-      display: block;
-      float: right;
-      margin-left: 1rem;
-      color: white;
+        cursor: pointer;
+        display: block;
+        float: right;
+        margin-left: 1rem;
     }
 
     .navbar .menu label i{ /*ÍCONE SETA SUBMENU*/
-      display: block;
-      transition: .5s;
-      margin-right: 0;
+        display: block;
+        transition: .5s;
+        margin-right: 0;
+        color: white;
     }
 
     .navbar .menu li ul { /*SUBMENU*/
-    width: 440px;
+        width: 440px;
     }
 
     .navbar .menu ul li{ /*ITENS SUBMENU*/
-    width: 30%;
-    display: inline-block;
-    border-left: .5px solid #0000006c;
-    border-bottom: 1px solid #0000006c;
-    text-align: center;
+        width: 30%;
+        display: inline-block;
+        border-left: .5px solid #0000006c;
+        border-bottom: 1px solid #0000006c;
+        text-align: center;
     }
 
-    .navbar label:has(input:checked) ~ ul{ /*ABRIR SUBMENU*/
-      overflow: auto ;
+    .cartTab{ /*ABA CARRINHO DE COMPRAS*/
+        width: 100vw;
+        inset: 0 -900px 0 auto;
+    }
+
+    .cartTab .listCart .it{ /*ITENS CARRINHO DE COMPRAS*/
+        grid-template-columns: 70px 320px 10px 1fr;
+    }
+
+    .listCart .name_cart{ /*NOME ITENS CARRINHO DE COMPRAS*/
+        font-size: 1.28rem;
+        left: 2.8rem;
+    }
+
+    .listCart .totalPrice{ /*PREÇO ITENS CARRINHO DE COMPRAS*/
+        font-size: 1.2rem;
+        top: 1rem;
+        left: 9rem;
+    }
+
+    .listCart .quantity{ /*QUANTIDADE ITENS CARRINHO DE COMPRAS*/
+        right: 17.4rem;
+        padding: 4px 7px;
+    }
+
+    .listCart .quantity span:nth-child(2) { 
+    /*NÚMERO NA QUANTIDADE ITENS CARRINHO DE COMPRAS*/
+        font-size: 1rem;
+    }
+
+    .listCart .quantity .mais{ /*BOTÃO + QUANTIDADE ITENS CARRINHO DE COMPRAS*/
+        font-size: 1.38rem;
+    }
+
+    .listCart .quantity .menos{ /*BOTÃO - QUANTIDADE ITENS CARRINHO DE COMPRAS*/
+        font-size: 1.38rem;
     }
 
     .cartTab .btn_cart .checkOut { /*BOTÃO FINALIZAR COMPRA*/
-    top: 12.5rem;
+        top: 12.5rem;
     }
 
     .cartTab .listCart{ /*LISTA ITENS CARRINHO DE COMPRAS*/
-    top: 3.2rem;
-    height: 215px;
-    padding: .6rem;
+        top: 3.2rem;
+        height: 215px;
     }
 
     .footer-distributed .footer-center i{ /*ÍCONES DO FOOTER CENTRO*/
-	margin: 10px 1px;
+	    margin: 10px 1px;
     }
 
     .footer-distributed .footer-company-about p { /*TEXTO FOOTER DIREITO*/
-    padding: 0 5px 5px 5px;
+        padding: 0 5px 5px 5px;
     }
 
 }

@@ -562,6 +562,7 @@ body.showCart head{ /*DESFOCAR FUNDO QUANDO MOSTRAR CARRINHO*/
   font-weight: 500;
   font-family: 'Poppins', sans-serif;
 }
+
 .listCart .quantity .menos{ /*BOTÃO - QUANTIDADE ITENS CARRINHO DE COMPRAS*/
   background-color: transparent;
   color: #22222294;
