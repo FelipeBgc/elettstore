@@ -207,6 +207,15 @@
     height: 45%;
     }
 
+    .cartTab .listCart{ /*LISTA ITENS CARRINHO DE COMPRAS*/
+    top: 3.9rem;
+    padding: .6rem;
+    }
+
+    .cartTab .btn_cart .checkOut { /*BOTÃO FINALIZAR COMPRA*/
+    top: 27rem;
+    }
+
     .slider{ /*POSIÇAO SLIDE*/
     margin-top: 7.97rem;
     }
