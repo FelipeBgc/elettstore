@@ -54,6 +54,18 @@
       margin-right: 0;
     }
 
+    .navbar .menu li ul { /*SUBMENU*/
+    width: 440px;
+    }
+
+    .navbar .menu ul li{ /*ITENS SUBMENU*/
+    width: 30%;
+    display: inline-block;
+    border-left: .5px solid #0000006c;
+    border-bottom: 1px solid #0000006c;
+    text-align: center;
+    }
+
     .navbar label:has(input:checked) ~ ul{ /*ABRIR SUBMENU*/
       overflow: auto ;
     }
