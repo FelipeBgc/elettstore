@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@media screen and (min-width: 670px) and (max-width: 900px) { /*TELAS ATÉ 900PX*/
+@media screen and (min-width: 670px) and (max-width: 900px) { /*TELAS ENTRE 670PX E 900PX*/
     
     header{ /*AJUSTAR CABEÇALHO*/
         height: 5.8rem;
@@ -86,7 +86,7 @@
         left: 22rem;
     }
 
-    .btn-remover-carrinho {
+    .btn-remover-carrinho { /*BOTÃO REMOVER ITENS CARRINHO*/
     position: relative;
     left: 46rem;
     bottom: 5rem;
@@ -110,7 +110,7 @@
         font-size: 1.38rem;
     }
 
-    .cart-summary {
+    .cart-summary {  /*RESUMO CARRINHO DE COMPRAS*/
     top: 8.5rem;
     }
 
@@ -131,7 +131,7 @@
         padding: 0 5px 5px 5px;
     }
 
-    .voltar-btn {
+    .voltar-btn { /*BOTÃO VOLTAR PARA LOJA*/
     top: 6.3rem;
     }
 }

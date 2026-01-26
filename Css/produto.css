@@ -1,19 +1,21 @@
+@charset "UTF-8";
+
 @font-face { 
   font-family: 'Mignon';
   src: url('../fonts/Mignon-Regular.otf') format('opentype'), url('../fonts/Mignon-Regular.ttf') format('truetype');
 }
 
-.logo h1 {
+.logo h1 { /*LOGO*/
   font-family: 'Mignon';
 }
 
-body {
+body { /*CORPO DA PÁGINA*/
   background-color: #fafafa;
   margin: 0;
   padding: 0;
 }
 
-.produto-container {
+.produto-container {  /*CONTAINER PRODUTO*/
   max-width: 1180px;
   margin: 10rem auto 2rem;
   padding: 24px 18px;
@@ -26,7 +28,7 @@ body {
   align-items: start;
 }
 
-.produto-imagem-container {
+.produto-imagem-container{ /*CONTAINER IMAGEM PRODUTO*/
   position: sticky;
   top: 24px;
   height: fit-content;
@@ -35,7 +37,7 @@ body {
   justify-content: center;
 }
 
-.produto-imagem {
+.produto-imagem { /*IMAGEM PRODUTO*/
   width: 100%;
   max-height: 480px;
   height: auto;
@@ -44,15 +46,52 @@ body {
   background-color: #fafafa;
   padding: 12px;
 }
+.produto-galeria {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.produto-thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+.produto-thumb {
+  width: 64px;
+  height: 64px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 2px;
+  background: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.produto-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.produto-thumb:hover {
+  border-color: #bdbdbd;
+}
+.produto-thumb.active {
+  border-color: #5bb299;
+  box-shadow: 0 0 0 2px rgba(91, 178, 153, 0.25);
+}
 
-.produto-info {
+.produto-info { /*INFORMAÇÕES PRODUTO*/
   display: flex;
   flex-direction: column;
   gap: 18px;
   padding: 10px 0;
 }
 
-.produto-titulo {
+.produto-titulo { /*TÍTULO PRODUTO*/
   font-size: 24px;
   font-weight: 600;
   color: #2d2d2d;
@@ -61,7 +100,7 @@ body {
   letter-spacing: -0.3px;
 }
 
-.produto-preco-container {
+.produto-preco-container { /*CONTAINER PREÇO PRODUTO*/
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -70,25 +109,25 @@ body {
   border-bottom: 1px solid #e8e8e8;
 }
 
-.produto-preco {
+.produto-preco { /*PREÇO PRODUTO*/
   font-size: 26px;
   font-weight: 700;
   color: #2d2d2d;
   margin: 0;
 }
 
-.produto-preco-pix {
+.produto-preco-pix { /*PREÇO PIX*/
   font-size: 13px;
   color: #5bb299;
   font-weight: 500;
 }
 
-.produto-preco-parcelado {
+.produto-preco-parcelado { /*PREÇO PARCELADO*/
   font-size: 12px;
   color: #666;
 }
 
-.produto-descricao {
+.produto-descricao { /*DESCRIÇÃO PRODUTO*/
   font-size: 13px;
   color: #666;
   line-height: 1.65;
@@ -100,21 +139,21 @@ body {
   overflow-y: auto;
 }
 
-.produto-descricao h4 {
+.produto-descricao h4 { /*TÍTULO DESCRIÇÃO*/
   color: #2d2d2d;
   font-size: 13px;
   margin: 0 0 6px 0;
   font-weight: 600;
 }
 
-.quantidade-section {
+.quantidade-section { /*SEÇÃO QUANTIDADE*/
   display: flex;
   flex-direction: column;
   gap: 12px;
   padding: 14px 0;
 }
 
-.quantidade-label {
+.quantidade-label { /*RÓTULO QUANTIDADE*/
   font-size: 12px;
   font-weight: 600;
   color: #2d2d2d;
@@ -122,7 +161,7 @@ body {
   letter-spacing: 0.3px;
 }
 
-.quantidade-controls {
+.quantidade-controls { /*CONTROLES QUANTIDADE*/
   display: flex;
   align-items: center;
   gap: 0;
@@ -132,7 +171,7 @@ body {
   overflow: hidden;
 }
 
-.quantidade-btn {
+.quantidade-btn { /*BOTÕES QUANTIDADE*/
   background-color: #fff;
   color: #2d2d2d;
   border: none;
@@ -148,20 +187,20 @@ body {
   border-right: 1px solid #e0e0e0;
 }
 
-.quantidade-btn:last-child {
+.quantidade-btn:last-child { /*BOTÃO DECREMENTAR*/
   border-right: none;
   border-left: 1px solid #e0e0e0;
 }
 
-.quantidade-btn:hover {
+.quantidade-btn:hover { /*HOVER BOTÕES QUANTIDADE*/
   background-color: #f5f5f5;
 }
 
-.quantidade-btn:active {
+.quantidade-btn:active { /*ACTIVE BOTÕES QUANTIDADE*/
   background-color: #e8e8e8;
 }
 
-.quantidade-input {
+.quantidade-input { /*INPUT QUANTIDADE*/
   width: 56px;
   text-align: center;
   font-size: 14px;
@@ -171,7 +210,7 @@ body {
   color: #2d2d2d;
 }
 
-.adicionar-carrinho-btn {
+.adicionar-carrinho-btn { /*BOTÃO ADICIONAR AO CARRINHO*/
   background-color: #5bb299;
   color: white;
   border: none;
@@ -190,17 +229,19 @@ body {
   text-align: center;
 }
 
-.adicionar-carrinho-btn:hover {
+.adicionar-carrinho-btn:hover { 
+/*HOVER BOTÃO ADICIONAR AO CARRINHO*/
   background-color: #4caf50;
   transform: translateY(-1px);
   box-shadow: 0 5px 14px rgba(76, 175, 80, 0.4);
 }
 
 .adicionar-carrinho-btn:active {
+/*ACTIVE BOTÃO ADICIONAR AO CARRINHO*/
   transform: translateY(0);
 }
 
-.voltar-btn {
+.voltar-btn { /*BOTÃO VOLTAR*/
   background-color: transparent;
   color: #666;
   border: 1px solid #e0e0e0;
@@ -221,19 +262,19 @@ body {
   z-index: 1000;
 }
 
-.voltar-btn:hover {
+.voltar-btn:hover { /*HOVER BOTÃO VOLTAR*/
   background-color: #f5f5f5;
   border-color: #ccc;
 }
 
-.produto-não-encontrado {
+.produto-não-encontrado { /*PRODUTO NÃO ENCONTRADO*/
   text-align: center;
   padding: 100px 20px;
   font-size: 20px;
   color: #666;
 }
 
-.produto-info-badge {
+.produto-info-badge { /*BADGE INFORMAÇÕES PRODUTO*/
   display: inline-flex;
   align-items: center;
   gap: 5px;
@@ -246,20 +287,23 @@ body {
   width: fit-content;
 }
 
-.listCart .totalPrice{ 
+.listCart .totalPrice{  /*PREÇO ITENS CARRINHO DE COMPRAS*/
     top: 1.5rem;
     left: 4rem;    
 }
 
-.btn-remover-carrinho{
+.btn-remover-carrinho{ 
+/*BOTÃO REMOVER ITENS CARRINHO DE COMPRAS*/
 position: relative;
 left: 20rem;    
 bottom:5rem;
 }
 
 
-@media screen and (min-width: 389px) and (max-width: 670px) {
-  .produto-container {
+@media screen and (min-width: 389px) and (max-width: 670px){ 
+/*RESPONSIVO CELULAR*/ 
+  
+    .produto-container { /*CONTAINER PRODUTO*/
     grid-template-columns: 1fr;
     margin: 6rem auto 1rem;
     gap: 18px;
@@ -267,93 +311,102 @@ bottom:5rem;
     min-height: auto;
   }
 
-  .produto-imagem-container {
+  .produto-imagem-container { /*CONTAINER IMAGEM PRODUTO*/
     position: relative;
     top: 0;
   }
 
-  .produto-imagem {
+  .produto-imagem { /*IMAGEM PRODUTO*/
     max-height: 320px;
   }
+  .produto-thumb {
+    width: 54px;
+    height: 54px;
+  }
 
-  .produto-titulo {
+  .produto-titulo { /*TÍTULO PRODUTO*/
     font-size: 19px;
   }
 
-  .produto-preco {
+  .produto-preco { /*PREÇO PRODUTO*/
     font-size: 23px;
   }
 
-  .produto-info {
+  .produto-info { /*INFORMAÇÕES PRODUTO*/
     gap: 12px;
   }
 
-  .produto-preco-container {
+  .produto-preco-container { /*CONTAINER PREÇO PRODUTO*/
     padding: 10px 0;
   }
 
-  .produto-descricao {
+  .produto-descricao { /*DESCRIÇÃO PRODUTO*/
     max-height: 100px;
     font-size: 12px;
   }
 
-  .adicionar-carrinho-btn {
+  .adicionar-carrinho-btn { /*BOTÃO ADICIONAR AO CARRINHO*/
     width: 100%;
     padding: 11px 20px;
   }
 
-  .frete-input-container {
+  .frete-input-container { /*CONTAINER INPUT FRETE*/
     flex-direction: column;
   }
 
-  .frete-btn {
+  .frete-btn { /*BOTÃO CALCULAR FRETE*/
     width: 100%;
   }
 
-  .voltar-btn {
+  .voltar-btn { /*BOTÃO VOLTAR*/
     top: 6.3rem;
   }
 
-   .listCart .totalPrice{ /*PREÇO ITENS CARRINHO DE COMPRAS*/
-        left: .9rem;
-        top: 27px;
-    }
+  .listCart .totalPrice{ /*PREÇO ITENS CARRINHO DE COMPRAS*/
+    left: .9rem;
+    top: 27px;
+  }
 
-    .btn-remover-carrinho{
+  .btn-remover-carrinho{ 
+    /*BOTÃO REMOVER ITENS CARRINHO DE COMPRAS*/
     position: relative;
     left: 17rem;
     bottom: 5rem;
-    }
+  }
 
 }
 
-@media screen and (min-width: 900px) and (max-width: 1300px) {
-  .produto-container {
+@media screen and (min-width: 900px) and (max-width: 1300px){
+/*RESPONSIVO TABLET*/ 
+  
+  .produto-container { /*CONTAINER PRODUTO*/
     max-width: 95%;
     gap: 28px;
     padding: 20px 14px;
   }
 
-  .produto-imagem {
+  .produto-imagem { /*IMAGEM PRODUTO*/
     max-height: 440px;
   }
 
-  .produto-titulo {
+  .produto-titulo { /*TÍTULO PRODUTO*/
     font-size: 22px;
   }
 
-  .produto-preco {
+  .produto-preco { /*PREÇO PRODUTO*/
     font-size: 25px;
   }
 
-    .listCart .totalPrice{ 
-        top: 1.5rem;
-        left: 4.5rem;    
-    }
+  .listCart .totalPrice{
+  /*PREÇO ITENS CARRINHO DE COMPRAS*/
+    top: 1.5rem;
+    left: 4.5rem;    
+  }
 
-    .btn-remover-carrinho{
+  .btn-remover-carrinho{ 
+  /*BOTÃO REMOVER ITENS CARRINHO DE COMPRAS*/
     position: relative;
     left: 20rem;    
     bottom:5rem;
-    }
+  }
 }

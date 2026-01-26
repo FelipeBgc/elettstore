@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
-@media screen and (min-width: 389px) and (max-width: 670px) { /*TELAS ATÉ 767PX*/
+@media screen and (min-width: 389px) and (max-width: 670px){ 
+/*TELAS DE 389PX A 670PX - CELULARES*/
 
     header{ /*AJUSTAR CABEÇALHO*/
         height: 6.5rem;
@@ -136,7 +137,7 @@
         border: none;
     }
 
-    .navbar .menu li:hover{
+    .navbar .menu li:hover{ /*EFEITO HOVER ITENS MENU*/
         background-color: unset ;
         border-left: 10px solid var(--cor7);
     }
@@ -169,7 +170,7 @@
         border-left: 1px solid #ffffff22;
     }
 
-    .navbar li li:hover{
+    .navbar li li:hover{ /*EFEITO HOVER ITENS SUBMENU*/
         border-left: unset !important;
     }
 
@@ -207,13 +208,13 @@
         top: 27px;
     }
 
-    .btn-remover-carrinho{
+    .btn-remover-carrinho{ /*BOTÃO REMOVER ITENS CARRINHO*/
     position: relative;
     left: 17rem;
     bottom: 5rem;
     }
 
-    .cart-summary {
+    .cart-summary { /*RESUMO CARRINHO DE COMPRAS*/
     top: 25rem;
     }
 
