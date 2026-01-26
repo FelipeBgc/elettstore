@@ -314,6 +314,17 @@ bottom:5rem;
     top: 6.3rem;
   }
 
+   .listCart .totalPrice{ /*PREÇO ITENS CARRINHO DE COMPRAS*/
+        left: .9rem;
+        top: 27px;
+    }
+
+    .btn-remover-carrinho{
+    position: relative;
+    left: 17rem;
+    bottom: 5rem;
+    }
+
 }
 
 @media screen and (min-width: 900px) and (max-width: 1300px) {
