@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@media screen and (max-width: 767px) { /*TELAS ATÉ 767PX*/
+@media screen and (min-width: 389px) and (max-width: 670px) { /*TELAS ATÉ 767PX*/
 
     header{ /*AJUSTAR CABEÇALHO*/
         height: 6.5rem;
@@ -203,8 +203,14 @@
     }
 
     .listCart .totalPrice{ /*PREÇO ITENS CARRINHO DE COMPRAS*/
-        
-        left: 1rem;
+        left: .9rem;
+        top: 27px;
+    }
+
+    .btn-remover-carrinho{
+    position: relative;
+    left: 17rem;
+    bottom: 5rem;
     }
 
     .cart-summary {

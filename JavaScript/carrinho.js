@@ -109,6 +109,11 @@ const addCartToHTML = () => {
                 <span>${cart.quantity}</span>
                 <span class="mais">&gt;</span>
                 </div>
+                            <button class="btn-remover-carrinho" data-id="${cart.product_id}">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-9l-1 1H5v2h14V4z"/>
+                                </svg>
+                            </button>
             `;
         listCartHTML.appendChild(newCart);
         })
@@ -127,7 +132,17 @@ listCartHTML.addEventListener('click', (event) => {
         }
         changeQuantity(product_id, type);
     }
+    if(positionClick.closest('.btn-remover-carrinho')) {
+        let product_id = positionClick.closest('.btn-remover-carrinho').dataset.id;
+        removerDoCarrinho(product_id);
+    }
 })
+
+const removerDoCarrinho = (product_id) => {
+    carts = carts.filter(item => item.product_id != product_id);
+    addCartToMemory();
+    addCartToHTML();
+}
 const changeQuantity = (product_id, type) => {
     let positionItemInCart = carts.findIndex((value) => value.product_id == product_id);
     if(positionItemInCart >= 0){

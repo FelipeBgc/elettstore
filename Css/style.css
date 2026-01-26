@@ -235,6 +235,30 @@ form .search{ /*BOTÃO PESQUISA*/
   text-align: left;
 }
 
+.btn-remover-carrinho { /*BOTÃO REMOVER ITENS CARRINHO*/
+  color: var(--cor3);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  margin-left: auto;
+}
+
+.btn-remover-carrinho:hover { /*EFEITO HOVER BOTÃO REMOVER ITENS CARRINHO*/
+  background-color: var(--cor1);
+  transform: scale(1.05);
+}
+
+.btn-remover-carrinho:active { /*EFEITO CLICK BOTÃO REMOVER ITENS CARRINHO*/
+  transform: scale(0.95);
+}
+
 /*LISTA PESQUISA*/
 
 .li.active{ /* QUANDO MOSTRAR LISTA PESQUISA*/
@@ -500,8 +524,14 @@ body.showCart head{ /*DESFOCAR FUNDO QUANDO MOSTRAR CARRINHO*/
   font-style: normal;
   color: #000000d0;
   position: relative;
-  left: 3.9rem;
-  top: .7rem;
+  left: 4rem;
+  top: 1.5rem;
+}
+
+.btn-remover-carrinho{
+position: relative;
+left: 20rem;    
+bottom:5rem;
 }
 
 .listCart .quantity{ /*QUANTIDADE ITENS CARRINHO DE COMPRAS*/
