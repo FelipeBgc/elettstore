@@ -180,3 +180,52 @@ class SearchLi {
     );
     
     searchLi.init();
+
+// carregando produtos do arquivo JSON e adicionando à lista de pesquisa
+    document.addEventListener('DOMContentLoaded', () => {
+    const listWrapper = document.querySelector('.li');
+    if (!listWrapper) return;
+
+    let listContainer = listWrapper.querySelector('.container-li');
+    if (!listContainer) {
+        listContainer = document.createElement('ul');
+        listContainer.className = 'container-li';
+        listWrapper.prepend(listContainer);
+    }
+
+    fetch('products.json')
+        .then(response => response.json())
+        .then(produtos => {
+            listContainer.innerHTML = '';
+
+            produtos.forEach(produto => {
+                const li = document.createElement('li');
+                li.className = 'item';
+
+                const imagem = Array.isArray(produto.images) && produto.images.length
+                    ? produto.images[0]
+                    : produto.image;
+
+                const preco = Number(produto.price || 0)
+                    .toFixed(2)
+                    .replace('.', ',');
+
+                li.innerHTML = `
+                    <a href="produto.html?id=${produto.id}">
+                        <div class="img-produto-li">
+                            <img src="${imagem}" alt="${produto.name}">
+                        </div>
+                        <div class="item-content">
+                            <h2 class="titulo-produto-li">${produto.name}</h2>
+                            <p class="pç-produto">R$ ${preco}</p>
+                        </div>
+                    </a>
+                `;
+
+                listContainer.appendChild(li);
+            });
+        })
+        .catch(error => {
+            console.error('Erro ao carregar produtos para a pesquisa:', error);
+        });
+});
