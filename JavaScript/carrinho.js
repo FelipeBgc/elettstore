@@ -186,7 +186,8 @@ const initApp = () => {
     fetch('products.json')
         .then(response => response.json())
         .then(data => {
-            listProducts = data;
+            const produtosIndex = data.filter(product => product.home === true);
+            listProducts = produtosIndex.length > 0 ? produtosIndex : data;
             addDataToHTML();
 
             // pegando o cart memory

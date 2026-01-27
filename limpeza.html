@@ -301,14 +301,18 @@
 
     const limpeza = produtos.filter(produto => {
       const categoria = (produto.categoria || '').toLowerCase();
-      const nome = (produto.name || '').toLowerCase();
-      return categoria === 'limpeza' || nome.includes('limpeza');
+      return categoria === 'limpeza';
     });
 
-    const lista = limpeza.length > 0 ? limpeza : produtos;
+    const lista = limpeza;
 
     const container = document.getElementById('limpeza-list');
     if (!container) return;
+
+    if (lista.length === 0) {
+      container.innerHTML = '<p class="categoria-vazia">Nenhum produto encontrado nesta categoria.</p>';
+      return;
+    }
 
     container.innerHTML = lista.map(produto => `
       <div class="limpeza-card">

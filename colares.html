@@ -302,14 +302,18 @@
 
     const colares = produtos.filter(produto => {
       const categoria = (produto.categoria || '').toLowerCase();
-      const nome = (produto.name || '').toLowerCase();
-      return categoria === 'colares' || nome.includes('colar');
+      return categoria === 'colares';
     });
 
-    const lista = colares.length > 0 ? colares : produtos;
+    const lista = colares;
 
     const container = document.getElementById('colares-list');
     if (!container) return;
+
+    if (lista.length === 0) {
+      container.innerHTML = '<p class="categoria-vazia">Nenhum produto encontrado nesta categoria.</p>';
+      return;
+    }
 
     container.innerHTML = lista.map(produto => `
       <div class="colar-card">
