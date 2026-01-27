@@ -546,17 +546,13 @@ async function sendWhatsAppMessage(orderNumber) {
   // Número do WhatsApp (remover caracteres especiais)
   const whatsappNumber = '5535988397718';
   
-  // URL do WhatsApp
-  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+  // URL do WhatsApp (usar api.whatsapp.com para melhor compatibilidade mobile)
+  const whatsappURL = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedMessage}`;
   
-  // Abrir WhatsApp
-  window.open(whatsappURL, '_blank');
+  // Limpar carrinho antes de redirecionar
+  localStorage.removeItem('cart');
+  localStorage.removeItem('checkout-shipping-cost');
   
-  // Limpar carrinho e redirecionar após um breve delay
-  setTimeout(() => {
-    localStorage.removeItem('cart');
-    localStorage.removeItem('checkout-shipping-cost');
-    alert('Pedido enviado! Você será redirecionado para a loja.');
-    window.location.href = 'index.html';
-  }, 2000);
+  // Redirecionar para WhatsApp
+  window.location.href = whatsappURL;
 }
