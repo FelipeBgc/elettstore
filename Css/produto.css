@@ -46,18 +46,18 @@ body { /*CORPO DA PÁGINA*/
   background-color: #fafafa;
   padding: 12px;
 }
-.produto-galeria {
+.produto-galeria { /*GALERIA DE IMAGENS*/
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.produto-thumbs {
+.produto-thumbs { /*THUMBS PRODUTO*/
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   justify-content: center;
 }
-.produto-thumb {
+.produto-thumb {  /*THUMB PRODUTO*/
   width: 64px;
   height: 64px;
   border: 1px solid #e0e0e0;
@@ -70,16 +70,16 @@ body { /*CORPO DA PÁGINA*/
   justify-content: center;
   transition: all 0.2s;
 }
-.produto-thumb img {
+.produto-thumb img { /*IMAGEM THUMB PRODUTO*/
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 4px;
 }
-.produto-thumb:hover {
+.produto-thumb:hover { /*HOVER THUMB PRODUTO*/
   border-color: #bdbdbd;
 }
-.produto-thumb.active {
+.produto-thumb.active { 
   border-color: #5bb299;
   box-shadow: 0 0 0 2px rgba(91, 178, 153, 0.25);
 }
@@ -300,8 +300,11 @@ bottom:5rem;
 }
 
 
-@media screen and (min-width: 389px) and (max-width: 670px){ 
 /*RESPONSIVO CELULAR*/ 
+
+
+@media screen and (min-width: 389px) and (max-width: 670px){ 
+
   
     .produto-container { /*CONTAINER PRODUTO*/
     grid-template-columns: 1fr;
@@ -319,7 +322,8 @@ bottom:5rem;
   .produto-imagem { /*IMAGEM PRODUTO*/
     max-height: 320px;
   }
-  .produto-thumb {
+
+  .produto-thumb { /*THUMB PRODUTO*/
     width: 54px;
     height: 54px;
   }
@@ -376,8 +380,11 @@ bottom:5rem;
 
 }
 
-@media screen and (min-width: 900px) and (max-width: 1300px){
+
 /*RESPONSIVO TABLET*/ 
+
+
+@media screen and (min-width: 900px) and (max-width: 1300px){ 
   
   .produto-container { /*CONTAINER PRODUTO*/
     max-width: 95%;

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anéis - Élett Store</title>
+  <link rel="stylesheet" href="Css/style.css" media="all" />
+  <link rel="stylesheet" href="Css/aneis.css" media="all" />
+  <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
+
+<!-- Estilos CSS específicos para a página de anéis -->
+
+<style>
+    
+ @font-face { 
+  font-family: 'Mignon';
+  src: url('../fonts/Mignon-Regular.otf') format('opentype'), url('../fonts/Mignon-Regular.ttf') format('truetype');
+}
+
+.logo h1 { /*LOGO*/
+  font-family: 'Mignon';
+}
+
+:root {
+  --aneis-bg: #fafafa;
+  --aneis-card: #ffffff;
+  --aneis-border: #e9e9e9;
+}
+
+.aneis-container {
+  max-width: 1180px;
+  margin: 10rem auto 3rem;
+  padding: 24px 18px;
+}
+
+.aneis-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.aneis-header h2 {
+  font-size: 26px;
+  color: #2d2d2d;
+  margin-bottom: 8px;
+}
+
+.aneis-header p {
+  color: #666;
+  font-size: 14px;
+}
+
+.aneis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.anel-card {
+  background: var(--aneis-card);
+  border: 1px solid var(--aneis-border);
+  border-radius: 10px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.anel-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.anel-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #f3f3f3;
+}
+
+.anel-title {
+  font-size: 15px;
+  color: #2d2d2d;
+  font-weight: 600;
+}
+
+.anel-price {
+  font-size: 15px;
+  color: #2d2d2d;
+  font-weight: 700;
+}
+
+.anel-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: #5bb299;
+  color: #fff;
+  border-radius: 6px;
+  padding: 10px 12px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.anel-link:hover {
+  background: #4caf50;
+}
+
+@media (max-width: 900px) {
+  .aneis-container {
+    margin: 8rem auto 2rem;
+    padding: 18px 14px;
+  }
+
+  .anel-img {
+    height: 180px;
+  }
+}
+</style>
+
+</head>
+<body>
+  <!--Cabeçalho-->
+  <header>
+    <!--Logo-->
+    <div class="logo">
+      <p>´</p>
+      <a href="index.html"> 
+        <h1>Élett Store</h1>
+      </a>
+    </div>
+    <!--Fim logo-->
+
+    <!--Navbar-->
+    <div class="navbar">
+      <!--Três traços-->
+      <input type="checkbox" name="openNav" id="openNav">
+      <label for="openNav" class="openNav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <!--Fim três traços-->
+
+      <!--Lista Menu-->
+      <ul class="menu">
+        <li>Produtos
+          <label>
+            <input type="checkbox">
+            <i class="fa-solid fa-angle-down"><img src="imagens/seta.svg" width="10px" height="10px"></i>
+          </label>
+          <!--Submenu em produtos-->
+          <ul class="submenu">
+            <li><a href="#" target="_self" rel="next">Todos os produtos</a></li>
+            <li><a href="colares.html" target="_self" rel="next">Colares</a></li>
+            <li><a href="choker.html" target="_self" rel="next">Choker</a></li>
+            <li><a href="pulseiras.html" target="_self" rel="next">Pulseiras</a></li>
+            <li><a href="brincos.html" target="_self" rel="next">Brincos</a></li>
+            <li><a href="aneis.html" target="_self" rel="next">Anéis</a></li>
+            <li><a href="#" target="_self" rel="next">Berloques</a></li>
+            <li><a href="#" target="_self" rel="next">Piercings</a></li>
+            <li><a href="#" target="_self" rel="next">Tornozeleiras</a></li>
+          </ul>
+          <!--Fim submenu-->
+        </li>
+        <li><a href="index.html" target="_self" rel="next">Página Inicial</a></li>
+        <li><a href="#" target="_self" rel="next">Masculino</a></li>
+        <li><a href="#" target="_self" rel="next">Limpeza</a></li>
+      </ul>
+      <!--Fim lista menu-->
+
+      <!--Opções entrar/inscrever-se-->
+      <ul class="otherOption">
+        <a href="login.html">
+          <li><ion-icon name="log-in-outline"></ion-icon> Entrar</li>
+        </a>
+        <a href="signup.html">
+          <li><ion-icon name="log-in-outline"></ion-icon> Inscrever-se</li>
+        </a>
+      </ul>
+      <!--Fim opções entrar/inscrever-se-->
+    </div>
+    <!--Fim navbar-->
+  </header>
+  <!--Fim cabeçalho-->
+
+  <main class="aneis-container">
+    <div class="aneis-header">
+      <h2>Anéis</h2>
+      <p>Designs delicados para destacar suas mãos.</p>
+    </div>
+
+    <div id="aneis-list" class="aneis-grid">
+      <!--Produtos renderizados via JavaScript-->
+    </div>
+  </main>
+
+  <!--Rodapé-->
+  <footer class="footer-distributed">
+    <section id="contact">
+      <div class="title">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco para fazer pedidos ou tirar suas dúvidas.</p>
+      </div>
+
+      <!-- Conteudo a esquerda-->
+      <div class="footer-left">
+        <h2 class="footer-links">
+          <span><ion-icon class="ico" name="wallet"></ion-icon></span>
+          <strong>Formas de pagamento:</strong>
+        </h2>
+
+        <!--Formas de pagamento-->
+        <div class="footer-icons">
+          <span><img src="imagens/pgamentos/bt-pgto-pagarme.webp" alt=""></span>
+          <span><img src="imagens/pgamentos/visa.webp" alt=""></span>
+          <span><img src="imagens/pgamentos/mastercard.png" alt=""></span>
+          <span><img src="imagens/pgamentos/amex.webp" alt=""></span>
+          <span><img src="imagens/pgamentos/elo.webp" alt=""></span>
+          <span><img src="imagens/pgamentos/hipercard.webp" alt=""></span>
+          <span><img src="imagens/pgamentos/diners.webp" alt=""></span>
+          <span><img src="imagens/pgamentos/aura.webp" alt=""></span>
+          <span><img src="imagens/pgamentos/pix.webp" alt=""></span>
+        </div>
+      </div>
+      <!-- Fim conteudo a esquerda-->
+
+      <!-- Conteudo ao centro-->
+      <div class="footer-center">
+        <h2 class="footer-links">Atendimento</h2>
+
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p>
+            <span>
+              <ion-icon class="ico" name="logo-whatsapp"></ion-icon><strong>Whatsapp:</strong> <a href="#">+1.555.555.5555</a>
+            </span>
+          </p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>
+            <span>
+              <ion-icon class="ico" name="call"></ion-icon><strong>telefone:</strong> (11) 5555-5555
+            </span>
+          </p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p>
+            <span><ion-icon class="ico" name="mail"></ion-icon><strong>E-mail:</strong><a id="b" href="mailto:contato@elett.store"> contato@elett.store</a></span>
+          </p>
+        </div>
+      </div>
+      <!-- Fim conteudo ao centro-->
+
+      <!-- Conteudo a direita-->
+      <div class="footer-right">
+        <h2 class="footer-links">
+          <p>
+            <span>
+              <ion-icon class="ico" name="alarm"></ion-icon><strong>Horário de Funcionamento:</strong>
+            </span>
+          </p>
+        </h2>
+
+        <div class="footer-company-about">
+          <p>Segunda a Sábado: 11h00 às 23h00</p>
+          <p>Domingo: 16h00 às 23h00</p>
+        </div>
+      </div>
+
+      <div class="button_end">
+        <h4>Peça agora mesmo!</h4>
+      </div>
+    </section> 
+  </footer>
+  <!--Fim rodapé-->
+
+  <!--Creditos-->
+  <footer class="footer-name">
+    &copy; 2025 Felipe Silva
+  </footer>
+  <!--Fim creditos-->
+
+
+    <!--JavaScripts-->
+
+<script>
+    async function carregarAneis() {
+  try {
+    const response = await fetch('products.json');
+    const produtos = await response.json();
+
+    const aneis = produtos.filter(produto => {
+      const categoria = (produto.categoria || '').toLowerCase();
+      const nome = (produto.name || '').toLowerCase();
+      return categoria === 'aneis' || nome.includes('anel');
+    });
+
+    const lista = aneis.length > 0 ? aneis : produtos;
+
+    const container = document.getElementById('aneis-list');
+    if (!container) return;
+
+    container.innerHTML = lista.map(produto => `
+      <div class="anel-card">
+        <img src="${produto.image}" alt="${produto.name}" class="anel-img">
+        <div class="anel-title">${produto.name}</div>
+        <div class="anel-price">R$ ${Number(produto.price).toFixed(2).replace('.', ',')}</div>
+        <a class="anel-link" href="produto.html?id=${produto.id}">Ver produto</a>
+      </div>
+    `).join('');
+  } catch (error) {
+    console.error('Erro ao carregar anéis:', error);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', carregarAneis);
+</script>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

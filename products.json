@@ -5,11 +5,13 @@
         "name": "Anel de Pedras Cristais (Ajustável)",
         "price": 39,
         "image": "imagens/anel.ajustavel.pedras.cristais.jpg",
+        "categoria": "aneis",
+        "novidade": true,
         "images": [
             "imagens/anel.ajustavel.pedras.cristais.jpg",
             "imagens/anel.ajustavel.coracao.cravejado.com.ponto.de.luz.jpg",
             "imagens/anel.aparador.cravejado.jpg"],
-        "descriçao" : "",
+        "descriçao" : "",   
         "desc" : "<br>10% <br> OFF <br><br>"
     },
     {
@@ -17,6 +19,8 @@
         "name": "Anel Aparador Cravejado",
         "price": 99,
         "image": "imagens/anel.aparador.cravejado.jpg",
+        "categoria": "pulseiras",
+        "novidade": true,
         "images": [
             "imagens/anel.aparador.cravejado.jpg",
             "imagens/anel.ajustavel.pedras.cristais.jpg",
@@ -30,6 +34,8 @@
         "name": "Anel Dedinho Regulável",
         "price": 10,
         "image": "imagens/anel.dedinho.regulavel.jpg",
+        "categoria": "aneis",
+        "novidade": true,
         "images": [
             "imagens/anel.dedinho.regulavel.jpg",
             "imagens/anel.ajustavel.coracao.cravejado.com.ponto.de.luz.jpg",
@@ -42,6 +48,8 @@
         "name": "Anel Regulável Coração",
         "price": 14,
         "image": "imagens/anel.regulavel.coracao.jpg",
+        "categoria": "choker",
+        "novidade": true,
         "images": [
             "imagens/anel.regulavel.coracao.jpg",
             "imagens/anel.ajustavel.coracao.cravejado.com.ponto.de.luz.jpg",
