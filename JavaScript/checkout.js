@@ -313,14 +313,13 @@ document.getElementById('card-cvv').addEventListener('input', function() {
 });
 
 // Submeter formulário
-document.getElementById('checkout-form').addEventListener('submit', function(e) {
+document.getElementById('checkout-form').addEventListener('submit', async function(e) {
   e.preventDefault();
   
   // Validação de campos obrigatórios de endereço
   const fullname = document.getElementById('fullname').value.trim();
   const email = document.getElementById('email').value.trim();
   const phone = document.getElementById('phone').value.trim();
-  const cep = document.getElementById('cep').value.trim();
   const address = document.getElementById('address').value.trim();
   const number = document.getElementById('number').value.trim();
   const neighborhood = document.getElementById('neighborhood').value.trim();
@@ -356,11 +355,6 @@ document.getElementById('checkout-form').addEventListener('submit', function(e) 
 
   if (!phone) {
     alert('Por favor, preencha o telefone');
-    return;
-  }
-
-  if (!cep) {
-    alert('Por favor, preencha o CEP');
     return;
   }
 
@@ -450,12 +444,119 @@ document.getElementById('checkout-form').addEventListener('submit', function(e) 
     }
   }
 
-  alert('Pedido realizado com sucesso!\n\nNúmero: #' + Math.floor(Math.random() * 1000000) + '\n\nVocê receberá um e-mail de confirmação em breve.');
+  // Gerar número do pedido
+  const orderNumber = Math.floor(Math.random() * 1000000);
   
-  localStorage.removeItem('cart');
-  localStorage.removeItem('checkout-shipping-cost');
-  window.location.href = 'index.html';
+  // Criar mensagem do WhatsApp com resumo completo
+  await sendWhatsAppMessage(orderNumber);
 });
 
 // Inicializar
 initCheckout();
+
+// Função para enviar mensagem do WhatsApp
+async function sendWhatsAppMessage(orderNumber) {
+  const carts = loadCartFromStorage();
+  const products = await loadProducts();
+  
+  // Coletar dados do formulário
+  const fullname = document.getElementById('fullname').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const address = document.getElementById('address').value.trim();
+  const number = document.getElementById('number').value.trim();
+  const complement = document.getElementById('complement').value.trim();
+  const neighborhood = document.getElementById('neighborhood').value.trim();
+  const city = document.getElementById('city').value.trim();
+  const state = document.getElementById('state').value.trim();
+  const checkoutCep = document.getElementById('checkout-cep').value.trim();
+  
+  // Método de entrega e pagamento
+  const deliverySelected = document.querySelector('input[name="delivery"]:checked');
+  const paymentSelected = document.querySelector('input[name="payment"]:checked');
+  
+  const deliveryNames = {
+    'normal': '📦 Normal (7-15 dias)',
+    'sedex': '🚚 SEDEX (2-5 dias)'
+  };
+  
+  const paymentNames = {
+    'credit': '💳 Crédito',
+    'debit': '🏦 Débito',
+    'pix': '📱 PIX'
+  };
+  
+  // Valores
+  const subtotalText = document.getElementById('subtotal').textContent;
+  const shippingText = document.getElementById('shipping').textContent;
+  const totalText = document.getElementById('total').textContent;
+  
+  // Construir lista de produtos
+  let productsList = '';
+  carts.forEach(cartItem => {
+    const product = products.find(p => p.id == cartItem.product_id);
+    if (product) {
+      const itemTotal = product.price * cartItem.quantity;
+      productsList += `\n• ${product.name}\n  Qtd: ${cartItem.quantity} x R$ ${product.price.toFixed(2).replace('.', ',')} = R$ ${itemTotal.toFixed(2).replace('.', ',')}\n`;
+    }
+  });
+  
+  // Montar mensagem completa
+  let message = `🛍️ *NOVO PEDIDO - Élett Store*\n`;
+  message += `━━━━━━━━━━━━━━━━━━━━\n\n`;
+  message += `*Pedido:* #${orderNumber}\n\n`;
+  
+  message += `*👤 DADOS DO CLIENTE*\n`;
+  message += `Nome: ${fullname}\n`;
+  message += `E-mail: ${email}\n`;
+  message += `Telefone: ${phone}\n\n`;
+  
+  message += `*📦 PRODUTOS*${productsList}\n`;
+  
+  message += `*💰 VALORES*\n`;
+  message += `Subtotal: ${subtotalText}\n`;
+  message += `Frete: ${shippingText}\n`;
+  message += `*Total: ${totalText}*\n\n`;
+  
+  message += `*📍 ENDEREÇO DE ENTREGA*\n`;
+  message += `${address}, ${number}`;
+  if (complement) message += ` - ${complement}`;
+  message += `\n${neighborhood}\n`;
+  message += `${city} - ${state}\n`;
+  message += `CEP: ${checkoutCep}\n\n`;
+  
+  message += `*🚚 MÉTODO DE ENTREGA*\n`;
+  message += `${deliveryNames[deliverySelected.value]}\n\n`;
+  
+  message += `*💳 FORMA DE PAGAMENTO*\n`;
+  message += `${paymentNames[paymentSelected.value]}\n`;
+  
+  // Se for PIX, adicionar observação
+  if (paymentSelected.value === 'pix') {
+    message += `\n_Aguardando confirmação do pagamento via PIX_\n`;
+    message += `Chave PIX: (35)98839-7718\n`;
+  }
+  
+  message += `\n━━━━━━━━━━━━━━━━━━━━\n`;
+  message += `_Pedido enviado via site Élett Store_`;
+  
+  // Codificar mensagem para URL
+  const encodedMessage = encodeURIComponent(message);
+  
+  // Número do WhatsApp (remover caracteres especiais)
+  const whatsappNumber = '5535988397718';
+  
+  // URL do WhatsApp
+  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+  
+  // Abrir WhatsApp
+  window.open(whatsappURL, '_blank');
+  
+  // Limpar carrinho e redirecionar após um breve delay
+  setTimeout(() => {
+    localStorage.removeItem('cart');
+    localStorage.removeItem('checkout-shipping-cost');
+    alert('Pedido enviado! Você será redirecionado para a loja.');
+    window.location.href = 'index.html';
+  }, 2000);
+}
