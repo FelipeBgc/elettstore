@@ -128,6 +128,11 @@ const addCartToHTML = () => {
             `;
             listCartHTML.appendChild(newCart);
         })
+    } else {
+        let emptyMessage = document.createElement('div');
+        emptyMessage.classList.add('cart-vazio');
+        emptyMessage.textContent = 'Nenhum item no carrinho de compras.';
+        listCartHTML.appendChild(emptyMessage);
     }
     iconCartSpan.innerText = totalQuantity;
     updateCartSubtotal();
@@ -191,10 +196,8 @@ const initApp = () => {
             addDataToHTML();
 
             // pegando o cart memory
-            if (localStorage.getItem('cart')) {
-                carts = JSON.parse(localStorage.getItem('cart'));
-                addCartToHTML();
-            }
+            carts = JSON.parse(localStorage.getItem('cart')) || [];
+            addCartToHTML();
         })
 }
 initApp();

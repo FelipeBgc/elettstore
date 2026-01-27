@@ -177,16 +177,16 @@ function renderizarCarrinho(carrinho) {
     fetch('products.json')
         .then(response => response.json())
         .then(produtos => {
-            if (carrinho.length > 0) {
-                carrinho.forEach(cart => {
-                    totalQuantity += cart.quantity;
-                    const produto = produtos.find(p => p.id == cart.product_id);
+                        if (carrinho.length > 0) {
+                                carrinho.forEach(cart => {
+                                        totalQuantity += cart.quantity;
+                                        const produto = produtos.find(p => p.id == cart.product_id);
 
-                    if (produto) {
-                        let newCart = document.createElement('div');
-                        newCart.classList.add('it');
-                        newCart.dataset.id = cart.product_id;
-                        newCart.innerHTML = `
+                                        if (produto) {
+                                                let newCart = document.createElement('div');
+                                                newCart.classList.add('it');
+                                                newCart.dataset.id = cart.product_id;
+                                                newCart.innerHTML = `
               <div class="image">
                 <img src="${produto.image}" alt="">
               </div>
@@ -207,10 +207,15 @@ function renderizarCarrinho(carrinho) {
                 </svg>
               </button>
             `;
-                        listCartHTML.appendChild(newCart);
-                    }
-                });
-            }
+                                                listCartHTML.appendChild(newCart);
+                                        }
+                                });
+                        } else {
+                                const emptyMessage = document.createElement('div');
+                                emptyMessage.classList.add('cart-vazio');
+                                emptyMessage.textContent = 'Nenhum item no carrinho de compras.';
+                                listCartHTML.appendChild(emptyMessage);
+                        }
 
             // Atualizar ícone e subtotal
             iconCartSpan.innerText = totalQuantity;
@@ -324,7 +329,5 @@ document.addEventListener('DOMContentLoaded', function () {
     atualizarContadorCarrinho();
     // Renderizar carrinho existente ao carregar
     let carrinho = JSON.parse(localStorage.getItem('cart')) || [];
-    if (carrinho.length > 0) {
-        renderizarCarrinho(carrinho);
-    }
+    renderizarCarrinho(carrinho);
 });

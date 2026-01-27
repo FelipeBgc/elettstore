@@ -435,6 +435,17 @@ body.showCart head{ /*DESFOCAR FUNDO QUANDO MOSTRAR CARRINHO*/
   z-index: 1003;
 }
 
+.cart-vazio { /*MENSAGEM CARRINHO VAZIO*/
+  text-align: center;
+  color: #777;
+  font-size: 14px;
+  padding: 16px 12px;
+  border: 1px dashed #ddd;
+  border-radius: 8px;
+  background: #fafafa;
+  margin: 8px;
+}
+
 .cartTab h1 { /*TÍTULO ABA CARRINHO DE COMPRAS*/
   padding: 7.7px 20px 20px 1rem;
   margin: 0;
