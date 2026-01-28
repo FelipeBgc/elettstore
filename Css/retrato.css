@@ -27,8 +27,10 @@
     }
 
     .navbar{ /*AJUSTAR MENU NAVEGAÇÃO*/
-        width: 65vw;
+        width: 95vw;
         background-color: #fff;
+        box-shadow: 0 4px 18px #00000022;
+        border: .5px solid var(--cor1);
         top: 0;
         left: 0;
         height: 100%;
@@ -106,7 +108,7 @@
         padding: 1rem 1rem;
         position: relative;
         top: 3rem;
-        font-size: 15px;
+        font-size: 17.5px;
         font-family: var(--font);
         font-weight: 700;
     }
@@ -128,7 +130,7 @@
 
     .navbar .otherOption ion-icon{ /*MOSTRAR ÍCONES OPÇÕES*/
         display: inline-block;
-        font-size: 15px;
+        font-size: 17px;
         font-weight: 700;
     }
 
@@ -179,6 +181,7 @@
         padding: 10px 10px 10px 30px;
         position: relative;
         top: 2px;
+        font-size: 16px;
     }
 
     .navbar label input:checked ~i { /*ROTACIONAR ÍCONE SETA SUBMENU*/
