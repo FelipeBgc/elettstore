@@ -2,13 +2,18 @@
 
 // Verificar se o usuário está logado
 function checkUserLogin() {
-  const token = localStorage.getItem('token');
-  const userLogado = localStorage.getItem('userLogado');
-  
-  if (token && userLogado) {
-    return JSON.parse(userLogado);
+  try {
+    const token = storage.getItem('token');
+    const userLogado = storage.getItem('userLogado');
+    
+    if (token && userLogado) {
+      return JSON.parse(userLogado);
+    }
+    return null;
+  } catch (e) {
+    console.error('Erro ao verificar login:', e.message);
+    return null;
   }
-  return null;
 }
 
 // Atualizar interface baseado no status de login
@@ -46,8 +51,8 @@ function logout(e) {
   e.preventDefault();
   
   if (confirm('Deseja realmente sair?')) {
-    localStorage.removeItem('token');
-    localStorage.removeItem('userLogado');
+    storage.removeItem('token');
+    storage.removeItem('userLogado');
     updateAuthUI();
     window.location.href = 'index.html';
   }
@@ -123,23 +128,27 @@ function autofillCheckoutForm() {
   }
 }
 
-// Salvar dados do endereço do usuário no localStorage
+// Salvar dados do endereço do usuário no storage
 function saveUserAddress(fullname, email, phone, address, number, complement, neighborhood, city, state, cep) {
-  let user = checkUserLogin();
-  
-  if (user) {
-    user.nome = fullname || user.nome;
-    user.email = email || user.email;
-    user.telefone = phone || user.telefone;
-    user.endereco = address || user.endereco;
-    user.numero = number || user.numero;
-    user.complemento = complement || user.complemento;
-    user.bairro = neighborhood || user.bairro;
-    user.cidade = city || user.cidade;
-    user.estado = state || user.estado;
-    user.cep = cep || user.cep;
+  try {
+    let user = checkUserLogin();
     
-    localStorage.setItem('userLogado', JSON.stringify(user));
+    if (user) {
+      user.nome = fullname || user.nome;
+      user.email = email || user.email;
+      user.telefone = phone || user.telefone;
+      user.endereco = address || user.endereco;
+      user.numero = number || user.numero;
+      user.complemento = complement || user.complemento;
+      user.bairro = neighborhood || user.bairro;
+      user.cidade = city || user.cidade;
+      user.estado = state || user.estado;
+      user.cep = cep || user.cep;
+      
+      storage.setItem('userLogado', user);
+    }
+  } catch (e) {
+    console.error('Erro ao salvar endereço:', e.message);
   }
 }
 
