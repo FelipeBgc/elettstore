@@ -1,5 +1,8 @@
 // Script da página de perfil
 
+// Usar o storage detectado do auth.js
+let storage = typeof getStorage !== 'undefined' ? getStorage() : localStorage;
+
 document.addEventListener('DOMContentLoaded', () => {
   carregarDadosPerfil();
   
@@ -7,15 +10,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnSair = document.querySelector('.btn-sair');
   if (btnSair) {
     btnSair.addEventListener('click', () => {
-      localStorage.removeItem('token');
-      localStorage.removeItem('userLogado');
+      storage.removeItem('token');
+      storage.removeItem('userLogado');
       window.location.href = 'index.html';
     });
   }
 });
 
 function carregarDadosPerfil() {
-  const userLogado = JSON.parse(localStorage.getItem('userLogado'));
+  const userLogado = JSON.parse(storage.getItem('userLogado'));
   
   if (!userLogado) {
     // Se não há usuário logado, redireciona para login

@@ -5,9 +5,12 @@ const CORREIOS_SERVICES = {
   'sedex': '04162' // Correios SEDEX
 };
 
-// Recuperar carrinho do localStorage
+// Usar o storage detectado do auth.js
+let storage = typeof getStorage !== 'undefined' ? getStorage() : localStorage;
+
+// Recuperar carrinho do storage
 function loadCartFromStorage() {
-  const cart = localStorage.getItem('cart');
+  const cart = storage.getItem('cart');
   return cart ? JSON.parse(cart) : [];
 }
 
@@ -153,7 +156,7 @@ async function calculateShipping() {
     msgDiv.classList.remove('error');
     msgDiv.style.display = 'block';
     
-    localStorage.setItem('checkout-shipping-cost', freteEstimado);
+    storage.setItem('checkout-shipping-cost', freteEstimado);
     const subtotal = parseFloat(document.getElementById('subtotal').textContent.replace('R$ ', '').replace(',', '.'));
     updateTotals(subtotal, freteEstimado);
   }
@@ -215,7 +218,7 @@ document.getElementById('calc-shipping-btn').addEventListener('click', async (e)
   btn.textContent = 'Calcular Frete';
   
   // Verificar se foi calculado com sucesso
-  const shippingCost = localStorage.getItem('checkout-shipping-cost');
+  const shippingCost = storage.getItem('checkout-shipping-cost');
   if (shippingCost) {
     btn.style.background = '#4CAF50';
     btn.style.color = 'white';
@@ -336,7 +339,7 @@ document.getElementById('checkout-form').addEventListener('submit', async functi
 
   // Validação de CEP de frete calculado
   const checkoutCep = document.getElementById('checkout-cep').value.trim();
-  const shippingCost = localStorage.getItem('checkout-shipping-cost');
+  const shippingCost = storage.getItem('checkout-shipping-cost');
 
   // Validação de método de entrega
   const deliverySelected = document.querySelector('input[name="delivery"]:checked');
@@ -561,8 +564,8 @@ async function sendWhatsAppMessage(orderNumber) {
   const whatsappURL = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedMessage}`;
   
   // Limpar carrinho antes de redirecionar
-  localStorage.removeItem('cart');
-  localStorage.removeItem('checkout-shipping-cost');
+  storage.removeItem('cart');
+  storage.removeItem('checkout-shipping-cost');
   
   // Redirecionar para WhatsApp
   window.location.href = whatsappURL;
