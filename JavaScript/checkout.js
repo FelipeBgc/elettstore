@@ -213,6 +213,14 @@ document.getElementById('calc-shipping-btn').addEventListener('click', async (e)
   await calculateShipping();
   btn.disabled = false;
   btn.textContent = 'Calcular Frete';
+  
+  // Verificar se foi calculado com sucesso
+  const shippingCost = localStorage.getItem('checkout-shipping-cost');
+  if (shippingCost) {
+    btn.style.background = '#4CAF50';
+    btn.style.color = 'white';
+    btn.textContent = '✓ Frete Calculado';
+  }
 });
 
 // Enter para calcular
@@ -389,7 +397,7 @@ document.getElementById('checkout-form').addEventListener('submit', async functi
   }
 
   if (!shippingCost) {
-    alert('Por favor, clique em "Calcular Frete" para validar o CEP');
+    alert('⚠️ FRETE OBRIGATÓRIO!\n\nClique em "Calcular Frete" para continuar com o pedido.');
     return;
   }
 
@@ -446,6 +454,9 @@ document.getElementById('checkout-form').addEventListener('submit', async functi
 
   // Gerar número do pedido
   const orderNumber = Math.floor(Math.random() * 1000000);
+  
+  // Salvar endereço do usuário se estiver logado
+  saveCheckoutAddressIfLogged();
   
   // Criar mensagem do WhatsApp com resumo completo
   await sendWhatsAppMessage(orderNumber);

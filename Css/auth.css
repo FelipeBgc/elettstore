@@ -1,0 +1,61 @@
+/* Estilos para o sistema de autenticação */
+
+#userGreeting {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #fcf6f7 0%, #fcf9fa 100%);
+  border-radius: 25px;
+  color: #333;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  border: 1.5px solid #7e7c7d;
+}
+
+#userGreeting:hover {
+  background: linear-gradient(135deg, #faf7f8 0%, #faf7f8 100%);
+  border-color: #858484;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(129, 129, 129, 0.2);
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  #userGreeting {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+  
+  #userGreeting::before {
+    font-size: 14px;
+  }
+}
+
+/* Estilos para o botão de logout - com hover customizado */
+.otherOption a[onclick*="logout"] {
+  pointer-events: auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.otherOption a[onclick*="logout"]:hover li {
+  color: white !important;
+  border-radius: 0 !important;
+  background-color: transparent !important;
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}

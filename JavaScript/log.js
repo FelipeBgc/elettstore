@@ -36,20 +36,26 @@ function entrar(){
             uservalid = {
                 nome: item.nomeCad,
                 email: item.emailCad,
-                senha: item.senhaCad
+                senha: item.senhaCad,
+                telefone: item.telefone || '',
+                endereco: item.endereco || '',
+                numero: item.numero || '',
+                bairro: item.bairro || '',
+                cidade: item.cidade || '',
+                estado: item.estado || '',
+                cep: item.cep || ''
             }
         }
     })
     
     if(email.value == uservalid.email && senha.value == uservalid.senha){
-        window.location.href = 'index.html'
-        
-        
         let mathRandom = Math.random().toString(16).substring(2)
         let token = mathRandom + mathRandom
         
         localStorage.setItem('token', token)
         localStorage.setItem('userLogado', JSON.stringify(uservalid))
+        
+        window.location.href = 'index.html'
     } else {
         emailLabel.setAttribute('style', 'color: red')
         email.setAttribute('style', 'border-color: red')

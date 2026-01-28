@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="Css/auth.css">
+    <link rel="stylesheet" href="Css/retrato.css" media="screen and (orientation: portrait)">
+    <link rel="stylesheet" href="Css/paisagem.css" media="screen and (orientation: landscape)">
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
+    <title>Meu Perfil - Élett Store</title>
+
+<!-- Estilos da página de perfil -->
+
+<style>
+@font-face { 
+  font-family: 'Mignon';
+  src: url('./fonts/Mignon-Regular.otf') format('opentype'), url('./fonts/Mignon-Regular.ttf') format('truetype');
+}
+
+.logo h1 { /*LOGO*/
+  font-family: 'Mignon';
+}
+
+.perfil-container {
+  max-width: 550px;
+  margin: 6rem auto 0;
+  padding: 10px;
+  min-height: calc(100vh - 6rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.perfil-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  width: 100%;
+}
+
+.perfil-header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.perfil-avatar {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.perfil-header h2 {
+  font-size: 22px;
+  color: #333;
+  font-weight: 600;
+  margin: 0;
+}
+
+.perfil-section {
+  margin-bottom: 20px;
+}
+
+.perfil-section h3 {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.perfil-info {
+  display: grid;
+  gap: 12px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-item label {
+  font-size: 12px;
+  color: #888;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-item span {
+  font-size: 15px;
+  color: #333;
+  padding: 8px 12px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+}
+
+.perfil-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-voltar, .btn-sair {
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-voltar {
+  background: #ff69b4;
+  color: white;
+}
+
+.btn-voltar:hover {
+  background: #ff1493;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.3);
+}
+
+.btn-sair {
+  background: #f44336;
+  color: white;
+}
+
+.btn-sair:hover {
+  background: #d32f2f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(244, 67, 54, 0.3);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .perfil-container {
+    margin: 4rem auto 1.5rem;
+    padding: 10px;
+  }
+
+  .perfil-card {
+    padding: 20px;
+  }
+
+  .perfil-header h2 {
+    font-size: 20px;
+  }
+
+  .perfil-avatar {
+    font-size: 50px;
+  }
+
+  .perfil-section h3 {
+    font-size: 16px;
+  }
+
+  .info-item span {
+    font-size: 14px;
+  }
+
+  .perfil-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-voltar, .btn-sair {
+    width: 100%;
+    padding: 10px 20px;
+  }
+}
+</style>
+</head>
+<body>
+    <!--Cabeçalho-->
+    <header>
+        <!--Logo-->
+        <div class="logo">
+            <p>´</p>
+            <a href="index.html"> 
+                <h1>Élett Store</h1>
+            </a>
+        </div>
+        <!--Fim logo-->
+
+        <!--Navbar-->
+        <div class="navbar">
+            <!--Três traços-->
+            <input type="checkbox" name="openNav" id="openNav">
+            <label for="openNav" class="openNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <!--Fim três traços-->
+
+            <!--Lista Menu-->
+            <ul class="menu">
+                <li>Produtos
+                    <label>
+                        <input type="checkbox">
+                        <i class="fa-solid fa-angle-down"><img src="imagens/seta.svg" width="10px" height="10px"></i>
+                    </label>
+                    <!--Submenu em produtos-->
+                    <ul class="submenu">
+                        <li><a href="index.html" target="_self" rel="next">Todos os produtos</a></li>
+                        <li><a href="colares.html" target="_self" rel="next">Colares</a></li>
+                        <li><a href="choker.html" target="_self" rel="next">Choker</a></li>
+                        <li><a href="pulseiras.html" target="_self" rel="next">Pulseiras</a></li>
+                        <li><a href="brincos.html" target="_self" rel="next">Brincos</a></li>
+                        <li><a href="aneis.html" target="_self" rel="next">Anéis</a></li>
+                        <li><a href="berloques.html" target="_self" rel="next">Berloques</a></li>
+                        <li><a href="piercings.html" target="_self" rel="next">Piercings</a></li>
+                        <li><a href="tornozeleiras.html" target="_self" rel="next">Tornozeleiras</a></li>
+                    </ul>
+                    <!--Fim submenu-->
+                </li>
+                <li><a href="novidades.html" target="_self" rel="next">Novidades do Mês</a></li>
+                <li><a href="masculino.html" target="_self" rel="next">Masculino</a></li>
+                <li><a href="limpeza.html" target="_self" rel="next">Limpeza</a></li>
+            </ul>
+            <!--Fim lista menu-->
+
+            <!--Opções entrar/inscrever-se-->
+            <ul class="otherOption" id="authOptions">
+                <a href="login.html">
+                    <li><ion-icon name="log-in-outline"></ion-icon> Entrar</li>
+                </a>
+                <a href="signup.html">
+                    <li><ion-icon name="log-in-outline"></ion-icon> Inscrever-se</li>
+                </a>
+            </ul>
+            <!--Fim opções entrar/inscrever-se-->
+        </div>
+        <!--Fim navbar-->
+
+        <!--Icone do carrinho-->
+        <div class="icon-cart">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="31" height="31" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312" />
+            </svg>
+            <span>0</span>
+        </div>
+        <!--Fim icone do carrinho-->
+    </header>
+    <!--Fim cabeçalho-->
+
+    <!-- Container do Perfil -->
+    <div class="perfil-container">
+        <div class="perfil-card">
+            <div class="perfil-header">
+                <div class="perfil-avatar">👤</div>
+                <h2 id="perfil-nome">Carregando...</h2>
+            </div>
+
+            <div class="perfil-section">
+                <h3>📧 Informações de Contato</h3>
+                <div class="perfil-info">
+                    <div class="info-item">
+                        <label>E-mail:</label>
+                        <span id="perfil-email">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Telefone:</label>
+                        <span id="perfil-telefone">-</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="perfil-actions">
+                <a href="index.html" class="btn-voltar">Voltar para Loja</a>
+                <button onclick="logout(event)" class="btn-sair">Sair da Conta</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="JavaScript/auth.js"></script>
+    <script src="JavaScript/perfil.js"></script>
+    <script src="JavaScript/carrinho.js"></script>
+</body>
+</html>

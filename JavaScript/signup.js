@@ -14,6 +14,10 @@ let email = document.querySelector('#email')
 let labelEmail = document.querySelector('#labelEmail')
 let validEmail = false
 
+let telefone = document.querySelector('#telefone')
+let labelTelefone = document.querySelector('#labelTelefone')
+let validTelefone = false
+
 let senha = document.querySelector('#senha')
 let labelSenha = document.querySelector('#labelSenha')
 let validSenha = false
@@ -69,6 +73,20 @@ email.addEventListener('keyup', () => {
   }
 })
 
+telefone.addEventListener('keyup', () => {
+  if(telefone.value.length < 11){
+    labelTelefone.setAttribute('style', 'color: red')
+    labelTelefone.innerHTML = 'Telefone *Insira um telefone válido (mínimo 11 dígitos)'
+    telefone.setAttribute('style', 'border-color: red')
+    validTelefone = false
+  } else {
+    labelTelefone.setAttribute('style', 'color: green')
+    labelTelefone.innerHTML = 'Telefone'
+    telefone.setAttribute('style', 'border-color: green')
+    validTelefone = true
+  }
+})
+
 senha.addEventListener('keyup', () => {
   if(senha.value.length <= 7){
     labelSenha.setAttribute('style', 'color: red')
@@ -100,14 +118,22 @@ confirmSenha.addEventListener('keyup', () => {
 
 
 function cadastrar(){
-    if(validNome & validEmail & validSenha || validConfirmSenha ){ 
+    if(validNome & validEmail & validTelefone & validSenha || validConfirmSenha ){ 
         let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
 
         listaUser.push(
         {
             nomeCad: nome.value,
             emailCad: email.value,
-            senhaCad: senha.value
+            telefoneCad: telefone.value,
+            senhaCad: senha.value,
+            telefone: telefone.value,
+            endereco: '',
+            numero: '',
+            bairro: '',
+            cidade: '',
+            estado: '',
+            cep: ''
         }
         )
         
@@ -153,4 +179,14 @@ btnConfirm.addEventListener('click', ()=>{
     } else {
         inputConfirmSenha.setAttribute('type', 'password');
     }
-}) 
+})
+
+// Formatar telefone (apenas números)
+telefone.addEventListener('input', function(e) {
+  let value = e.target.value.replace(/\D/g, '');
+  if (value.length <= 11) {
+    e.target.value = value;
+  } else {
+    e.target.value = value.substring(0, 11);
+  }
+})
