@@ -119,8 +119,7 @@ confirmSenha.addEventListener('keyup', () => {
 
 function cadastrar(){
     if(validNome & validEmail & validTelefone & validSenha || validConfirmSenha ){ 
-        let userListaString = storage.getItem('listaUser');
-        let listaUser = userListaString ? JSON.parse(userListaString) : [];
+        let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
 
         listaUser.push(
         {
@@ -138,7 +137,8 @@ function cadastrar(){
         }
         )
         
-        storage.setItem('listaUser', listaUser);
+        localStorage.setItem('listaUser', JSON.stringify(listaUser))
+        
 
         msgSuccess.setAttribute('style', 'display: block')
         msgSuccess.innerHTML = '<strong>Cadastrando usuário...</strong>'

@@ -29,8 +29,7 @@ function entrar(){
         senha:''
     }
     
-    let userListaString = storage.getItem('listaUser');
-    listaUser = userListaString ? JSON.parse(userListaString) : [];
+    listaUser = JSON.parse(localStorage.getItem('listaUser'))
     
     listaUser.forEach((item) => {
         if(email.value == item.emailCad && senha.value == item.senhaCad){
@@ -53,8 +52,8 @@ function entrar(){
         let mathRandom = Math.random().toString(16).substring(2)
         let token = mathRandom + mathRandom
         
-        storage.setItem('token', token);
-        storage.setItem('userLogado', uservalid);
+        localStorage.setItem('token', token)
+        localStorage.setItem('userLogado', JSON.stringify(uservalid))
         
         window.location.href = 'index.html'
     } else {
