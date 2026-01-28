@@ -235,6 +235,30 @@ form .search{ /*BOTÃO PESQUISA*/
   text-align: left;
 }
 
+.btn-remover-carrinho { /*BOTÃO REMOVER ITENS CARRINHO*/
+  color: var(--cor3);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  margin-left: auto;
+}
+
+.btn-remover-carrinho:hover { /*EFEITO HOVER BOTÃO REMOVER ITENS CARRINHO*/
+  background-color: var(--cor1);
+  transform: scale(1.05);
+}
+
+.btn-remover-carrinho:active { /*EFEITO CLICK BOTÃO REMOVER ITENS CARRINHO*/
+  transform: scale(0.95);
+}
+
 /*LISTA PESQUISA*/
 
 .li.active{ /* QUANDO MOSTRAR LISTA PESQUISA*/
@@ -397,7 +421,7 @@ body.showCart head{ /*DESFOCAR FUNDO QUANDO MOSTRAR CARRINHO*/
 .cartTab .listCart{ /*LISTA ITENS CARRINHO DE COMPRAS*/
   font-family: "Montserrat", sans-serif;
   position: absolute;
-  top: 4.5rem;
+  top: 3.5rem;
   left: 0;
   right: 0;
   min-width: 90%;
@@ -409,30 +433,6 @@ body.showCart head{ /*DESFOCAR FUNDO QUANDO MOSTRAR CARRINHO*/
   overflow-x:hidden ;
   padding: .6rem;
   z-index: 1003;
-}
-
-.btn-remover-carrinho { /*BOTÃO REMOVER ITENS CARRINHO*/
-  color: var(--cor3);
-  border: none;
-  padding: 8px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: all 0.3s;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-weight: 600;
-  margin-left: auto;
-}
-
-.btn-remover-carrinho:hover { /*EFEITO HOVER BOTÃO REMOVER ITENS CARRINHO*/
-  background-color: var(--cor1);
-  transform: scale(1.05);
-}
-
-.btn-remover-carrinho:active { /*EFEITO CLICK BOTÃO REMOVER ITENS CARRINHO*/
-  transform: scale(0.95);
 }
 
 .cart-vazio { /*MENSAGEM CARRINHO VAZIO*/
@@ -447,7 +447,7 @@ body.showCart head{ /*DESFOCAR FUNDO QUANDO MOSTRAR CARRINHO*/
 }
 
 .cartTab h1 { /*TÍTULO ABA CARRINHO DE COMPRAS*/
-  padding: 7.7px 20px 15px 1rem;
+  padding: 7.7px 20px 20px 1rem;
   margin: 0;
   color: var(--cor3);
   text-align: left;
