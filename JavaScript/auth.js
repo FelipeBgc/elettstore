@@ -1,49 +1,9 @@
-// Sistema de Autenticação Centralizado com Storage Adaptável
-
-// Objeto para armazenar dados em memória como fallback
-const memoryStorage = {
-  data: {},
-  getItem(key) {
-    return this.data[key] || null;
-  },
-  setItem(key, value) {
-    this.data[key] = value;
-  },
-  removeItem(key) {
-    delete this.data[key];
-  }
-};
-
-// Detectar qual storage usar
-function getStorage() {
-  try {
-    // Tentar localStorage
-    const test = '__localStorage_test__';
-    localStorage.setItem(test, test);
-    localStorage.removeItem(test);
-    return localStorage;
-  } catch (e) {
-    try {
-      // Se localStorage falhar, tentar sessionStorage
-      const test = '__sessionStorage_test__';
-      sessionStorage.setItem(test, test);
-      sessionStorage.removeItem(test);
-      return sessionStorage;
-    } catch (e) {
-      // Se ambos falharem, usar memória
-      console.warn('Storage indisponível. Usando armazenamento em memória. Dados serão perdidos ao fechar a aba.');
-      return memoryStorage;
-    }
-  }
-}
-
-// Usar o storage detectado
-const storage = getStorage();
+// Sistema de Autenticação Centralizado
 
 // Verificar se o usuário está logado
 function checkUserLogin() {
-  const token = storage.getItem('token');
-  const userLogado = storage.getItem('userLogado');
+  const token = localStorage.getItem('token');
+  const userLogado = localStorage.getItem('userLogado');
   
   if (token && userLogado) {
     return JSON.parse(userLogado);
@@ -86,8 +46,8 @@ function logout(e) {
   e.preventDefault();
   
   if (confirm('Deseja realmente sair?')) {
-    storage.removeItem('token');
-    storage.removeItem('userLogado');
+    localStorage.removeItem('token');
+    localStorage.removeItem('userLogado');
     updateAuthUI();
     window.location.href = 'index.html';
   }
@@ -163,7 +123,7 @@ function autofillCheckoutForm() {
   }
 }
 
-// Salvar dados do endereço do usuário no storage
+// Salvar dados do endereço do usuário no localStorage
 function saveUserAddress(fullname, email, phone, address, number, complement, neighborhood, city, state, cep) {
   let user = checkUserLogin();
   
@@ -179,7 +139,7 @@ function saveUserAddress(fullname, email, phone, address, number, complement, ne
     user.estado = state || user.estado;
     user.cep = cep || user.cep;
     
-    storage.setItem('userLogado', JSON.stringify(user));
+    localStorage.setItem('userLogado', JSON.stringify(user));
   }
 }
 

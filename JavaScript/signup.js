@@ -1,8 +1,6 @@
 let btn = document.querySelector('#verSenha')
 let btnConfirm = document.querySelector('#verConfirmSenha')
 
-// Usar o storage detectado do auth.js
-let storage = typeof getStorage !== 'undefined' ? getStorage() : localStorage;
 
 let nome = document.querySelector('#nome')
 let labelNome = document.querySelector('#labelNome')
@@ -121,7 +119,7 @@ confirmSenha.addEventListener('keyup', () => {
 
 function cadastrar(){
     if(validNome & validEmail & validTelefone & validSenha || validConfirmSenha ){ 
-        let listaUser = JSON.parse(storage.getItem('listaUser') || '[]')
+        let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
 
         listaUser.push(
         {
@@ -139,7 +137,7 @@ function cadastrar(){
         }
         )
         
-        storage.setItem('listaUser', JSON.stringify(listaUser))
+        localStorage.setItem('listaUser', JSON.stringify(listaUser))
         
 
         msgSuccess.setAttribute('style', 'display: block')

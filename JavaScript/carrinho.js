@@ -1,8 +1,5 @@
 // JavaScript/carrinho.js
 
-// Usar o storage detectado do auth.js
-let storage = typeof getStorage !== 'undefined' ? getStorage() : localStorage;
-
 let iconCart = document.querySelector('.icon-cart');
 let closeCart = document.querySelector('.close')
 let body = document.querySelector('body');
@@ -75,7 +72,7 @@ const addToCart = (product_id) => {
     addCartToMemory();
 }
 const addCartToMemory = () => {
-    storage.setItem('cart', JSON.stringify(carts));
+    localStorage.setItem('cart', JSON.stringify(carts));
 }
 
 // atualizando subtotal do carrinho
@@ -199,7 +196,7 @@ const initApp = () => {
             addDataToHTML();
 
             // pegando o cart memory
-            carts = JSON.parse(storage.getItem('cart')) || [];
+            carts = JSON.parse(localStorage.getItem('cart')) || [];
             addCartToHTML();
         })
 }

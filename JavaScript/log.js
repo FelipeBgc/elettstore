@@ -2,9 +2,6 @@ let btn = document.querySelector('.fa-eye')
 
 let log = document.querySelector('.log')
 
-// Usar o storage detectado do auth.js
-let storage = typeof getStorage !== 'undefined' ? getStorage() : localStorage;
-
 btn.addEventListener('click', ()=>{
     let inputSenha = document.querySelector('#senha');
 
@@ -32,7 +29,7 @@ function entrar(){
         senha:''
     }
     
-    listaUser = JSON.parse(storage.getItem('listaUser'))
+    listaUser = JSON.parse(localStorage.getItem('listaUser'))
     
     listaUser.forEach((item) => {
         if(email.value == item.emailCad && senha.value == item.senhaCad){
@@ -55,8 +52,8 @@ function entrar(){
         let mathRandom = Math.random().toString(16).substring(2)
         let token = mathRandom + mathRandom
         
-        storage.setItem('token', token)
-        storage.setItem('userLogado', JSON.stringify(uservalid))
+        localStorage.setItem('token', token)
+        localStorage.setItem('userLogado', JSON.stringify(uservalid))
         
         window.location.href = 'index.html'
     } else {
