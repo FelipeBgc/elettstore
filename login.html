@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Css/signup.css">
+    <link rel="stylesheet" href="Css/login.css">
     <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Identificação - Élett Store</title>
@@ -14,21 +14,22 @@
             <img src="imagens/logo_1.png" alt="Elett Store">
 
             <div id="msgError"></div>
+            <div id="msgSuccess"></div>
 
-            <div class="label-float">
-                <input type="email" id="email" placeholder="" required>
-                <label id="emailLabel" for="email">Email</label>
-            </div>
-            
-            <div class="label-float">
-                <input type="password" id="senha" placeholder="" required>
-                <label id="senhaLabel" for="senha">Senha</label>
-                <i class="fa fa-eye" aria-hidden="true"></i>
-            </div>
-
-            <div class="justify-center">
-                <button onclick="entrar()">Iniciar Sessão</button>
-            </div>
+            <form action="">
+                <div class="label-float">
+                    <input type="email" id="email" placeholder="" required>
+                    <label id="emailLabel" for="email">Email</label>
+                </div>
+                
+                <div class="label-float">
+                    <input type="password" id="senha" placeholder="" required>
+                    <label id="senhaLabel" for="senha">Senha</label>
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                </div>
+                <input type="submit" name="submit" id="justify-center" value="Iniciar Sessão">
+                </input>
+            </form>
 
             <div class="justify-center">
                 <hr>
