@@ -864,6 +864,10 @@ body.showCart head{ /*DESFOCAR FUNDO QUANDO MOSTRAR CARRINHO*/
   position: relative;
 }
 
+.item_c:hover{ /*HOVER CADA ITEM DA LISTA DE PRODUTOS*/
+  transform: translateY(-4px);
+}
+
 .item_c a{ /*LINKS NA LISTA DE PRODUTOS*/
   text-decoration: none;
 }
@@ -872,7 +876,8 @@ body.showCart head{ /*DESFOCAR FUNDO QUANDO MOSTRAR CARRINHO*/
   width: 100%;
   height: 59%;
   object-fit: cover;
-  border-radius: 3px 3px 0 0; 
+  border-radius: 3px 3px;
+  padding: 10px; 
 }
 
 .item_c h2 { /*TÍTULO CADA ITEM DA LISTA DE PRODUTOS*/
@@ -890,6 +895,9 @@ body.showCart head{ /*DESFOCAR FUNDO QUANDO MOSTRAR CARRINHO*/
   text-transform: capitalize;
   color: rgba(0, 0, 0, 0.829);
   padding-right: .67px;
+  font-size: 15px;
+  color: #2d2d2d;
+  font-weight: 600;
 }
 
 .item_c h2:hover{ 
