@@ -876,8 +876,7 @@ body.showCart head{ /*DESFOCAR FUNDO QUANDO MOSTRAR CARRINHO*/
   width: 100%;
   height: 59%;
   object-fit: cover;
-  border-radius: 3px 3px;
-  padding: 10px; 
+  border-radius: 3px 3px 0 0;
 }
 
 .item_c h2 { /*TÍTULO CADA ITEM DA LISTA DE PRODUTOS*/
