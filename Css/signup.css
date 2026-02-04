@@ -58,40 +58,6 @@ body {
     }
 }
 
-@media (max-height: 760px) {
-    .card{
-        padding: 20px;
-    }
-
-    img{
-        margin-bottom: 12px;
-        height: 2rem;
-    }
-
-    .label-float {
-        margin-top: 3%;
-        margin-bottom: 3%;
-    }
-
-    .label-float input{
-        font-size: 14px;
-    }
-
-    input[type="submit"]{
-        font-size: 12pt;
-        margin-top: 12px;
-    }
-
-    hr{
-        margin-top: 6%;
-        margin-bottom: 6%;
-    }
-
-    p{
-        font-size: 12pt;
-    }
-}
-
 img{
     text-align: center;
     margin-bottom: 20px;
@@ -136,7 +102,7 @@ img{
     margin-top: 0;
 }
 
-input[type="submit"]{
+button{
     background-color: rgba(45, 185, 45, 0.884);
     border-color: #ffffff90;
     padding: 7px 19px;
@@ -149,12 +115,9 @@ input[type="submit"]{
     transition: all .2s ease-out;
     text-transform: uppercase;
     color: #fff;
-    display: flex;
-    width: 65%;
-    margin-left: 3rem;
 }
 
-input[type="submit"]:hover{
+button:hover{
     background-color: rgba(45, 185, 45, 0.651);
     color: #ffffff;
     
