@@ -273,7 +273,7 @@ const changeQuantity = (product_id, type) => {
 // iniciando o app
 const initApp = () => {
     const path = window.location.pathname.toLowerCase();
-    const hideCartPages = ['/login.html', '/signup.html'];
+    const hideCartPages = ['/login.html', '/signup.html', '/checkout.html'];
     const isHiddenPage = hideCartPages.some(page => path.endsWith(page));
 
     if (!isHiddenPage) {
