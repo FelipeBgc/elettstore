@@ -102,7 +102,7 @@ async function carregarProduto() {
           <label class="quantidade-label">Quantidade</label>
           <div class="quantidade-controls">
             <button class="quantidade-btn" onclick="diminuirQuantidade()">−</button>
-                        <input type="number" id="quantidade" class="quantidade-input" value="1" min="1" inputmode="numeric" pattern="[0-9]*">
+            <input type="number" id="quantidade" class="quantidade-input" value="1" min="1" readonly>
             <button class="quantidade-btn" onclick="aumentarQuantidade()">+</button>
           </div>
         </div>
@@ -113,7 +113,6 @@ async function carregarProduto() {
       </div>
     `;
         configurarGaleria(imagensProduto, produto.name);
-        configurarQuantidadeInput();
     } catch (error) {
         console.error('Erro ao carregar produto:', error);
         document.getElementById('produto-container').innerHTML =
@@ -173,38 +172,6 @@ function configurarGaleria(imagens, nomeProduto) {
 
     // Configurar modal
     configurarModal(imagens, nomeProduto);
-}
-
-function configurarQuantidadeInput() {
-    const input = document.getElementById('quantidade');
-    if (!input) return;
-
-    // permitir somente números enquanto digita
-    input.addEventListener('input', function () {
-        // remove quaisquer caracteres não numéricos
-        this.value = this.value.replace(/[^0-9]/g, '');
-    });
-
-    // ao perder o foco ou confirmar, garante valor mínimo 1
-    input.addEventListener('change', function () {
-        let v = parseInt(this.value, 10);
-        if (isNaN(v) || v < 1) this.value = 1;
-    });
-
-    // permitir setas do teclado para aumentar/diminuir
-    input.addEventListener('keydown', function (e) {
-        if (e.key === 'ArrowUp') {
-            e.preventDefault();
-            this.value = (parseInt(this.value || '0', 10) || 0) + 1;
-            this.dispatchEvent(new Event('change'));
-        } else if (e.key === 'ArrowDown') {
-            e.preventDefault();
-            let v = (parseInt(this.value || '0', 10) || 0) - 1;
-            if (v < 1) v = 1;
-            this.value = v;
-            this.dispatchEvent(new Event('change'));
-        }
-    });
 }
 
 function atualizarGaleriaPrincipal(indice, imagens, imagemPrincipal, thumbs, nomeProduto) {
@@ -345,17 +312,13 @@ function atualizarModalThumbs(indice) {
 // Funções de quantidade
 function aumentarQuantidade() {
     const input = document.getElementById('quantidade');
-    const val = parseInt(input.value || '0', 10) || 0;
-    input.value = val + 1;
+    input.value = parseInt(input.value) + 1;
 }
 
 function diminuirQuantidade() {
     const input = document.getElementById('quantidade');
-    const val = parseInt(input.value || '0', 10) || 0;
-    if (val > 1) {
-        input.value = val - 1;
-    } else {
-        input.value = 1;
+    if (parseInt(input.value) > 1) {
+        input.value = parseInt(input.value) - 1;
     }
 }
 

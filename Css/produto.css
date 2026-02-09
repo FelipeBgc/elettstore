@@ -260,16 +260,6 @@ body { /*CORPO DA PÁGINA*/
   color: #2d2d2d;
 }
 
-/* Remover setas (spin buttons) do input number para quantidade */
-.quantidade-input::-webkit-outer-spin-button,
-.quantidade-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-.quantidade-input {
-  -moz-appearance: textfield; /* Firefox */
-}
-
 .adicionar-carrinho-btn { /*BOTÃO ADICIONAR AO CARRINHO*/
   background-color: #5bb299;
   color: white;
