@@ -88,7 +88,7 @@ body { /*CORPO DA PÁGINA*/
   display: flex;
   flex-direction: column;
   gap: 18px;
-  padding: 10px 10px;
+  padding: 10px 0;
 }
 
 .produto-titulo { /*TÍTULO PRODUTO*/
@@ -129,30 +129,21 @@ body { /*CORPO DA PÁGINA*/
 
 .produto-descricao { /*DESCRIÇÃO PRODUTO*/
   font-size: 13px;
-  color: #333333;
-  line-height: 1.20;
+  color: #666;
+  line-height: 1.65;
   padding: 12px 12px 10px 12px;
   background-color: #f9f9f9;
   border-radius: 5px;
+  border-left: 3px solid #5bb299;
   max-height: 150px;
   overflow-y: auto;
-  border-left: 3px solid #5bb299;
-  width: fit-content;
 }
 
 .produto-descricao h4 { /*TÍTULO DESCRIÇÃO*/
   color: #2d2d2d;
-  font-size: 17px;
+  font-size: 13px;
   margin: 0 0 6px 0;
   font-weight: 600;
-}
-
-.produto-descricao h3 { /*TÍTULO DESCRIÇÃO*/
-  color: #2d2d2d;
-  font-size: 12.5px;
-  margin: 0 0 6px 0;
-  font-weight: 600;
-  padding-top: .5rem;
 }
 
 .quantidade-section { /*SEÇÃO QUANTIDADE*/
