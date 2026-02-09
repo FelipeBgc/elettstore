@@ -499,12 +499,21 @@ bottom:5rem;
 @media screen and (min-width: 389px) and (max-width: 670px){ 
 
   .modal-imagem-principal {
-    min-height: 80vh;
+    min-height: 100vh;
   }
 
   .modal-fechar{
     top: 2rem;
     right: 0;
+  }
+
+  .modal-thumbs-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
   }
 
   .modal-thumb {
