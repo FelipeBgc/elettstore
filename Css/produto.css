@@ -501,7 +501,6 @@ bottom:5rem;
   .modal-imagem-principal {
     min-height: 100vh;
     min-width: 200vw;
-    object-position: center;
   }
 
   .modal-fechar{
