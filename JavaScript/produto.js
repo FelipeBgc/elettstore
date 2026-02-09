@@ -39,10 +39,31 @@ async function carregarProduto() {
         document.getElementById('produto-container').innerHTML = `
             <div class="produto-imagem-container">
                 <div class="produto-galeria">
-                    <img id="produto-imagem-principal" src="${imagensProduto[0]}" alt="${produto.name}" class="produto-imagem">
+                    <div class="galeria-wrapper">
+                        <button type="button" class="galeria-seta galeria-seta-esquerda" id="galeriaAnterior">&lt;</button>
+                        <img id="produto-imagem-principal" src="${imagensProduto[0]}" alt="${produto.name}" class="produto-imagem">
+                        <button type="button" class="galeria-seta galeria-seta-direita" id="galeraProximo">&gt;</button>
+                    </div>
                     <div class="produto-thumbs">
                         ${imagensProduto.map((img, index) => `
                             <button type="button" class="produto-thumb${index === 0 ? ' active' : ''}" data-src="${img}" data-alt="${produto.name} ${index + 1}">
+                                <img src="${img}" alt="${produto.name} ${index + 1}">
+                            </button>
+                        `).join('')}
+                    </div>
+                </div>
+            </div>
+            <div class="modal-galeria" id="modalGaleria">
+                <div class="modal-container">
+                    <button type="button" class="modal-fechar" id="fecharModal">&times;</button>
+                    <div class="modal-setas">
+                        <button type="button" class="modal-seta" id="seteAnterior">&lt;</button>
+                        <button type="button" class="modal-seta" id="seteProximo">&gt;</button>
+                    </div>
+                    <img id="modal-imagem-principal" src="${imagensProduto[0]}" alt="${produto.name}" class="modal-imagem-principal">
+                    <div class="modal-thumbs-container" id="modalThumbs">
+                        ${imagensProduto.map((img, index) => `
+                            <button type="button" class="modal-thumb${index === 0 ? ' ativa' : ''}" data-index="${index}">
                                 <img src="${img}" alt="${produto.name} ${index + 1}">
                             </button>
                         `).join('')}
@@ -102,16 +123,189 @@ async function carregarProduto() {
 function configurarGaleria(imagens, nomeProduto) {
     const imagemPrincipal = document.getElementById('produto-imagem-principal');
     const thumbs = document.querySelectorAll('.produto-thumb');
+    const btnAnterior = document.getElementById('galeriaAnterior');
+    const btnProximo = document.getElementById('galeraProximo');
+    
     if (!imagemPrincipal || !thumbs.length) return;
 
-    thumbs.forEach((thumb) => {
+    let indiceAtual = 0;
+
+    // Configurar cliques nas miniaturas principais
+    thumbs.forEach((thumb, index) => {
         thumb.addEventListener('click', () => {
             const novaImagem = thumb.dataset.src;
             imagemPrincipal.src = novaImagem;
             imagemPrincipal.alt = nomeProduto;
+            indiceAtual = index;
             thumbs.forEach(t => t.classList.remove('active'));
             thumb.classList.add('active');
+            
+            // Atualizar modal também
+            const modalImagem = document.getElementById('modal-imagem-principal');
+            if (modalImagem) {
+                modalImagem.src = novaImagem;
+            }
+            atualizarModalThumbs(indiceAtual);
         });
+    });
+
+    // Configurar setas da galeria principal
+    if (btnAnterior) {
+        btnAnterior.addEventListener('click', () => {
+            indiceAtual = (indiceAtual - 1 + imagens.length) % imagens.length;
+            atualizarGaleriaPrincipal(indiceAtual, imagens, imagemPrincipal, thumbs, nomeProduto);
+        });
+    }
+
+    if (btnProximo) {
+        btnProximo.addEventListener('click', () => {
+            indiceAtual = (indiceAtual + 1) % imagens.length;
+            atualizarGaleriaPrincipal(indiceAtual, imagens, imagemPrincipal, thumbs, nomeProduto);
+        });
+    }
+
+    // Configurar swipe/drag para mobile
+    configurarSwipeGaleria(imagemPrincipal, imagens, thumbs, nomeProduto);
+
+    // Configurar clique na imagem principal para abrir modal
+    imagemPrincipal.addEventListener('click', abrirModal);
+
+    // Configurar modal
+    configurarModal(imagens, nomeProduto);
+}
+
+function atualizarGaleriaPrincipal(indice, imagens, imagemPrincipal, thumbs, nomeProduto) {
+    imagemPrincipal.src = imagens[indice];
+    imagemPrincipal.alt = nomeProduto;
+    thumbs.forEach(t => t.classList.remove('active'));
+    thumbs[indice].classList.add('active');
+    
+    // Atualizar modal também
+    const modalImagem = document.getElementById('modal-imagem-principal');
+    if (modalImagem) {
+        modalImagem.src = imagens[indice];
+    }
+    atualizarModalThumbs(indice);
+}
+
+function configurarSwipeGaleria(imagemPrincipal, imagens, thumbs, nomeProduto) {
+    let touchStartX = 0;
+    let touchEndX = 0;
+    let indiceAtual = 0;
+
+    imagemPrincipal.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, false);
+
+    imagemPrincipal.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe(touchStartX, touchEndX);
+    }, false);
+
+    function handleSwipe(startX, endX) {
+        const diferenca = startX - endX;
+        const limiar = 50; // Mínimo de pixels para considerar como swipe
+
+        if (Math.abs(diferenca) > limiar) {
+            if (diferenca > 0) {
+                // Swipe para esquerda = próxima imagem
+                indiceAtual = (indiceAtual + 1) % imagens.length;
+            } else {
+                // Swipe para direita = imagem anterior
+                indiceAtual = (indiceAtual - 1 + imagens.length) % imagens.length;
+            }
+            atualizarGaleriaPrincipal(indiceAtual, imagens, imagemPrincipal, thumbs, nomeProduto);
+        }
+    }
+}
+
+function abrirModal() {
+    const modal = document.getElementById('modalGaleria');
+    if (modal) {
+        modal.classList.add('ativa');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function fecharModal() {
+    const modal = document.getElementById('modalGaleria');
+    if (modal) {
+        modal.classList.remove('ativa');
+        document.body.style.overflow = 'auto';
+    }
+}
+
+function configurarModal(imagens, nomeProduto) {
+    const modal = document.getElementById('modalGaleria');
+    const btnFechar = document.getElementById('fecharModal');
+    const btnAnterior = document.getElementById('seteAnterior');
+    const btnProximo = document.getElementById('seteProximo');
+    const modalThumbs = document.querySelectorAll('.modal-thumb');
+    const modalImagem = document.getElementById('modal-imagem-principal');
+
+    if (!modal || !btnFechar || !modalImagem) return;
+
+    let indiceAtual = 0;
+
+    // Fechar modal ao clicar no botão X
+    btnFechar.addEventListener('click', fecharModal);
+
+    // Fechar modal ao clicar fora da imagem
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            fecharModal();
+        }
+    });
+
+    // Navegar com as setas
+    btnAnterior.addEventListener('click', () => {
+        indiceAtual = (indiceAtual - 1 + imagens.length) % imagens.length;
+        atualizarModalImagem(indiceAtual, imagens, modalImagem);
+    });
+
+    btnProximo.addEventListener('click', () => {
+        indiceAtual = (indiceAtual + 1) % imagens.length;
+        atualizarModalImagem(indiceAtual, imagens, modalImagem);
+    });
+
+    // Navegar com miniaturas do modal
+    modalThumbs.forEach((thumb, index) => {
+        thumb.addEventListener('click', () => {
+            indiceAtual = index;
+            atualizarModalImagem(indiceAtual, imagens, modalImagem);
+            atualizarModalThumbs(indiceAtual);
+        });
+    });
+
+    // Navegação com teclado
+    document.addEventListener('keydown', (e) => {
+        if (!modal.classList.contains('ativa')) return;
+        
+        if (e.key === 'ArrowLeft') {
+            indiceAtual = (indiceAtual - 1 + imagens.length) % imagens.length;
+            atualizarModalImagem(indiceAtual, imagens, modalImagem);
+        } else if (e.key === 'ArrowRight') {
+            indiceAtual = (indiceAtual + 1) % imagens.length;
+            atualizarModalImagem(indiceAtual, imagens, modalImagem);
+        } else if (e.key === 'Escape') {
+            fecharModal();
+        }
+    });
+}
+
+function atualizarModalImagem(indice, imagens, elementoImagem) {
+    elementoImagem.src = imagens[indice];
+    atualizarModalThumbs(indice);
+}
+
+function atualizarModalThumbs(indice) {
+    const modalThumbs = document.querySelectorAll('.modal-thumb');
+    modalThumbs.forEach((thumb, index) => {
+        if (index === indice) {
+            thumb.classList.add('ativa');
+        } else {
+            thumb.classList.remove('ativa');
+        }
     });
 }
 
