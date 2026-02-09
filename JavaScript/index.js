@@ -124,6 +124,83 @@ searchInput.addEventListener('input', (event) => {
         
 });
 
+// Clique no ícone/botão de pesquisa: redirecionar por categoria ou filtrar por correspondência exata
+const searchButton = document.querySelector('.search');
+if (searchButton) {
+    searchButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        const raw = searchInput.value || '';
+        const value = formatString(raw);
+
+        // mapa simples de palavras-chave para páginas de categoria
+        const categorias = [
+            {keys: ['anel','aneis'], page: 'aneis.html'},
+            {keys: ['colar','colares'], page: 'colares.html'},
+            {keys: ['choker'], page: 'choker.html'},
+            {keys: ['pulseira','pulseiras'], page: 'pulseiras.html'},
+            {keys: ['brinco','brincos'], page: 'brincos.html'},
+            {keys: ['berloque','berloques'], page: 'berloques.html'},
+            {keys: ['piercing','piercings'], page: 'piercings.html'},
+            {keys: ['tornozeleira','tornozeleiras','tornozelo'], page: 'tornozeleiras.html'},
+            {keys: ['masculino','homem','homens'], page: 'masculino.html'},
+            {keys: ['limpeza'], page: 'limpeza.html'},
+            {keys: ['novidade','novidades'], page: 'novidades.html'}
+        ];
+
+        if (value !== '') {
+            for (const cat of categorias) {
+                for (const k of cat.keys) {
+                    if (value.indexOf(k) !== -1) {
+                        // redireciona para página de categoria
+                        window.location.href = cat.page;
+                        return;
+                    }
+                }
+            }
+        }
+
+        // não é termo de categoria: aplicar filtragem exata nos itens da pesquisa
+        const items = document.querySelectorAll('.container-li .item');
+        const noResults = document.getElementById('no_results');
+
+        if (value === '') {
+            items.forEach(item => item.style.display = 'none');
+            if (noResults) noResults.style.display = 'none';
+            return;
+        }
+
+        let hasResults = false;
+        items.forEach(item => {
+            const itemTitleEl = item.querySelector('.titulo-produto-li');
+            if (!itemTitleEl) return;
+            const itemTitle = formatString(itemTitleEl.textContent || '');
+            if (itemTitle === value) {
+                item.style.display = 'flex';
+                hasResults = true;
+            } else {
+                item.style.display = 'none';
+            }
+        });
+
+        if (noResults) noResults.style.display = hasResults ? 'none' : 'block';
+
+        // se houver resultados, e exatamente 1 item visível, navegar para a página do produto
+        if (hasResults) {
+            const visibleItems = Array.from(items).filter(i => i.style.display !== 'none');
+            if (visibleItems.length === 1) {
+                const link = visibleItems[0].querySelector('a');
+                if (link) {
+                    const href = link.getAttribute('href');
+                    if (href) {
+                        window.location.href = href;
+                        return;
+                    }
+                }
+            }
+        }
+    });
+}
+
 
 // função para formatar strings (remover acentos, espaços e deixar em minúsculo)
 function formatString(value) {

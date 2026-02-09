@@ -192,6 +192,31 @@
   </header>
   <!--Fim cabeçalho-->
 
+    <!--Barra de pesquisa-->
+    <div id="sectionsh">
+      <form action="index.html" method="get" autocomplete="off">
+        <div class="search-box">
+          <input id="search" type="text" name="pesquisa" class="search-txt" placeholder=" O que está buscando?" style="font-size: medium; align-items: center; justify-content: center;" >
+          <label for="search"></label>
+          <div>
+            <button type="submit" class="search" style="font-size: medium; align-items: center; justify-content: center;">
+              <ion-icon name="search-outline"></ion-icon>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!--Fim barra de pesquisa-->
+
+    <!--Lista de produtos na barra de pesquisa-->
+    <div class="li">
+      <ul class="container-li"></ul>
+      <li id="no_results">
+        <p>Nenhum resultado encontrado</p>
+      </li>
+    </div>
+    <!--Fim lista de produtos na barra de pesquisa-->
+
   <main class="choker-container">
     <div class="choker-header">
       <h2>Choker</h2>
@@ -335,6 +360,7 @@ document.addEventListener('DOMContentLoaded', carregarChokers);
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="JavaScript/index.js"></script>
   <script src="JavaScript/auth.js"></script>
   <script src="JavaScript/carrinho.js"></script>
 </body>
