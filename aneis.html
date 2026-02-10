@@ -23,41 +23,41 @@
   font-family: 'Mignon';
 }
 
-:root {
+:root { /*VARIÁVEIS DE CORES ESPECÍFICAS PARA A PÁGINA DE ANÉIS*/
   --aneis-bg: #fafafa;
   --aneis-card: #ffffff;
   --aneis-border: #e9e9e9;
 }
 
-.aneis-container {
+.aneis-container { /*CONTAINER PRINCIPAL*/
   max-width: 1180px;
   margin: 10rem auto 3rem;
   padding: 24px 18px;
 }
 
-.aneis-header {
+.aneis-header { /*CABEÇALHO DA PÁGINA*/
   text-align: center;
   margin-bottom: 24px;
 }
 
-.aneis-header h2 {
+.aneis-header h2 { /*TÍTULO DA PÁGINA*/
   font-size: 26px;
   color: #2d2d2d;
   margin-bottom: 8px;
 }
 
-.aneis-header p {
+.aneis-header p { /*DESCRIÇÃO DA PÁGINA*/
   color: #666;
   font-size: 14px;
 }
 
-.aneis-grid {
+.aneis-grid { /*GRADE DE PRODUTOS*/
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
 
-.anel-card {
+.anel-card { /*CARTÃO DO PRODUTO*/
   background: var(--aneis-card);
   border: 1px solid var(--aneis-border);
   border-radius: 10px;
@@ -74,7 +74,7 @@
   box-shadow: 0 6px 16px rgba(0,0,0,0.08);
 }
 
-.anel-img {
+.anel-img { /*IMAGEM DO PRODUTO*/
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -82,19 +82,20 @@
   background: #f3f3f3;
 }
 
-.anel-title {
+.anel-title { /*TÍTULO DO PRODUTO*/
   font-size: 15px;
   color: #2d2d2d;
   font-weight: 600;
+  text-transform: capitalize;
 }
 
-.anel-price {
+.anel-price { /*PREÇO DO PRODUTO*/
   font-size: 15px;
   color: #2d2d2d;
   font-weight: 700;
 }
 
-.anel-link {
+.anel-link { /*LINK DO PRODUTO*/
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -109,11 +110,11 @@
   transition: background 0.2s ease;
 }
 
-.anel-link:hover {
+.anel-link:hover { /*EFEITO HOVER NO LINK*/
   background: #4caf50;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 900px) { /*ESTILOS PARA TELAS MENORES QUE 900PX*/
   .aneis-container {
     margin: 8rem auto 2rem;
     padding: 18px 14px;

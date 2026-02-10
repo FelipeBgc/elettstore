@@ -1,4 +1,5 @@
 [
+    "Aneis",
     {
         "id": 1,
         "name": "Anel dedinho regulável",
@@ -21,8 +22,6 @@
         "price": 99,
         "image": "imagens/produtos/Aneis/anel.aparador.cravejado.jpg",
         "categoria": "aneis",
-        "home": true,
-        "novidade": true,
         "images": [
             "imagens/produtos/Aneis/anel.aparador.cravejado.jpg"],
         "descriçao" :"<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
@@ -34,8 +33,6 @@
         "price": 10,
         "image": "imagens/produtos/Aneis/anel.dedinho.regulavel.jpg",
         "categoria": "aneis",
-        "home": true,
-        "novidade": true,
         "images": [
             "imagens/produtos/Aneis/anel.dedinho.regulavel.jpg"],
         "descriçao" :"<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
@@ -47,25 +44,23 @@
         "price": 14,
         "image": "imagens/produtos/Aneis/anel.regulavel.coracao.jpg",
         "categoria": "aneis",
-        "home": true,
-        "novidade": true,
         "images": [
             "imagens/produtos/Aneis/anel.regulavel.coracao.jpg"],
         "descriçao" :"<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
         "desc" : "<br>10% <br> OFF <br><br>"
     },
+
+    "Colares",
+
     {
         "id": 5,
         "name": "Colar Borboletinha",
         "price": 59,
         "image": "imagens/produtos/colares/colar.borboletinha.jpg",
         "categoria": "colares",
-        "novidade": true,
         "images": [
-            "imagens/produtos/colares/colar.borboletinha.jpg",
-            "imagens/produtos/Aneis/anel.ajustavel.coracao.cravejado.com.ponto.de.luz.jpg",
-            "imagens/produtos/Aneis/anel.dedinho.regulavel.jpg"],
-        "descriçao" : "",
+            "imagens/produtos/colares/colar.borboletinha.jpg"],
+        "descriçao" :"<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
         "desc": ""
     },
     {
@@ -74,30 +69,137 @@
         "price": 69,
         "image": "imagens/produtos/colares/colar.coracao.cristal.jpg",
         "categoria": "colares",
-        "novidade": true,
         "images": [
-            "imagens/produtos/colares/colar.coracao.cristal.jpg",
-            "imagens/produtos/Aneis/anel.ajustavel.coracao.cravejado.com.ponto.de.luz.jpg",
-            "imagens/produtos/Aneis/anel.dedinho.regulavel.jpg"],
-        "descriçao" : "",
+            "imagens/produtos/colares/colar.coracao.cristal.jpg"],
+        "descriçao" :"<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
         "desc": ""
     },
     {
         "id": 7,
         "name": "Colar Menino",
         "price": 52,
-        "image": "imagens/produtos/colares/colar.menino.jpg",
+        "image": "imagens/produtos/colares/colar.menino1.jpg",
         "categoria": "colares",
         "novidade": true,
         "images": [
-            "imagens/produtos/colares/colar.menino.jpg",
-            "imagens/produtos/Aneis/anel.ajustavel.coracao.cravejado.com.ponto.de.luz.jpg",
-            "imagens/produtos/Aneis/anel.dedinho.regulavel.jpg"],
-        "descriçao" : "",
+            "imagens/produtos/colares/colar.menino1.jpg",
+            "imagens/produtos/colares/colar.menino2.jpg"],
+        "descriçao" :"<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
         "desc": ""
     },
     {
         "id": 8,
+        "name": "Colar Menina<br><br>",
+        "price": 72,
+        "image": "imagens/produtos/colares/colar.menina1.jpg",
+        "categoria": "colares",
+        "novidade": true,
+        "images": [
+            "imagens/produtos/colares/colar.menina1.jpg",
+            "imagens/produtos/colares/colar.menina2.jpg"],
+        "descriçao" :"<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
+        "desc": ""
+    },
+    {
+        "id": 9,
+        "name": "Colar Gravatinha Coração<br>",
+        "price": 72,
+        "image": "imagens/produtos/colares/Colar.gravatinha.coração1.jpg",
+        "home": true,
+        "novidade": true,
+        "categoria": "colares",
+        "images": [
+            "imagens/produtos/colares/Colar.gravatinha.coração1.jpg",
+            "imagens/produtos/colares/Colar.gravatinha.coração2.jpg",
+            "imagens/produtos/colares/Colar.gravatinha.coração3.jpg"],
+        "descriçao" :"<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
+        "desc": ""
+    },
+     {
+        "id": 10,
+        "name": "Colar Mini Coração com Ponto de Luz",
+        "price": 72,
+        "image": "imagens/produtos/colares/colar.mini.coracao.com.ponto.de.luz1.jpg",
+        "categoria": "colares",
+        "novidade": true,
+        "images": [
+            "imagens/produtos/colares/colar.mini.coracao.com.ponto.de.luz1.jpg",
+            "imagens/produtos/colares/colar.mini.coracao.com.ponto.de.luz2.jpg"],
+        "descriçao" :"<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
+        "desc": ""
+    },
+    {
+        "id": 11,
+        "name": "Colar Plaquinha (Sempre Juntas Mãe)",
+        "price": 72,
+        "image": "imagens/produtos/colares/colar.plaquinha.sempre.juntas.mae1.jpg",
+        "categoria": "colares",
+        "novidade": true,
+        "images": [
+            "imagens/produtos/colares/colar.plaquinha.sempre.juntas.mae1.jpg",
+            "imagens/produtos/colares/colar.plaquinha.sempre.juntas.mae2.jpg",
+            "imagens/produtos/colares/colar.plaquinha.sempre.juntas.mae3.jpg"],
+        "descriçao" :"<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
+        "desc": ""
+    },
+    {
+        "id": 12,
+        "name": "Colar Plaquinha Com Ponto De Luz",
+        "price": 72,
+        "image": "imagens/produtos/colares/colar.plaquinha.com.ponto.de.luz1.jpg",
+        "categoria": "colares",
+        "novidade": true,
+        "images": [
+            "imagens/produtos/colares/colar.plaquinha.com.ponto.de.luz1.jpg",
+            "imagens/produtos/colares/colar.plaquinha.com.ponto.de.luz2.jpg"],
+        "descriçao" :"<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
+        "desc": ""
+    },
+    {
+        "id": 13,
+        "name": "Colar 2 em 1<br><br> ",
+        "price": 72,
+        "image": "imagens/produtos/colares/colar.2.em.11.jpg",
+        "categoria": "colares",
+        "novidade": true,
+        "images": [
+            "imagens/produtos/colares/colar.2.em.11.jpg",
+            "imagens/produtos/colares/colar.2.em.12.jpg",
+            "imagens/produtos/colares/colar.2.em.13.jpg"],
+        "descriçao" :"<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
+        "desc": ""
+    },
+    {
+        "id": 14,
+        "name": "Colar Plaquinha (seja forte e corajosa)",
+        "price": 72,
+        "image": "imagens/produtos/colares/colar.plaquinha.seja.forte.e.corajosa1.jpg",
+        "categoria": "colares",
+        "novidade": true,
+        "images": [
+            "imagens/produtos/colares/colar.plaquinha.seja.forte.e.corajosa1.jpg",
+            "imagens/produtos/colares/colar.plaquinha.seja.forte.e.corajosa2.jpg"],
+        "descriçao" :"<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
+        "desc": ""
+    },
+    {
+        "id": 15,
+        "name": "Colar Ponto de Luz<br><br>",
+        "price": 72,
+        "image": "imagens/produtos/colares/colar.ponto.de.luz1.jpg",
+        "categoria": "colares",
+        "novidade": true,
+        "images": [
+            "imagens/produtos/colares/colar.ponto.de.luz1.jpg",
+            "imagens/produtos/colares/colar.ponto.de.luz2.jpg"],
+        "descriçao" :"<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
+        "desc": ""
+    },
+
+    "Chokers",
+
+    {
+        "id": 16,
         "name": "Choker Pipoca",
         "price": 45,
         "image": "imagens/produtos/choker/choker.pipoca.jpg",
@@ -105,69 +207,65 @@
         "novidade": true,
         "images": [
             "imagens/produtos/choker/choker.pipoca.jpg",
-            "imagens/produtos/Aneis/anel.ajustavel.coracao.cravejado.com.ponto.de.luz.jpg",
-            "imagens/produtos/Aneis/anel.dedinho.regulavel.jpg"],
-        "descriçao" : "",
+            "imagens/produtos/choker/choker.pipoca2.jpg"],
+        "descriçao" : "<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
         "desc": ""
     },
     {
-        "id": 9,
+        "id": 17,
         "name": "Choker Medalhinhas Laminadas",
         "price": 58,
         "image": "imagens/produtos/choker/choker.medalhinhas.laminadas.jpg",
         "categoria": "choker",
+        "home": true,
         "novidade": true,
         "images": [
             "imagens/produtos/choker/choker.medalhinhas.laminadas.jpg",
-            "imagens/produtos/Aneis/anel.ajustavel.coracao.cravejado.com.ponto.de.luz.jpg",
-            "imagens/produtos/Aneis/anel.dedinho.regulavel.jpg"],
-        "descriçao" : "",
+            "imagens/produtos/choker/choker.medalhinhas.laminadas2.jpg"],
+        "descriçao" : "<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
         "desc": ""
     },
     {
-        "id": 10,
+        "id": 18,
         "name": "Choker Fio Alemão 3mm",
         "price": 62,
         "image": "imagens/produtos/choker/choker.fio.alemao.3mm.jpg",
         "categoria": "choker",
-        "novidade": true,
         "images": [
-            "imagens/produtos/choker/choker.fio.alemao.3mm.jpg",
-            "imagens/produtos/Aneis/anel.ajustavel.coracao.cravejado.com.ponto.de.luz.jpg",
-            "imagens/produtos/Aneis/anel.dedinho.regulavel.jpg"],
-        "descriçao" : "",
+            "imagens/produtos/choker/choker.fio.alemao.3mm.jpg"],
+        "descriçao" : "<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
         "desc": ""
     },
+
+    "Pulseiras",
+
     {
-        "id": 11,
-        "name": "Pulseira Fio Alemão 3mm",
+        "id": 19,
+        "name": "Pulseira Ouro Pipoca<br><br>",
         "price": 39,
-        "image": "imagens/produtos/pulseiras/pulseira.fio.alemao.3mm.jpg",
+        "image": "imagens/produtos/pulseiras/pulseira.ouro.pipoca1.jpg",
         "categoria": "pulseiras",
+        "home": true,
         "novidade": true,
         "images": [
-            "imagens/produtos/pulseiras/pulseira.fio.alemao.3mm.jpg",
-            "imagens/produtos/Aneis/anel.ajustavel.coracao.cravejado.com.ponto.de.luz.jpg",
-            "imagens/produtos/Aneis/anel.dedinho.regulavel.jpg"],
-        "descriçao" : "",
+            "imagens/produtos/pulseiras/pulseira.ouro.pipoca1.jpg",
+            "imagens/produtos/pulseiras/pulseira.ouro.pipoca2.jpg"],
+        "descriçao" : "<h3>Material:</h3> Semijoia de alta qualidade, desenvolvida com acabamento refinado e brilho sofisticado.<br><h3>Banho:</h3> 03 milésimos de ouro, aplicado com tecnologia que garante uniformidade e finalizado com dupla camada de verniz protetor, proporcionando maior resistência, durabilidade e preservação do brilho. Produto níquel free.<br><h3>Garantia:</h3> 6 meses a partir do recebimento do produto, válida exclusivamente para defeitos relacionados ao banho.<br><h3>Durabilidade:</h3> Alta, considerando o uso adequado e os cuidados recomendados.<br><h3>Cuidados com a peça:</h3> Para manter sua semijoia sempre bonita, evite contato com água, produtos químicos, perfumes e cremes. Não exponha ao sol por períodos prolongados.<br>Guarde em local seco, separado de outras peças, e realize a limpeza com flanela macia e seca.<br><h3>Importante:</h3> Todas as nossas semijoias são livres de níquel, oferecendo mais conforto e segurança para a pele.",
         "desc": ""
     },
     {
-        "id": 12,
+        "id": 20,
         "name": "Pulseira Bolinhas",
         "price": 42,
         "image": "imagens/produtos/pulseiras/pulseira.bolinhas.jpg",
         "categoria": "pulseiras",
-        "novidade": true,
         "images": [
-            "imagens/produtos/pulseiras/pulseira.bolinhas.jpg",
-            "imagens/produtos/Aneis/anel.ajustavel.coracao.cravejado.com.ponto.de.luz.jpg",
-            "imagens/produtos/Aneis/anel.dedinho.regulavel.jpg"],
-        "descriçao" : "",
+            "imagens/produtos/pulseiras/pulseira.bolinhas.jpg"],
+        "descriçao" : "<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
         "desc": ""
     },
     {
-        "id": 13,
+        "id": 21,
         "name": "Pulseira Elos",
         "price": 47,
         "image": "imagens/produtos/pulseiras/pulseira.elos.jpg",
@@ -175,185 +273,273 @@
         "novidade": true,
         "images": [
             "imagens/produtos/pulseiras/pulseira.elos.jpg",
-            "imagens/produtos/Aneis/anel.ajustavel.coracao.cravejado.com.ponto.de.luz.jpg",
-            "imagens/produtos/Aneis/anel.dedinho.regulavel.jpg"],
-        "descriçao" : "",
-        "desc": ""
-    },
-    {
-        "id": 14,
-        "name": "Pulseira Corações Lisos",
-        "price": 54,
-        "image": "imagens/produtos/pulseiras/pulseira.coracoes.lisos.preenchidos.jpg",
-        "categoria": "pulseiras",
-        "novidade": true,
-        "images": [
-            "imagens/produtos/pulseiras/pulseira.coracoes.lisos.preenchidos.jpg",
-            "imagens/produtos/Aneis/anel.ajustavel.coracao.cravejado.com.ponto.de.luz.jpg",
-            "imagens/produtos/Aneis/anel.dedinho.regulavel.jpg"],
-        "descriçao" : "",
-        "desc": ""
-    },
-    {
-        "id": 15,
-        "name": "Brinco Coração Mini",
-        "price": 28,
-        "image": "imagens/produtos/brincos/brinco.coracao.mini.jpg",
-        "categoria": "brincos",
-        "novidade": true,
-        "images": [
-            "imagens/produtos/brincos/brinco.coracao.mini.jpg",
-            "imagens/produtos/Aneis/anel.ajustavel.coracao.cravejado.com.ponto.de.luz.jpg",
-            "imagens/produtos/Aneis/anel.dedinho.regulavel.jpg"],
-        "descriçao" : "",
-        "desc": ""
-    },
-    {
-        "id": 16,
-        "name": "Brinco Modal",
-        "price": 32,
-        "image": "imagens/produtos/brincos/brinco.modal.jpg",
-        "categoria": "brincos",
-        "novidade": true,
-        "images": [
-            "imagens/produtos/brincos/brinco.modal.jpg",
-            "imagens/produtos/Aneis/anel.ajustavel.coracao.cravejado.com.ponto.de.luz.jpg",
-            "imagens/produtos/Aneis/anel.dedinho.regulavel.jpg"],
-        "descriçao" : "",
-        "desc": ""
-    },
-    {
-        "id": 17,
-        "name": "Argola Arredondada Ponto de Luz",
-        "price": 49,
-        "image": "imagens/produtos/brincos/argola.arredondada.com.ponto.de.luz.jpg",
-        "categoria": "brincos",
-        "novidade": true,
-        "images": [
-            "imagens/produtos/brincos/argola.arredondada.com.ponto.de.luz.jpg",
-            "imagens/produtos/Aneis/anel.ajustavel.coracao.cravejado.com.ponto.de.luz.jpg",
-            "imagens/produtos/Aneis/anel.dedinho.regulavel.jpg"],
-        "descriçao" : "",
-        "desc": ""
-    },
-    {
-        "id": 18,
-        "name": "Argolinha Mini",
-        "price": 35,
-        "image": "imagens/produtos/brincos/argolinha.mini.jpg",
-        "categoria": "brincos",
-        "novidade": true,
-        "images": [
-            "imagens/produtos/brincos/argolinha.mini.jpg",
-            "imagens/produtos/Aneis/anel.ajustavel.coracao.cravejado.com.ponto.de.luz.jpg",
-            "imagens/produtos/Aneis/anel.dedinho.regulavel.jpg"],
-        "descriçao" : "",
-        "desc": ""
-    },
-    {
-        "id": 19,
-        "name": "Berloque Coração Zircônia",
-        "price": 26,
-        "image": "imagens/produtos/berloques/conjunto.coracao.zirconia.(colar.e.brinco).jpg",
-        "categoria": "berloques",
-        "images": [
-            "imagens/produtos/berloques/conjunto.coracao.zirconia.(colar.e.brinco).jpg",
-            "imagens/produtos/Aneis/anel.ajustavel.coracao.cravejado.com.ponto.de.luz.jpg",
-            "imagens/produtos/Aneis/anel.dedinho.regulavel.jpg"],
-        "descriçao" : "",
-        "desc": ""
-    },
-    {
-        "id": 20,
-        "name": "Berloque Zircônias Delicadas",
-        "price": 24,
-        "image": "imagens/produtos/berloques/argolinha.com.sete.zirconias.jpg",
-        "categoria": "berloques",
-        "novidade": true,
-        "images": [
-            "imagens/produtos/berloques/argolinha.com.sete.zirconias.jpg",
-            "imagens/produtos/berloques/argolinha.com.sete.zirconias.jpg",
-            "imagens/produtos/Aneis/anel.dedinho.regulavel.jpg"],
-        "descriçao" : "",
-        "desc": ""
-    },
-    {
-        "id": 21,
-        "name": "Piercing Argolinha Cravejada",
-        "price": 22,
-        "image": "imagens/produtos/piercings/argolinha.cravejada.grossa.jpg",
-        "categoria": "piercings",
-        "novidade": true,
-        "images": [
-            "imagens/produtos/piercings/argolinha.cravejada.grossa.jpg",
-            "imagens/produtos/Aneis/anel.ajustavel.coracao.cravejado.com.ponto.de.luz.jpg",
-            "imagens/produtos/Aneis/anel.dedinho.regulavel.jpg"],
-        "descriçao" : "",
+            "imagens/produtos/pulseiras/pulseira.elos1.jpg"],
+        "descriçao" : "<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
         "desc": ""
     },
     {
         "id": 22,
-        "name": "Piercing Argolinha Zircônias",
-        "price": 24,
-        "image": "imagens/produtos/piercings/argolinha.com.sete.zirconias.jpg",
-        "categoria": "piercings",
+        "name": "Pulseira Corações Lisos",
+        "price": 54,
+        "image": "imagens/produtos/pulseiras/pulseira.coracoes.lisos.preenchidos.jpg",
+        "categoria": "pulseiras",
         "images": [
-            "imagens/produtos/piercings/argolinha.com.sete.zirconias.jpg",
-            "imagens/produtos/Aneis/anel.ajustavel.coracao.cravejado.com.ponto.de.luz.jpg",
-            "imagens/produtos/Aneis/anel.dedinho.regulavel.jpg"],
-        "descriçao" : "",
+            "imagens/produtos/pulseiras/pulseira.coracoes.lisos.preenchidos.jpg"],
+        "descriçao" : "<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
         "desc": ""
     },
     {
         "id": 23,
-        "name": "Tornozeleira Fita Riscada Brilhosa",
-        "price": 41,
-        "image": "imagens/produtos/tornozeleiras/pulseira.fita.riscada.brilhosa.jpg",
-        "categoria": "tornozeleiras",
-        "images": [
-            "imagens/produtos/tornozeleiras/pulseira.fita.riscada.brilhosa.jpg",
-            "imagens/produtos/Aneis/anel.ajustavel.coracao.cravejado.com.ponto.de.luz.jpg",
-            "imagens/produtos/Aneis/anel.dedinho.regulavel.jpg"],
-        "descriçao" : "",
-        "desc": ""
-    },
-    {
-        "id": 24,
-        "name": "Tornozeleira Fio Alemão",
-        "price": 38,
-        "image": "imagens/produtos/tornozeleiras/pulseira.fio.alemao.3mm.jpg",
-        "categoria": "tornozeleiras",
-        "images": [
-            "imagens/produtos/tornozeleiras/pulseira.fio.alemao.3mm.jpg",
-            "imagens/produtos/Aneis/anel.ajustavel.coracao.cravejado.com.ponto.de.luz.jpg",
-            "imagens/produtos/Aneis/anel.dedinho.regulavel.jpg"],
-        "descriçao" : "",
-        "desc": ""
-    },
-    {
-        "id": 25,
         "name": "Pulseira Masculina Elos",
         "price": 64,
         "image": "imagens/produtos/pulseiras/pulseira.elos.jpg",
         "categoria": "masculino",
+        "novidade": true,
         "images": [
             "imagens/produtos/pulseiras/pulseira.elos.jpg",
-            "imagens/produtos/Aneis/anel.ajustavel.coracao.cravejado.com.ponto.de.luz.jpg",
-            "imagens/produtos/Aneis/anel.dedinho.regulavel.jpg"],
-        "descriçao" : "",
+            "imagens/produtos/pulseiras/pulseira.elos1.jpg"],
+        "descriçao" : "<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
+        "desc": ""
+    },
+    {
+        "id": 24,
+        "name": "Pulseira Elos Coração<br><br>",
+        "price": 72,
+        "image": "imagens/produtos/pulseiras/pulseira.elos.coracao1.jpg",
+        "categoria": "pulseiras",
+        "novidade": true,
+        "images": [
+            "imagens/produtos/pulseiras/pulseira.elos.coracao1.jpg",
+            "imagens/produtos/pulseiras/pulseira.elos.coracao2.jpg"],
+        "descriçao" :"<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
+        "desc": ""
+    },
+    {
+        "id": 25,
+        "name": "Bracelete de Prata<br><br>",
+        "price": 72,
+        "image": "imagens/produtos/pulseiras/bracelete.prata1.jpg",
+        "home": true,
+        "novidade": true,
+        "categoria": "pulseiras",
+        "images": [
+            "imagens/produtos/pulseiras/bracelete.prata1.jpg",
+            "imagens/produtos/pulseiras/bracelete.prata2.jpg"],
+        "descriçao" :"<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
         "desc": ""
     },
     {
         "id": 26,
-        "name": "Colar Masculino Minimal",
-        "price": 72,
-        "image": "imagens/produtos/colares/colar.menino.jpg",
-        "categoria": "masculino",
+        "name": "Pulseira Fita Riscada Brilhosa",
+        "price": 41,
+        "image": "imagens/produtos/pulseiras/pulseira.fita.riscada.brilhosa.jpg",
+        "categoria": "pulseiras",
         "images": [
-            "imagens/produtos/colares/colar.menino.jpg",
-            "imagens/produtos/Aneis/anel.ajustavel.coracao.cravejado.com.ponto.de.luz.jpg",
-            "imagens/produtos/Aneis/anel.dedinho.regulavel.jpg"],
-        "descriçao" : "",
+            "imagens/produtos/pulseiras/pulseira.fita.riscada.brilhosa.jpg"],
+        "descriçao" : "<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
+        "desc": ""
+    },
+    {
+        "id": 27,
+        "name": "Pulseira Fio Alemão<br><br>",
+        "price": 38,
+        "image": "imagens/produtos/pulseiras/pulseira.fio.alemao.3mm.jpg",
+        "categoria": "pulseiras",
+        "images": [
+            "imagens/produtos/pulseiras/pulseira.fio.alemao.3mm.jpg"],
+        "descriçao" : "<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
+        "desc": ""
+    },
+
+    "Brincos",
+
+    {
+        "id": 28,
+        "name": "Brinco Coração Mini",
+        "price": 28,
+        "image": "imagens/produtos/brincos/brinco.coracao.mini.jpg",
+        "categoria": "brincos",
+        "images": [
+            "imagens/produtos/brincos/brinco.coracao.mini.jpg"],
+        "descriçao" : "<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
+        "desc": ""
+    },
+    {
+        "id": 29,
+        "name": "Argolinha Mini",
+        "price": 35,
+        "image": "imagens/produtos/brincos/argolinha.mini.jpg",
+        "categoria": "brincos",
+        "images": [
+            "imagens/produtos/brincos/argolinha.mini.jpg"],
+        "descriçao" : "<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
+        "desc": ""
+    },
+    {
+        "id": 30,
+        "name": "Brinco orgânico com detalhe",
+        "price": 72,
+        "image": "imagens/produtos/brincos/Brinco.orgânico.com.detalhe1.jpg",
+        "categoria": "brincos",
+        "novidade": true,
+        "images": [
+            "imagens/produtos/brincos/Brinco.orgânico.com.detalhe1.jpg",
+            "imagens/produtos/brincos/Brinco.orgânico.com.detalhe2.jpg"],
+        "descriçao" :"<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
+        "desc": ""
+    },
+    {
+        "id": 31,
+        "name": "Trio de Argolas Retangulares",
+        "price": 72,
+        "image": "imagens/produtos/brincos/Trio.de.argolas.retangulares1.jpg",
+        "categoria": "brincos",
+        "novidade": true,
+        "images": [
+            "imagens/produtos/brincos/Trio.de.argolas.retangulares1.jpg",
+            "imagens/produtos/brincos/Trio.de.argolas.retangulares2.jpg",
+            "imagens/produtos/brincos/Trio.de.argolas.retangulares3.jpg"],
+        "descriçao" :"<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
+        "desc": ""
+    },
+    {
+        "id": 32,
+        "name": "Argola Lisa GG <br><br>",
+        "price": 72,
+        "image": "imagens/produtos/brincos/argola.lisa.gg1.jpg",
+        "categoria": "brincos",
+        "novidade": true,
+        "images": [
+            "imagens/produtos/brincos/argola.lisa.gg1.jpg",
+            "imagens/produtos/brincos/argola.lisa.gg2.jpg"],
+        "descriçao" :"<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
+        "desc": ""
+    },
+    {
+        "id": 33,
+        "name": "Argola Coração P <br><br>",
+        "price": 72,
+        "image": "imagens/produtos/brincos/argola.coracao.p1.jpg",
+        "categoria": "brincos",
+        "novidade": true,
+        "images": [
+            "imagens/produtos/brincos/argola.coracao.p1.jpg",
+            "imagens/produtos/brincos/argola.coracao.p2.jpg"],
+        "descriçao" :"<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
+        "desc": ""
+    },
+    {
+        "id": 34,
+        "name": "Argola Regular Ponto de Luz",
+        "price": 72,
+        "image": "imagens/produtos/brincos/argola.regular.ponto.de.luz1.jpg",
+        "home": true,
+        "novidade": true,
+        "categoria": "brincos",
+        "images": [
+            "imagens/produtos/brincos/argola.regular.ponto.de.luz1.jpg",
+            "imagens/produtos/brincos/argola.regular.ponto.de.luz2.jpg",
+            "imagens/produtos/brincos/argola.regular.ponto.de.luz3.jpg",
+            "imagens/produtos/brincos/argola.arredondada.com.ponto.de.luz.jpg"],
+        "descriçao" :"<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
+        "desc": ""
+    },
+    {
+        "id": 35,
+        "name": "Argola Cravejada P<br><br>",
+        "price": 72,
+        "image": "imagens/produtos/brincos/argola.cravejada.p1.jpg",
+        "categoria": "brincos",
+        "novidade": true,
+        "images": [
+            "imagens/produtos/brincos/argola.cravejada.p1.jpg",
+            "imagens/produtos/brincos/argola.cravejada.p2.jpg",
+            "imagens/produtos/brincos/argola.cravejada.p3.jpg"],
+        "descriçao" :"<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
+        "desc": ""
+    },
+    {
+        "id": 36,
+        "name": "Brinco Coração<br><br>",
+        "price": 72,
+        "image": "imagens/produtos/brincos/brinco.coracao1.jpg",
+        "categoria": "brincos",
+        "novidade": true,
+        "images": [
+            "imagens/produtos/brincos/brinco.coracao1.jpg",
+            "imagens/produtos/brincos/brinco.coracao2.jpg"],
+        "descriçao" :"<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
+        "desc": ""
+    },
+    {
+        "id": 37,
+        "name": "Argola ouro liso P<br><br>",
+        "price": 72,
+        "image": "imagens/produtos/brincos/argola.ouro.liso.p1.jpg",
+        "categoria": "brincos",
+        "novidade": true,
+        "images": [
+            "imagens/produtos/brincos/argola.ouro.liso.p1.jpg",
+            "imagens/produtos/brincos/argola.ouro.liso.p2.jpg",
+            "imagens/produtos/brincos/argola.ouro.liso.p3.jpg",
+            "imagens/produtos/brincos/argola.ouro.liso.p4.jpg"],
+        "descriçao" :"<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
+        "desc": ""
+    },
+    {
+        "id": 38,
+        "name": "Argolinha Com Sete Zirconias",
+        "price": 72,
+        "image": "imagens/produtos/brincos/argolinha.com.sete.zirconias.jpg",
+        "categoria": "brincos",
+        "images": [
+            "imagens/produtos/brincos/argolinha.com.sete.zirconias.jpg"],
+        "descriçao" :"<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
+        "desc": ""
+    },
+    {
+        "id": 39,
+        "name": "Argolinha Cravejada Grossa",
+        "price": 72,
+        "image": "imagens/produtos/brincos/argolinha.cravejada.grossa.jpg",
+        "categoria": "brincos",
+        "images": [
+            "imagens/produtos/brincos/argolinha.cravejada.grossa.jpg"],
+        "descriçao" :"<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
+        "desc": ""
+    },
+
+    "Berloques",
+
+    {
+
+    },
+
+    "Pircing",
+
+    {
+
+    },
+
+    "Tornozeleiras",
+
+    {
+
+    },
+
+    "Limpeza",
+
+    {
+        "id": 40,
+        "name": "Limpa pratas Monzi + Flanela Magica",
+        "price": 72,
+        "image": "imagens/produtos/limpeza/kit.limpeza.pratas1.jpg",
+        "home": true,
+        "categoria": "limpeza",
+        "images": [
+            "imagens/produtos/limpeza/kit.limpeza.pratas1.jpg",
+            "imagens/produtos/limpeza/kit.limpeza.pratas2.jpg"],
+        "descriçao" :"Kit ideal para a limpeza e conservação de peças em prata e semijoias. O Limpa Pratas Monzi auxilia na remoção do escurecimento causado pela oxidação, enquanto a flanela mágica ajuda a restaurar e manter o brilho das peças.<br><h3>Indicação:</h3>Indicado para peças em prata e semijoias banhadas. Não recomendado para peças com pedras coladas, pérolas ou acabamento fosco.<br><h3>Conteúdo do kit:</h3>01 Limpa Pratas Monzi<br>01 Flanela Mágica<br><h3>Benefícios:</h3>✔ Remove o escurecimento<br>✔ Recupera o brilho<br>✔ Fácil de usar<br>✔ Ideal para manutenção das peças<br><h3>Modo de uso:</h3>Utilize conforme instruções do fabricante. Finalize a limpeza com a flanela mágica para melhor resultado.<br><h3>Cuidados:</h3>Evite o uso em peças delicadas. Mantenha o produto bem fechado e fora do alcance de crianças.<br><h3>Importante:</h3>Realize a limpeza regularmente para manter suas peças sempre bonitas e brilhantes.",
         "desc": ""
     }
 ]

@@ -29,35 +29,35 @@
   --piercings-border: #e9e9e9;
 }
 
-.piercings-container {
+.piercings-container { /*CONTAINER PRINCIPAL*/
   max-width: 1180px;
   margin: 10rem auto 3rem;
   padding: 24px 18px;
 }
 
-.piercings-header {
+.piercings-header { /*CABEÇALHO DA SEÇÃO DE PIERCINGS*/
   text-align: center;
   margin-bottom: 24px;
 }
 
-.piercings-header h2 {
+.piercings-header h2 { /*TÍTULO DA SEÇÃO*/
   font-size: 26px;
   color: #2d2d2d;
   margin-bottom: 8px;
 }
 
-.piercings-header p {
+.piercings-header p { /*DESCRIÇÃO DA SEÇÃO*/
   color: #666;
   font-size: 14px;
 }
 
-.piercings-grid {
+.piercings-grid { /*GRADE DE PRODUTOS*/
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
 
-.piercing-card {
+.piercing-card { /*CARTÃO DE CADA PRODUTO*/
   background: var(--piercings-card);
   border: 1px solid var(--piercings-border);
   border-radius: 10px;
@@ -69,12 +69,12 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.piercing-card:hover {
+.piercing-card:hover { /*EFEITO HOVER NO CARTÃO*/
   transform: translateY(-4px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.08);
 }
 
-.piercing-img {
+.piercing-img { /*IMAGEM DO PRODUTO*/
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -82,19 +82,20 @@
   background: #f3f3f3;
 }
 
-.piercing-title {
+.piercing-title { /*TÍTULO DO PRODUTO*/
   font-size: 15px;
   color: #2d2d2d;
   font-weight: 600;
+  text-transform: capitalize;
 }
 
-.piercing-price {
+.piercing-price { /*PREÇO DO PRODUTO*/
   font-size: 15px;
   color: #2d2d2d;
   font-weight: 700;
 }
 
-.piercing-link {
+.piercing-link { /*LINK DO PRODUTO*/
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -109,11 +110,11 @@
   transition: background 0.2s ease;
 }
 
-.piercing-link:hover {
+.piercing-link:hover { /*EFEITO HOVER NO LINK*/
   background: #4caf50;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 900px) { /*ESTILOS PARA TELAS MENORES QUE 900PX*/
   .piercings-container {
     margin: 8rem auto 2rem;
     padding: 18px 14px;

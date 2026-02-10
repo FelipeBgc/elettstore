@@ -29,35 +29,35 @@
   --novidades-border: #e9e9e9;
 }
 
-.novidades-container {
+.novidades-container { /*CONTAINER PRINCIPAL*/
   max-width: 1180px;
   margin: 10rem auto 3rem;
   padding: 24px 18px;
 }
 
-.novidades-header {
+.novidades-header { /*CABEÇALHO DA SEÇÃO DE NOVIDADES*/
   text-align: center;
   margin-bottom: 24px;
 }
 
-.novidades-header h2 {
+.novidades-header h2 { /*TÍTULO DA SEÇÃO DE NOVIDADES*/
   font-size: 26px;
   color: #2d2d2d;
   margin-bottom: 8px;
 }
 
-.novidades-header p {
+.novidades-header p { /*DESCRIÇÃO DA SEÇÃO DE NOVIDADES*/
   color: #666;
   font-size: 14px;
 }
 
-.novidades-grid {
+.novidades-grid { /*GRADE DE NOVIDADES*/
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
 
-.novidade-card {
+.novidade-card { /*CARTÃO DE CADA NOVIDADE*/
   background: var(--novidades-card);
   border: 1px solid var(--novidades-border);
   border-radius: 10px;
@@ -69,33 +69,33 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.novidade-card:hover {
+.novidade-card:hover { /*EFEITO HOVER NO CARTÃO*/
   transform: translateY(-4px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.08);
 }
 
-.novidade-img {
+.novidade-img { /*IMAGEM DO PRODUTO*/
   width: 100%;
   height: 200px;
-  
   object-fit: cover;
   border-radius: 8px;
   background: #f3f3f3;
 }
 
-.novidade-title {
+.novidade-title { /*TÍTULO DO PRODUTO*/
   font-size: 15px;
   color: #2d2d2d;
   font-weight: 600;
+  text-transform: capitalize;
 }
 
-.novidade-price {
+.novidade-price { /*PREÇO DO PRODUTO*/
   font-size: 15px;
   color: #2d2d2d;
   font-weight: 700;
 }
 
-.novidade-link {
+.novidade-link { /*LINK DO PRODUTO*/
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -110,11 +110,11 @@
   transition: background 0.2s ease;
 }
 
-.novidade-link:hover {
+.novidade-link:hover { /*EFEITO HOVER NO LINK*/
   background: #4caf50;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 900px) { /*ESTILOS PARA TELAS MENORES QUE 900PX*/
   .novidades-container {
     margin: 8rem auto 2rem;
     padding: 18px 14px;
