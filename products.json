@@ -541,14 +541,14 @@
 
     {
         "id": 41,
-        "name": "Limpa pratas Monzi + Flanela Magica",
+        "name": "Limpa Pratas + Flanela Mágica",
         "price": 72,
-        "image": "imagens/produtos/limpeza/kit.limpeza.pratas1.jpg",
+        "image": "imagens/produtos/limpeza/kit.limpa.prata1.jpg",
         "categoria": "limpeza",
         "home": true,
         "images": [
-            "imagens/produtos/limpeza/kit.limpeza.pratas1.jpg",
-            "imagens/produtos/limpeza/kit.limpeza.pratas2.jpg"],
+            "imagens/produtos/limpeza/kit.limpa.prata1.jpg",
+            "imagens/produtos/limpeza/kit.limpa.prata2.jpg"],
         "descriçao" :"Kit ideal para a limpeza e conservação de peças em prata e semijoias. O Limpa Pratas Monzi auxilia na remoção do escurecimento causado pela oxidação, enquanto a flanela mágica ajuda a restaurar e manter o brilho das peças.<br><h3>Indicação:</h3>Indicado para peças em prata e semijoias banhadas. Não recomendado para peças com pedras coladas, pérolas ou acabamento fosco.<br><h3>Conteúdo do kit:</h3>01 Limpa Pratas Monzi<br>01 Flanela Mágica<br><h3>Benefícios:</h3>✔ Remove o escurecimento<br>✔ Recupera o brilho<br>✔ Fácil de usar<br>✔ Ideal para manutenção das peças<br><h3>Modo de uso:</h3>Utilize conforme instruções do fabricante. Finalize a limpeza com a flanela mágica para melhor resultado.<br><h3>Cuidados:</h3>Evite o uso em peças delicadas. Mantenha o produto bem fechado e fora do alcance de crianças.<br><h3>Importante:</h3>Realize a limpeza regularmente para manter suas peças sempre bonitas e brilhantes.",
         "desc": ""
     }
