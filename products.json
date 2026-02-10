@@ -3,15 +3,15 @@
         "id": 1,
         "name": "Anel dedinho regulável",
         "price": 35,
-        "image": "imagens/produtos/Aneis/anel_dedinho_regulável_34,90.jpg",
+        "image": "imagens/produtos/Aneis/IMG_6231.jpg",
         "categoria": "aneis",
         "home": true,
         "novidade": true,
         "images": [
-            "imagens/produtos/Aneis/anel_dedinho_regulável_34,90.jpg",
             "imagens/produtos/Aneis/IMG_6231.jpg",
+            "imagens/produtos/Aneis/IMG_6236.jpg",
             "imagens/produtos/Aneis/anel_dedinho_regulável2.jpg",
-            "imagens/produtos/Aneis/IMG_6234.jpg"],
+            "imagens/produtos/Aneis/IMG_6235.jpg"],
         "descriçao" :"<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",   
         "desc" : "<br>10% <br> OFF <br><br>"
     },
@@ -272,7 +272,7 @@
         "novidade": true,
         "images": [
             "imagens/produtos/berloques/argolinha.com.sete.zirconias.jpg",
-            "imagens/produtos/Aneis/anel.ajustavel.coracao.cravejado.com.ponto.de.luz.jpg",
+            "imagens/produtos/berloques/argolinha.com.sete.zirconias.jpg",
             "imagens/produtos/Aneis/anel.dedinho.regulavel.jpg"],
         "descriçao" : "",
         "desc": ""

@@ -514,6 +514,9 @@ bottom:5rem;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
     gap: 12px;
   }
 
