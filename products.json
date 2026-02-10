@@ -512,7 +512,18 @@
     "Berloques",
 
     {
-
+        "id": 40,
+        "name": "Berloque Halter<br><br>",
+        "price": 58,
+        "image": "imagens/produtos/berloques/berloque.halter1.jpg",
+        "categoria": "berloques",
+        "home": true,
+        "novidade": true,
+        "images": [
+            "imagens/produtos/berloques/berloque.halter1.jpg",
+            "imagens/produtos/berloques/berloque.halter2.jpg"],
+        "descriçao" : "<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
+        "desc": ""
     },
 
     "Pircing",
@@ -530,7 +541,7 @@
     "Limpeza",
 
     {
-        "id": 40,
+        "id": 41,
         "name": "Limpa pratas Monzi + Flanela Magica",
         "price": 72,
         "image": "imagens/produtos/limpeza/kit.limpeza.pratas1.jpg",
