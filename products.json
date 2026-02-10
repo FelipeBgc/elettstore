@@ -102,16 +102,16 @@
     },
     {
         "id": 9,
-        "name": "Colar Gravatinha Coração<br>",
+        "name": "Colar Gravatinha Coração",
         "price": 72,
-        "image": "imagens/produtos/colares/Colar.gravatinha.coração1.jpg",
+        "image": "imagens/produtos/colares/colar.gravatinha.coracao1.jpg",
         "home": true,
         "novidade": true,
         "categoria": "colares",
         "images": [
-            "imagens/produtos/colares/Colar.gravatinha.coração1.jpg",
-            "imagens/produtos/colares/Colar.gravatinha.coração2.jpg",
-            "imagens/produtos/colares/Colar.gravatinha.coração3.jpg"],
+            "imagens/produtos/colares/colar.gravatinha.coracao1.jpg",
+            "imagens/produtos/colares/colar.gravatinha.coracao2.jpg",
+            "imagens/produtos/colares/colar.gravatinha.coracao3.jpg"],
         "descriçao" :"<h3>Material:</h3>Semijoia com banho de prata de alta qualidade.<br><h3>Banho:</h3>Camada de 50 milésimos de prata finalizada com verniz alemão para maior proteção e brilho. Produto níquel free.<br><h3>Garantia:</h3>6 meses a partir da data de recebimento válida exclusivamente para defeitos relacionados ao banho ou defeitos de fábrica.<br><h3>Durabilidade:</h3>Alta quando utilizados e conservados corretamente.<br><h3>Cuidados com a peça:</h3>Evite contato com produtos químicos perfumes cremes e exposição prolongada ao sol.<br>Guarde sua semijoia em local seco longe da umidade e separada de outras peças,<br>para manter o brilho realize a limpeza regularmente.",
         "desc": ""
     },
