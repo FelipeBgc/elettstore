@@ -544,8 +544,8 @@
         "name": "Limpa pratas Monzi + Flanela Magica",
         "price": 72,
         "image": "imagens/produtos/limpeza/kit.limpeza.pratas1.jpg",
-        "home": true,
         "categoria": "limpeza",
+        "home": true,
         "images": [
             "imagens/produtos/limpeza/kit.limpeza.pratas1.jpg",
             "imagens/produtos/limpeza/kit.limpeza.pratas2.jpg"],
