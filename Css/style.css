@@ -845,6 +845,11 @@ body.showCart head{ /*DESFOCAR FUNDO QUANDO MOSTRAR CARRINHO*/
 
 .listProduct{ /*LISTA DE PRODUTOS*/
   margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 2 colunas iguais */
+  gap: 1rem; /* espaço entre cards */
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .item_c { /*CADA ITEM DA LISTA DE PRODUTOS*/
@@ -855,9 +860,9 @@ body.showCart head{ /*DESFOCAR FUNDO QUANDO MOSTRAR CARRINHO*/
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 170px;
+  width: 190px;
   height: 350px;
-  margin-left: 1.1rem;
+  margin-left: .5rem;
   margin-top: 2rem;  
   font-weight: 500;
   font-style: normal;

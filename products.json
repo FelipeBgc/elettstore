@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "Anel dedinho regulável",
+        "name": "Anel dedinho regulável<br>",
         "price": 35,
         "image": "imagens/produtos/Aneis/IMG_6231.jpg",
         "categoria": "aneis",
@@ -542,7 +542,7 @@
 
 
 
-    
+
     {
         "id": 41,
         "name": "Limpa Pratas + Flanela Mágica",

@@ -198,9 +198,19 @@
         height: 45%;
     }
 
-    .cartTab .listCart{ /*LISTA ITENS CARRINHO DE COMPRAS*/
-        top: 3.9rem;
-        height: 410px;
+    .listProduct{ /*ITENS CARRINHO DE COMPRAS*/
+        top: 1.5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .item_c { /*CADA ITEM DA LISTA DE PRODUTOS*/
+        width: 170px;
+        height: 350px;
+        margin: 2rem auto 0;
     }
 
     .listCart .totalPrice{ /*PREÇO ITENS CARRINHO DE COMPRAS*/
