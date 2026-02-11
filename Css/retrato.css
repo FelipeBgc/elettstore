@@ -222,6 +222,14 @@
         top: 27px;
     }
 
+    .categoria-vazia {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -200%);
+        width: 90%;
+    }
+
     .btn-remover-carrinho{ /*BOTÃO REMOVER ITENS CARRINHO*/
     position: relative;
     left: 17rem;

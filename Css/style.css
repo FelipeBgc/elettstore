@@ -269,6 +269,10 @@ form .search{ /*BOTÃO PESQUISA*/
 }
 
 .categoria-vazia {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
   color: #777;
   font-size: 14px;

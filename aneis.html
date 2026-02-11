@@ -53,15 +53,16 @@
 
 .aneis-grid { /*GRADE DE PRODUTOS*/
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(5, 1fr); /* 2 colunas iguais */
+  gap: 1rem; /* espaço entre cards */
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .anel-card { /*CARTÃO DO PRODUTO*/
   background: var(--aneis-card);
   border: 1px solid var(--aneis-border);
   border-radius: 10px;
-  
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -88,7 +89,6 @@
   margin-top: .25rem !important;
   line-height: 1.1429em;
   text-overflow: ellipsis;
-  overflow: hidden;
   -webkit-box-orient: vertical;
   text-align: left;
   text-transform: capitalize;
@@ -131,6 +131,15 @@
   .aneis-container {
     margin: 8rem auto 2rem;
     padding: 18px 14px;
+  }
+
+  .aneis-grid {
+    top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
 
   .anel-img {

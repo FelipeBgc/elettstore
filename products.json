@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "Anel dedinho regulável<br>",
+        "name": "Anel dedinho(regulável)<br>",
         "price": 35,
         "image": "imagens/produtos/Aneis/IMG_6231.jpg",
         "categoria": "aneis",
@@ -56,7 +56,7 @@
 
     {
         "id": 5,
-        "name": "Colar Borboletinha",
+        "name": "Colar Borboletinha<br><br>",
         "price": 59,
         "image": "imagens/produtos/colares/colar.borboletinha.jpg",
         "categoria": "colares",
@@ -67,7 +67,7 @@
     },
     {
         "id": 6,
-        "name": "Colar Coração Cristal",
+        "name": "Colar Coração Cristal<br><br>",
         "price": 69,
         "image": "imagens/produtos/colares/colar.coracao.cristal.jpg",
         "categoria": "colares",
@@ -78,7 +78,7 @@
     },
     {
         "id": 7,
-        "name": "Colar Menino",
+        "name": "Colar Menino<br><br>",
         "price": 52,
         "image": "imagens/produtos/colares/colar.menino1.jpg",
         "categoria": "colares",
@@ -104,7 +104,7 @@
     },
     {
         "id": 9,
-        "name": "Colar Gravatinha Coração",
+        "name": "Colar Gravatinha<br> Coração<br>",
         "price": 72,
         "image": "imagens/produtos/colares/colar.gravatinha.coracao1.jpg",
         "novidade": true,
@@ -131,7 +131,7 @@
     },
     {
         "id": 11,
-        "name": "Colar Plaquinha (Sempre Juntas Mãe)",
+        "name": "Colar Plaquinha<br> (Sempre Juntas Mãe)",
         "price": 72,
         "image": "imagens/produtos/colares/colar.plaquinha.sempre.juntas.mae1.jpg",
         "categoria": "colares",
@@ -172,7 +172,7 @@
     },
     {
         "id": 14,
-        "name": "Colar Plaquinha (seja forte e corajosa)",
+        "name": "Colar Plaquinha<br> (seja forte e corajosa)",
         "price": 72,
         "image": "imagens/produtos/colares/colar.plaquinha.seja.forte.e.corajosa1.jpg",
         "categoria": "colares",
@@ -204,7 +204,7 @@
 
     {
         "id": 16,
-        "name": "Choker Pipoca",
+        "name": "Choker Pipoca<br><br>",
         "price": 45,
         "image": "imagens/produtos/choker/choker.pipoca.jpg",
         "categoria": "choker",
@@ -231,7 +231,7 @@
     },
     {
         "id": 18,
-        "name": "Choker Fio Alemão 3mm",
+        "name": "Choker Fio Alemão 3mm<br><br>",
         "price": 62,
         "image": "imagens/produtos/choker/choker.fio.alemao.3mm.jpg",
         "categoria": "choker",
@@ -273,7 +273,7 @@
     },
     {
         "id": 21,
-        "name": "Pulseira Elos",
+        "name": "Pulseira Elos<br><br>",
         "price": 47,
         "image": "imagens/produtos/pulseiras/pulseira.elos.jpg",
         "categoria": "pulseiras",
@@ -286,7 +286,7 @@
     },
     {
         "id": 22,
-        "name": "Pulseira Corações Lisos",
+        "name": "Pulseira Corações Lisos<br><br>",
         "price": 54,
         "image": "imagens/produtos/pulseiras/pulseira.coracoes.lisos.preenchidos.jpg",
         "categoria": "pulseiras",
@@ -297,7 +297,7 @@
     },
     {
         "id": 23,
-        "name": "Pulseira Masculina Elos",
+        "name": "Pulseira Masculina Elos <br><br>",
         "price": 64,
         "image": "imagens/produtos/pulseiras/pulseira.elos.jpg",
         "categoria": "masculino",
@@ -365,7 +365,7 @@
 
     {
         "id": 28,
-        "name": "Brinco Coração Mini",
+        "name": "Brinco Coração Mini<br><br>",
         "price": 28,
         "image": "imagens/produtos/brincos/brinco.coracao.mini.jpg",
         "categoria": "brincos",
@@ -376,7 +376,7 @@
     },
     {
         "id": 29,
-        "name": "Argolinha Mini",
+        "name": "Argolinha Mini<br><br>",
         "price": 35,
         "image": "imagens/produtos/brincos/argolinha.mini.jpg",
         "categoria": "brincos",
