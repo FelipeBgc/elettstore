@@ -210,7 +210,7 @@
     .item_c { /*CADA ITEM DA LISTA DE PRODUTOS*/
         width: 170px;
         height: 350px;
-        margin: 2rem auto 0;
+        margin: 1rem auto 0;
     }
 
     .listCart .totalPrice{ /*PREÇO ITENS CARRINHO DE COMPRAS*/
