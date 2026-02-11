@@ -213,6 +213,10 @@
         margin: 1rem auto 0;
     }
 
+    .item_c a{
+        height: 100%;
+    }
+
     .listCart .totalPrice{ /*PREÇO ITENS CARRINHO DE COMPRAS*/
         left: .9rem;
         top: 27px;

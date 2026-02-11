@@ -854,13 +854,13 @@ body.showCart head{ /*DESFOCAR FUNDO QUANDO MOSTRAR CARRINHO*/
 
 .item_c { /*CADA ITEM DA LISTA DE PRODUTOS*/
   background-color: white;
-  border-radius: 2px;
+  border-radius: 5px;
   box-shadow: .1px .1px 9px rgba(0, 0, 0, 0.267);
   display: inline-block;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 190px;
+  width: 178.7px;
   height: 350px;
   margin-left: .5rem;
   margin-top: 1rem;  
@@ -915,7 +915,7 @@ body.showCart head{ /*DESFOCAR FUNDO QUANDO MOSTRAR CARRINHO*/
   font-weight: 700;
   font-size: 1.2rem;
   color: var(--cor3);
-  margin: 1px 0 1px .6rem;
+  margin:  0 1px 0 .5rem;
   text-align: left;
 }
 
@@ -925,7 +925,7 @@ body.showCart head{ /*DESFOCAR FUNDO QUANDO MOSTRAR CARRINHO*/
   margin-top: 1rem !important;
   color: white;
   fill: #ffffff;
-  padding: 8px 40px;
+  padding: 10px 45px;
   text-align: center;
   text-decoration: none;
   font-family: var(--font);

@@ -262,7 +262,7 @@
     },
     {
         "id": 20,
-        "name": "Pulseira Bolinhas",
+        "name": "Pulseira Bolinhas<br><br>",
         "price": 42,
         "image": "imagens/produtos/pulseiras/pulseira.bolinhas.jpg",
         "categoria": "pulseiras",
