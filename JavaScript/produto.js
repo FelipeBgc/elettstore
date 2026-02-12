@@ -75,11 +75,20 @@ async function carregarProduto() {
           <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
             <path d="M8 0L6.59 1.41L12.17 7H0v2h12.17l-5.58 5.59L8 16l8-8z" transform="rotate(180 8 8)"/>
           </svg>
-          Voltar para a loja
+          Voltar
         </a>
         
+        <div class="caminho"> Inicio > ${produto.categoria} > ${produto.name}</div>               
+
         <h1 class="produto-titulo">${produto.name}</h1>
-        
+
+        <div class="produto-cod">Cód.:${produto.id}</div>
+
+        <div class="produto-avaliacao">
+          <span class="avaliacao-estrelas">★★★★★</span>
+          <span class="avaliacao-texto">${produto.avaliação}</span>
+        </div>
+
         <div class="produto-info-badge">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
             <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
@@ -91,11 +100,6 @@ async function carregarProduto() {
           <p class="produto-preco">R$ ${produto.price.toFixed(2).replace('.', ',')}</p>
           <p class="produto-preco-pix">R$ ${precoComDesconto.replace('.', ',')} no PIX (3% de desconto)</p>
           <p class="produto-preco-parcelado">ou 2x de R$ ${parcelado.replace('.', ',')} sem juros</p>
-        </div>
-
-        <div class="produto-descricao">
-          <h4>Descrição do Produto</h4>
-          ${produto.descriçao}
         </div>
 
         <div class="quantidade-section">
@@ -110,7 +114,12 @@ async function carregarProduto() {
         <button class="adicionar-carrinho-btn" onclick="adicionarAoCarrinho(${produto.id})">
           Adicionar ao Carrinho
         </button>
+        
       </div>
+      <div class="produto-descricao">
+          <h3>Descrição do Produto</h3>
+          ${produto.descriçao}
+        </div>
     `;
         configurarGaleria(imagensProduto, produto.name);
     } catch (error) {

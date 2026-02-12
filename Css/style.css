@@ -906,6 +906,7 @@ body.showCart head{ /*DESFOCAR FUNDO QUANDO MOSTRAR CARRINHO*/
   font-size: 15px;
   color: #2d2d2d;
   font-weight: 600;
+  height: 2.4rem;
 }
 
 .item_c h2:hover{ 

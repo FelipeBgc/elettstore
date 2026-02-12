@@ -508,13 +508,13 @@ async function sendWhatsAppMessage(orderNumber) {
     const product = products.find(p => p.id == cartItem.product_id);
     if (product) {
       const itemTotal = product.price * cartItem.quantity;
-      productsList += `\n• ${product.name}\n  Qtd: ${cartItem.quantity} x R$ ${product.price.toFixed(2).replace('.', ',')} = R$ ${itemTotal.toFixed(2).replace('.', ',')}\n`;
+      productsList += `\nCód.:${product.id}\n • ${product.name}\n  Qtd: ${cartItem.quantity} x R$ ${product.price.toFixed(2).replace('.', ',')} = R$ ${itemTotal.toFixed(2).replace('.', ',')}\n`;
     }
   });
   
   // Montar mensagem completa
   let message = `🛍️ *NOVO PEDIDO - Élett Store*\n`;
-  message += `━━━━━━━━━━━━━━━━━━━━\n\n`;
+  message += `━━━━━━━━━━━━━━\n\n`;
   message += `*Pedido:* #${orderNumber}\n\n`;
   
   message += `*👤 DADOS DO CLIENTE*\n`;
@@ -548,7 +548,7 @@ async function sendWhatsAppMessage(orderNumber) {
     message += `Chave PIX: (35)98839-7718\n`;
   }
   
-  message += `\n━━━━━━━━━━━━━━━━━━━━\n`;
+  message += `\n━━━━━━━━━━━━━━\n`;
   message += `_Pedido enviado via site Élett Store_`;
   
   // Codificar mensagem para URL
