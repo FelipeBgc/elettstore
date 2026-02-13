@@ -34,7 +34,7 @@ body {
   background-color: var(--cor5);
 }
 
-.icon-cart{
+.cartTab, .icon-cart, .listCart, .cartsummary, .btn-cart{
     display: none;
 }
 
