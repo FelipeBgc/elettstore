@@ -34,6 +34,10 @@ body {
   background-color: var(--cor5);
 }
 
+.icon-cart{
+    display: none;
+}
+
 .container{
     display: flex;
     justify-content: center;
