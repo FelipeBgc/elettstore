@@ -369,6 +369,277 @@ function adicionarAoCarrinho(produtoId) {
     }, 3000);
 }
 
+// INFINITE SCROLL NA PÁGINA DE PRODUTO
+// Carrega produtos relacionados abaixo da descrição
+
+class ProdutoInfiniteScroll {
+    constructor() {
+        this.itemsPerPage = 6; // Produtos por carregamento
+        this.currentPage = 1;
+        this.isLoading = false;
+        this.hasMoreItems = true;
+        this.allProducts = [];
+        this.currentProductId = null;
+        this.currentCategory = null;
+        
+        this.init();
+    }
+
+    async init() {
+        // Pegar ID do produto atual
+        this.currentProductId = this.getUrlParameter('id');
+        
+        if (!this.currentProductId) return;
+
+        // Carregar todos os produtos
+        await this.loadAllProducts();
+        
+        // Aguardar descrição do produto carregar
+        this.waitForProductDescription();
+    }
+
+    waitForProductDescription() {
+        // Verificar se a descrição do produto já foi carregada
+        const checkDescription = setInterval(() => {
+            const descricao = document.querySelector('.produto-descricao');
+            
+            if (descricao) {
+                clearInterval(checkDescription);
+                
+                // Criar seção de produtos relacionados
+                this.createRelatedProductsSection();
+                
+                // Carregar primeira página
+                this.renderPage();
+                
+                // Configurar infinite scroll
+                this.setupIntersectionObserver();
+                window.addEventListener('scroll', () => this.handleScroll());
+            }
+        }, 100);
+        
+        // Timeout de segurança (parar após 5 segundos)
+        setTimeout(() => {
+            clearInterval(checkDescription);
+        }, 5000);
+    }
+
+    getUrlParameter(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+    }
+
+    async loadAllProducts() {
+        try {
+            const response = await fetch('./products.json');
+            const data = await response.json();
+            
+            // Encontrar produto atual para pegar a categoria
+            const currentProduct = data.find(p => p.id == this.currentProductId);
+            
+            if (currentProduct) {
+                this.currentCategory = currentProduct.categoria;
+            }
+            
+            // Filtrar produtos: mesma categoria, excluindo o produto atual
+            this.allProducts = data.filter(p => 
+                p.id != this.currentProductId && 
+                (this.currentCategory ? p.categoria === this.currentCategory : true)
+            );
+            
+            // Embaralhar produtos para variedade
+            this.allProducts = this.shuffleArray(this.allProducts);
+            
+        } catch (error) {
+            console.error('Erro ao carregar produtos:', error);
+            this.allProducts = [];
+        }
+    }
+
+    shuffleArray(array) {
+        const newArray = [...array];
+        for (let i = newArray.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+        }
+        return newArray;
+    }
+
+    createRelatedProductsSection() {
+        // Encontrar a descrição do produto
+        const descricao = document.querySelector('.produto-descricao');
+        
+        if (!descricao) return;
+
+        // Criar seção de produtos relacionados
+        const section = document.createElement('section');
+        section.className = 'produtos-relacionados-section';
+        section.innerHTML = `
+            <div class="produtos-relacionados-header">
+                <h2>Produtos Relacionados</h2>
+                <p>Você também pode gostar destes produtos</p>
+            </div>
+            <div id="produtos-relacionados-grid" class="produtos-relacionados-grid">
+                <!-- Produtos serão carregados aqui -->
+            </div>
+            <div id="relacionados-loader" class="relacionados-loader" style="display: none;">
+                <div class="spinner"></div>
+                <p>Carregando mais produtos...</p>
+            </div>
+        `;
+
+        // Inserir DEPOIS da descrição do produto
+        descricao.parentNode.insertBefore(section, descricao.nextSibling);
+    }
+
+    renderPage() {
+        if (this.isLoading || !this.hasMoreItems) return;
+        
+        this.isLoading = true;
+        this.showLoader();
+        
+        // Calcular índices
+        const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+        const endIndex = startIndex + this.itemsPerPage;
+        
+        // Pegar produtos da página
+        const pageProducts = this.allProducts.slice(startIndex, endIndex);
+        
+        if (pageProducts.length === 0) {
+            this.hasMoreItems = false;
+            this.hideLoader(true);
+            return;
+        }
+
+        // Simular delay de carregamento
+        setTimeout(() => {
+            this.appendProducts(pageProducts);
+            this.currentPage++;
+            this.isLoading = false;
+            this.hideLoader(false);
+            
+            // Verificar se há mais produtos
+            if (endIndex >= this.allProducts.length) {
+                this.hasMoreItems = false;
+                this.showEndMessage();
+            }
+        }, 500);
+    }
+
+    appendProducts(products) {
+        const grid = document.getElementById('produtos-relacionados-grid');
+        if (!grid) return;
+
+        products.forEach(product => {
+            const productCard = this.createProductCard(product);
+            grid.appendChild(productCard);
+        });
+    }
+
+    createProductCard(product) {
+        const card = document.createElement('div');
+        card.className = 'produto-relacionado-card fade-in-up';
+        
+        const discount = product.discount || 0;
+        const discountHTML = discount > 0 ? `<span class="produto-badge">${discount}% OFF</span>` : '';
+        
+        card.innerHTML = `
+            <a href="produto.html?id=${product.id}" class="produto-relacionado-link">
+                <div class="produto-relacionado-image">
+                    <img src="${product.image}" alt="${product.name}" loading="lazy">
+                    ${discountHTML}
+                </div>
+                <div class="produto-relacionado-info">
+                    <h3 class="produto-relacionado-title">${product.name}</h3>
+                    <div class="produto-relacionado-price">
+                        R$ ${Number(product.price).toFixed(2).replace('.', ',')}
+                    </div>
+                    <button class="produto-relacionado-btn">Ver Produto</button>
+                </div>
+            </a>
+        `;
+        
+        return card;
+    }
+
+    setupIntersectionObserver() {
+        const sentinel = document.createElement('div');
+        sentinel.id = 'relacionados-sentinel';
+        sentinel.style.height = '20px';
+        
+        const grid = document.getElementById('produtos-relacionados-grid');
+        if (grid) {
+            grid.parentElement.appendChild(sentinel);
+        }
+        
+        const options = {
+            root: null,
+            rootMargin: '200px',
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !this.isLoading && this.hasMoreItems) {
+                    this.renderPage();
+                }
+            });
+        }, options);
+        
+        observer.observe(sentinel);
+    }
+
+    handleScroll() {
+        if (this.isLoading || !this.hasMoreItems) return;
+        
+        const scrollHeight = document.documentElement.scrollHeight;
+        const scrollTop = document.documentElement.scrollTop;
+        const clientHeight = document.documentElement.clientHeight;
+        
+        if (scrollTop + clientHeight >= scrollHeight - 400) {
+            this.renderPage();
+        }
+    }
+
+    showLoader() {
+        const loader = document.getElementById('relacionados-loader');
+        if (loader) {
+            loader.style.display = 'flex';
+        }
+    }
+
+    hideLoader(isEnd) {
+        const loader = document.getElementById('relacionados-loader');
+        if (loader && !isEnd) {
+            loader.style.display = 'none';
+        }
+    }
+
+    showEndMessage() {
+        const loader = document.getElementById('relacionados-loader');
+        if (loader) {
+            loader.innerHTML = '<p class="end-message">✨ Você viu todos os produtos relacionados!</p>';
+            loader.style.display = 'flex';
+            
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 3000);
+        }
+    }
+}
+
+// Inicializar quando a página carregar
+document.addEventListener('DOMContentLoaded', () => {
+    new ProdutoInfiniteScroll();
+});
+
+
+
+
+
+
+
+
 // Renderizar carrinho como no index.html
 function renderizarCarrinho(carrinho) {
     const listCartHTML = document.querySelector('.listCart');
