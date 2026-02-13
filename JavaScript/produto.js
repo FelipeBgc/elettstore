@@ -618,7 +618,7 @@ class ProdutoInfiniteScroll {
     showEndMessage() {
         const loader = document.getElementById('relacionados-loader');
         if (loader) {
-            loader.innerHTML = '<p class="end-message">✨ Você viu todos os produtos relacionados!</p>';
+            loader.innerHTML = '<p class="end-message"></p>';
             loader.style.display = 'flex';
             
             setTimeout(() => {

@@ -677,7 +677,7 @@ bottom:5rem;
     display: flex;
     gap: 1em;
     margin: 1em .8rem;
-    width: 100%;
+    width: 100vw;
     overflow-x: auto;
     overflow-y: hidden;
     scroll-behavior: smooth;  
@@ -726,8 +726,9 @@ bottom:5rem;
 /* Card de produto relacionado */
 .produto-relacionado-card {
     height: 100%;
-    flex: 0 0 15em;
+    flex: 0 0 170px;
     border-radius: 10px;
+    width: 80vw;
     text-align: center;
     align-content: center;
     background-color: #ffff;
